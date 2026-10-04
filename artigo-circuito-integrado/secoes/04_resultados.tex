@@ -1,0 +1,116 @@
+% ==============================================================================
+% secoes/04_resultados.tex - SEÇÃO IV: RESULTADOS
+% Tema: Federico Faggin e o Primeiro Microprocessador Monolítico (Intel 4004)
+% ==============================================================================
+
+\section{Resultados}
+\label{sec:resultados}
+
+% [DIRETIVA DE ESCRITA: INTRODUÇÃO DOS RESULTADOS]
+% - Apresentar os achados estruturados em três eixos complementares:
+%   1. As formulações físico-matemáticas e as inovações de circuito desenvolvidas por Faggin;
+%   2. Os desdobramentos sociotécnicos na indústria da computação e automação;
+%   3. A transformação dos programas curriculares de graduação em Engenharia Elétrica.
+
+\subsection{Contribuições Técnico-Científicas Fundamentais}
+\label{subsec:contribuicoes_tecnicas}
+
+% [DIRETIVA DE ESCRITA: RELAÇÕES FÍSICAS E FORMULAÇÕES ANALÍTICAS]
+% - Explicar as limitações de capacitância e velocidade que inviabilizavam a CPU monolítica antes de Faggin:
+
+% 1. Capacitância Parasita de Sobreposição (Cov) e SGT:
+\begin{equation}
+\label{eq:cov}
+C_{ov} = C_{ox} \cdot W \cdot L_{ov}, \quad \text{com} \quad C_{ox} = \frac{\epsilon_{ox}}{t_{ox}}
+\end{equation}
+onde $C_{ox}$ é a capacitância por unidade de área do dielétrico de óxido de silício, $W$ a largura do canal, $L_{ov}$ o comprimento de sobreposição geométrica induzido por tolerâncias de máscara, $\epsilon_{ox}$ a permissividade do $SiO_2$ e $t_{ox}$ a espessura do óxido. Nos transistores com porta autoalinhada de silício desenvolvidos por Faggin, a difusão ocorre após a definição da porta, fazendo $L_{ov} \to 0$ (restando apenas a difusão lateral intrínseca) e reduzindo drasticamente a constante de tempo de chaveamento:
+\begin{equation}
+\label{eq:tau}
+\tau \approx R_{on} \cdot C_L
+\end{equation}
+onde $R_{on}$ representa a resistência de condução do canal e $C_L$ a capacitância total de carga vista pelo estágio inversor.
+
+% 2. Atraso de Propagação e Frequência Máxima de Operação:
+% Modelar analiticamente a elevação da frequência de clock alcançada pelo Intel 4004 (740 kHz):
+\begin{equation}
+\label{eq:fmax}
+f_{max} \propto \frac{\mu \cdot C_{ox} \cdot (V_{\text{DD}} - V_{th})^2}{L^2 \cdot C_L}
+\end{equation}
+onde $\mu$ é a mobilidade dos portadores, $L$ o comprimento efetivo do canal ($L = \SI{10}{\micro\meter}$ no processo original do 4004), $V_{\text{DD}}$ a tensão de alimentação e $V_{th}$ a tensão de limiar do transistor PMOS. A tecnologia SGT permitiu ciclos de instrução típicos de $\SI{10.8}{\micro\second}$, algo inatingível com portas metálicas convencionais na mesma área de pastilha.
+
+% 3. Densidade de Integração e Roteamento Bidimensional:
+% Apresentar a métrica histórica de densidade que permitiu a CPU em chip único:
+\begin{equation}
+\label{eq:densidade}
+D_{\text{int}} = \frac{N_{\text{transistores}}}{\text{Área}} \approx \frac{2.300}{\SI{12}{\milli\meter\squared}} \approx 192\text{ trans./mm}^2
+\end{equation}
+viabilizada pela introdução da camada de polissilício como nível condutor adicional para cruzamentos ortogonais com a metalização de alumínio.
+
+\subsection{Tabela de Inovações de Federico Faggin}
+\label{subsec:tabela_faggin}
+
+% [DIRETIVA DE ESCRITA: TABELA I - INOVAÇÕES DE FAGGIN (MODELO FARADAY)]
+% - Apresentar a Tabela I relacionando as descobertas conceituais, expressões matemáticas
+%   e correlatos tecnológicos imediatos de acordo com as especificações de tema.md.
+\begin{table*}[t]
+\caption{Principais Inovações de Federico Faggin, Formulações Físico-Matemáticas e Aplicações em Engenharia}
+\label{tab:inovacoes_faggin}
+\centering
+\begin{tabularx}{\textwidth}{p{3.8cm} p{5.5cm} X}
+\toprule
+\textbf{Inovação / Marco (Ano)} & \textbf{Formulação Conceitual / Matemática} & \textbf{Aplicações Tecnológicas em Engenharia} \\
+\midrule
+Porta Autoalinhada de Silício -- SGT (1968) & $C_{ov} \to \text{mínimo}$ \newline $V_{th} = \Phi_{ms} + 2\phi_F + \frac{Q_d}{C_{ox}} - \frac{Q_{ss}}{C_{ox}}$ & Circuitos integrados MOS de alta velocidade, memórias semicondutoras DRAM (Intel 1103) e lógica digital de baixa tensão. \\
+Arquitetura em Chip Único e Sistema MCS-4 (1971) & Barramento multiplexado compartilhado de 4 bits para endereços e dados: $\text{Bus} = f(t_{\text{ciclo}})$ & Calculadoras eletrônicas programáveis (Busicom), primeiros semáforos inteligentes e automação de bombas de combustível. \\
+Célula de Carga Ativa com \textit{Bootstrapping} (1970--1971) & $V_{out} = V_{\text{DD}}$ (eliminação da degradação de limiar $V_{th}$ da carga ativa por acoplamento capacitivo) & Drivers de barramento interno rápido, circuitos de pré-carga em memórias dinâmicas e otimização de área em CPUs monolíticas. \\
+Roteamento em Camada Dupla Silício-Metal (1971) & Interconexões ortogonais sem curtos-circuitos adicionais: $\text{Área} \propto \frac{1}{\text{camadas}^2}$ & Viabilização do layout manual de lógica aleatória (\textit{random logic}) de alta densidade em pastilhas monolíticas de silício. \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+\subsection{Impactos na Sociedade e Indústria}
+\label{subsec:impactos_sociedade}
+
+% [DIRETIVA DE ESCRITA: IMPACTOS INDUSTRIAIS E SOCIAIS]
+% - Detalhar os três desdobramentos fundamentais:
+%   1. Transição Histórica do Hardware Rígido para o Firmware Programável:
+%      a substituição de dezenas de placas de circuitos dedicados por um chip padrão
+%      cujo comportamento é ditado por instruções armazenadas em ROM.
+%   2. Emergência dos Sistemas Computacionais Embarcados:
+%      a penetração do processamento digital em bens de consumo, automação industrial,
+%      controle de ignição automotiva e equipamentos médicos portáteis.
+%   3. Proliferação da Microcomputação Pessoal:
+%      a linhagem direta originada pelo 4004, que culminou no Intel 8008, 8080 e no Zilog Z80
+%      (fundada por Faggin em 1974), base dos primeiros microcomputadores pessoais e estações de trabalho.
+
+\subsection{Impacto na Formação da Engenharia Elétrica (Eixo Pedagógico)}
+\label{subsec:impacto_curricular}
+
+% [DIRETIVA DE ESCRITA: TABELA II - INFLUÊNCIA NO CURRÍCULO DE ENGENHARIA ELÉTRICA]
+% - Apresentar a Tabela II mapeando a presença dos conceitos de Faggin e do 4004
+%   nas componentes curriculares de Engenharia Elétrica contemporâneas.
+\begin{table*}[t]
+\caption{Conceitos Derivados da Revolução dos Microprocessadores no Currículo de Engenharia Elétrica}
+\label{tab:curriculo_microprocessadores}
+\centering
+\begin{tabularx}{\textwidth}{p{4.2cm} p{5.2cm} X}
+\toprule
+\textbf{Componente Curricular Típico} & \textbf{Conceito Tecnológico Herdeiro} & \textbf{Expressão Analítica / Ferramenta Pedagógica} \\
+\midrule
+Dispositivos Semicondutores & Efeito de campo em MOS, tensão de limiar e porta autoalinhada (SGT) & $I_D = \frac{1}{2}\mu C_{ox}\frac{W}{L}(V_{GS} - V_{th})^2$; extração de parâmetros físicos de canal \\
+Sistemas Digitais / Circuitos Lógicos & Máquinas de estados finitos (FSM), decodificadores e lógica sequencial & $Q_{next} = f(Q, \text{Entrada})$; diagramas de transição de estados e tabelas de excitação \\
+Arquitetura de Computadores & Conjunto de instruções (ISA), ciclo busca-decodificação-execução & $T_{\text{exec}} = N_{\text{inst}} \times \text{CPI} \times \tau_{clk}$; pipeline e microarquitetura \\
+Sistemas Microprocessados / Embarcados & Barramentos multiplexados, temporização, I/O mapeado e interrupções & Memórias mapeadas em espaço de endereçamento, protocolos seriais (UART/SPI/I2C) e firmware em C/Assembly \\
+Concepção de Circuitos VLSI & Regras de layout escalável ($\lambda$), capacitâncias parasitas e atrasos & $\tau_{pd} = 0{,}69 \cdot R_{eq} \cdot C_L$; diagramas de bastão (\textit{stick diagrams}), ferramentas CAD/EDA e DRC \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+% [DIRETIVA DE ESCRITA: METODOLOGIAS DE ENSINO CONTEMPORÂNEAS]
+% - Abordar duas práticas pedagógicas essenciais demandadas pelo estudo do 4004:
+%   1. Aprendizado Baseado em Emulação e HDLs: os estudantes projetam e sintetizam
+%      processadores monociclo ou o próprio Intel 4004 em VHDL/Verilog sobre placas FPGA,
+%      visualizando a operação íntima de registradores, ALU e barramentos no silício;
+%   2. Desmistificação do Co-Design Hardware/Software: a compreensão histórica ensina que
+%      o software não é uma entidade puramente abstrata, dependendo criticamente de atrasos
+%      de propagação, restrições térmicas e largura de banda dos barramentos físicos.

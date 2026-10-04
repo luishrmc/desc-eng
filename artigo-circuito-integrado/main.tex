@@ -1,0 +1,46 @@
+% ==============================================================================
+% main.tex - ARQUIVO MESTRE ESTRUTURAL
+% Ponto de entrada para compilação do artigo modular em formato IEEE Transactions
+% ==============================================================================
+\documentclass[journal, twocolumn]{IEEEtran}
+
+% Inclusão das definições globais, pacotes e metadados
+\input{00_config}
+
+\begin{document}
+
+% Renderização do Título, Autoria e Notas Institucionais
+\maketitle
+
+% ------------------------------------------------------------------------------
+% ELEMENTOS TEXTUAIS MODULARES
+% ------------------------------------------------------------------------------
+% Resumo e Palavras-Chave (Abstract e Keywords)
+\input{secoes/00_resumo}
+
+% Seção I: Introdução (Contextualização do problema, objetivos e escopo)
+\input{secoes/01_introducao}
+
+% Seção II: Fundamentação Teórica (Tirania dos números, física e marcos conceituais)
+\input{secoes/02_fundamentacao}
+
+% Seção III: Metodologia (Análise documental, patentes e triangulação histórica)
+\input{secoes/03_metodologia}
+
+% Seção IV: Resultados (Kilby vs. Noyce, patentes, equações, tabelas e impactos)
+\input{secoes/04_resultados}
+
+% Seção V: Discussão (Dialética da invenção, interfaces sociais e modelo pedagógico)
+\input{secoes/05_discussao}
+
+% Seção VI: Conclusão e Agradecimentos
+\input{secoes/06_conclusao}
+
+% ------------------------------------------------------------------------------
+% ELEMENTOS PÓS-TEXTUAIS (BIBLIOGRAFIA IEEE)
+% ------------------------------------------------------------------------------
+\nocite{*} % Garante a compilação do banco bibliográfico durante a fase de scaffolding
+\bibliographystyle{IEEEtran}
+\bibliography{pos_textuais/01_referencias}
+
+\end{document}

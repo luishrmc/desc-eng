@@ -1,0 +1,44 @@
+% ==============================================================================
+% secoes/01_introducao.tex - SEÇÃO I: INTRODUÇÃO
+% Tema: Federico Faggin e o Primeiro Microprocessador Monolítico (Intel 4004)
+% ==============================================================================
+
+\section{Introdução}
+\label{sec:introducao}
+
+% [DIRETIVA DE ESCRITA: PARÁGRAFO DE ABERTURA COM CAPITULAR]
+% - Utilizar o comando \IEEEPARstart{A}{primeira_palavra} para manter o estilo clássico IEEE.
+% - Contextualizar o cenário do final da década de 1960 na indústria de semicondutores,
+%   destacando a proliferação de circuitos lógicos de pequena e média escala (SSI/MSI)
+%   e a barreira física de interconexão conhecida como a "tirania dos números" \cite{morton1958}.
+\IEEEPARstart{A}{evolução} dos sistemas eletrônicos digitais atingiu, no final da década de 1960, uma encruzilhada tecnológica decisiva: enquanto a demanda por processamento de controle e cálculo se multiplicava na indústria e no comércio, a implementação física dessas funções ainda exigia conjuntos fragmentados de dezenas de circuitos integrados customizados, elevando custos, consumo de potência e complexidade de montagem.
+
+% [DIRETIVA DE ESCRITA: O IMPASSE DO PROJETO BUSICOM E A CPU EM CHIP ÚNICO]
+% - Descrever a demanda histórica da fabricante japonesa de calculadoras Busicom em 1969,
+%   que contratou a jovem Intel Corporation para projetar um conjunto de 12 chips dedicados.
+% - Contrastar a proposta arquitetural preliminar de Ted Hoff e Stan Mazor (uma CPU programável
+%   por software) com a inviabilidade fabril da época: com a tecnologia de porta de alumínio
+%   (metal-gate MOS), a área requerida e as capacitâncias parasitas impediam a integração
+%   de uma CPU de uso geral em uma única pastilha viável economicamente \cite{faggin1996}.
+% - Apresentar o papel central de Federico Faggin: físico e engenheiro que havia desenvolvido
+%   a tecnologia de porta autoalinhada de silício (Silicon Gate Technology - SGT) na Fairchild (1968)
+%   e que ingressou na Intel em 1970 para liderar o projeto, layout manual, lógica de silício
+%   e fabricação do conjunto MCS-4 (Intel 4004) \cite{faggin1970, faggin2021}.
+
+% [DIRETIVA DE ESCRITA: PROBLEMA EDUCACIONAL E JUSTIFICATIVA]
+% - Expor o problema pedagógico identificado na formação dos engenheiros: a fragmentação
+%   curricular crônica entre a Física dos Dispositivos Semicondutores (nível de transporte quântico
+%   e processos fabris) e a Arquitetura de Computadores (nível de blocos funcionais e microarquitetura).
+% - Justificar que a gênese do 4004 constitui o estudo de caso perfeito para demonstrar que rupturas
+%   arquiteturais dependem indissociavelmente de inovações no nível de materiais e física do estado sólido.
+
+% [DIRETIVA DE ESCRITA: OBJETIVOS DO ARTIGO]
+% - Formular os objetivos formais:
+%   1. Analisar a transição da tecnologia MOS de porta de metal para a Silicon Gate Technology (SGT);
+%   2. Investigar as inovações de circuito de Faggin (cargas ativas com bootstrapping e layout bidimensional);
+%   3. Avaliar as repercussões socioeconômicas (nascimento dos sistemas embarcados e da microcomputação);
+%   4. Propor diretrizes pedagógicas para integrar o co-design hardware/software nos currículos de engenharia.
+
+% [DIRETIVA DE ESCRITA: ESTRUTURA DO ARTIGO (MAPPING)]
+% - Mapeamento sequencial das seções subsequentes no padrão IEEE (similar a Michael_Faraday.pdf):
+A estrutura deste artigo organiza-se segundo o modelo sequencial de análise histórico-pedagógica: a \cref{sec:fundamentacao} apresenta a fundamentação teórica sobre a tecnologia MOS de porta autoalinhada de silício e a arquitetura do sistema MCS-4; a \cref{sec:metodologia} descreve os procedimentos de pesquisa documental e triangulação historiográfica; a \cref{sec:resultados} detalha as formulações analíticas de velocidade e capacitância, a tabela comparativa das inovações de Faggin, os impactos socioeconômicos e o mapeamento curricular; a \cref{sec:discussao} debate a simbiose entre engenharia de dispositivos e arquitetura lógica, bem como o desafio da hiperabstração no ensino contemporâneo; e a \cref{sec:conclusao} sintetiza as contribuições e o legado formativo de Federico Faggin.

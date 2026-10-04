@@ -1,0 +1,54 @@
+% ==============================================================================
+% secoes/02_fundamentacao.tex - SEÇÃO II: FUNDAMENTAÇÃO TEÓRICA
+% Tema: Federico Faggin e o Primeiro Microprocessador Monolítico (Intel 4004)
+% ==============================================================================
+
+\section{Fundamentação Teórica}
+\label{sec:fundamentacao}
+
+% [DIRETIVA DE ESCRITA: INTRODUÇÃO DA FUNDAMENTAÇÃO TEÓRICA]
+% - Estabelecer a transição dos transistores bipolares para a tecnologia MOS e
+%   o impasse enfrentado pelos processos de fabricação até o final dos anos 1960.
+
+\subsection{A Tecnologia MOS de Porta Metálica vs. Porta Autoalinhada (SGT)}
+\label{subsec:mos_sgt}
+
+% [DIRETIVA DE ESCRITA: LIMITAÇÕES DA PORTA DE ALUMÍNIO E A DESCOBERTA DO SGT]
+% - Descrever a física dos transistores MOS com porta de alumínio (metal-gate MOS):
+%   a necessidade de tolerâncias de tolerância de alinhamento mecânico das máscaras fotolitográficas,
+%   resultando em expressiva sobreposição geométrica (overlap) entre a porta e as regiões de fonte e dreno.
+% - Explicar como Federico Faggin, em 1968 no centro de P&D da Fairchild Semiconductor,
+%   desenvolveu a Silicon Gate Technology (SGT) \cite{faggin1970}:
+%   a utilização de polissilício termicamente estável depositado antes da dopagem das regiões de
+%   fonte e dreno, permitindo que a própria porta atue como máscara autoalinhada.
+% - Detalhar a fabricação do primeiro chip comercial do mundo em SGT: o Fairchild 3708
+%   (multiplexador analógico de 8 bits com lógica decodificadora), comprovando a viabilidade industrial do processo.
+
+\subsection{Vantagens Físicas e Métricas da Silicon Gate Technology}
+\label{subsec:vantagens_sgt}
+
+% [DIRETIVA DE ESCRITA: PROPRIEDADES FÍSICAS E GANHOS DE DESEMPENHO DO SGT]
+% - Analisar detalhadamente as três vantagens fundamentais introduzidas pelo SGT:
+%   1. Minimização da Capacitância Parasita de Sobreposição (Cov): ao eliminar o overlap mecânico,
+%      a capacitância Miller entre porta e dreno é reduzida drasticamente, aumentando a velocidade
+%      de comutação intrínseca dos transistores em até 5 vezes frente ao metal-gate equivalente.
+%   2. Redução e Estabilidade da Tensão de Limiar (Vth): a diferença de função de trabalho
+%      (work function) entre o silício dopado e o substrato resulta em tensões de limiar mais baixas
+%      e confiáveis, viabilizando a compatibilidade de alimentação com níveis lógicos TTL (Transistor-Transistor Logic).
+%   3. Camada Condutora Adicional para Roteamento: o polissilício condutor atua como um segundo
+%      nível de interconexão abaixo do alumínio, permitindo cruzamentos ortogonais sem curtos-circuitos
+%      e aumentando drasticamente a densidade de integração em layouts de lógica aleatória (random logic).
+
+\subsection{O Ecossistema do Sistema MCS-4 (Micro Computer Set)}
+\label{subsec:sistema_mcs4}
+
+% [DIRETIVA DE ESCRITA: O CONJUNTO MCS-4 E A CPU 4004]
+% - Apresentar a arquitetura distribuída do conjunto de chips MCS-4 projetado por Faggin:
+%   * Intel 4001: Memória ROM de 2048 bits com portas de I/O paralelas integradas;
+%   * Intel 4002: Memória RAM de 320 bits com portas de saída e registradores dinâmicos;
+%   * Intel 4003: Registrador de deslocamento de 10 bits para expansão serial de I/O;
+%   * Intel 4004: A Unidade Central de Processamento (CPU) de 4 bits contendo cerca de 2.300 transistores
+%     PMOS integrados em uma pastilha de apenas 12 mm², encapsulada em padrão DIP de 16 pinos.
+% - Enfatizar a genialidade do encapsulamento compacto: o uso de um barramento multiplexado de endereço
+%   e dado de 4 bits permitiu acomodar um computador completo de uso geral em pinagem restrita,
+%   viabilizando custos de embalagem extremamente reduzidos.
