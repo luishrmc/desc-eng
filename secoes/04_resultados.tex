@@ -1,0 +1,103 @@
+% ==============================================================================
+% secoes/04_resultados.tex - SEÇÃO IV: RESULTADOS
+% Tema: Federico Faggin e o Primeiro Microprocessador Monolítico (Intel 4004)
+% ==============================================================================
+
+\section{Resultados}
+\label{sec:resultados}
+
+Os resultados organizam-se em dois eixos: as formulações físico-matemáticas e as inovações de circuito desenvolvidas por Faggin, e os desdobramentos sociotécnicos na indústria e na automação.
+
+\subsection{Inovações Técnicas de Dispositivo e Circuito}
+\label{subsec:contribuicoes_tecnicas}
+
+\subsubsection{Redução da Capacitância Parasita de Sobreposição}
+
+Nos processos de porta metálica, a sobreposição dimensional $L_{ov}$ entre porta e difusões gera elevada capacitância de Miller:
+\begin{equation}
+\label{eq:cov}
+C_{ov} = C_{ox} \cdot W \cdot L_{ov}, \quad \text{com} \quad C_{ox} = \frac{\epsilon_{ox}}{t_{ox}}
+\end{equation}
+em que $C_{ox}$ é a capacitância do óxido por unidade de área, $W$ a largura do canal, $\epsilon_{ox}$ a permissividade do $\text{SiO}_2$ e $t_{ox}$ a espessura do óxido. Com a tecnologia autoalinhada concebida por Faggin, a sobreposição limita-se à difusão lateral de dopantes ($L_{ov} \to \text{mínimo}$), o que reduz a capacitância de carga total $C_L$ e a constante de tempo intrínseca do nó:
+\begin{equation}
+\label{eq:tau}
+\tau_{pd} \approx R_{on} \cdot C_L
+\end{equation}
+em que $R_{on}$ é a resistência de condução do canal e $C_L$ a capacitância total de carga vista pelo estágio. A tensão de limiar do transistor MOS, cuja estabilidade é favorecida pela função trabalho do polissilício ($\Phi_{ms}$), é
+\begin{equation}
+\label{eq:vth}
+V_{th} = \Phi_{ms} + 2\phi_F + \frac{Q_d}{C_{ox}} - \frac{Q_{ss}}{C_{ox}}
+\end{equation}
+em que $\phi_F$ é o potencial de Fermi do substrato, $Q_d$ a carga de depleção e $Q_{ss}$ a carga efetiva de estados de superfície.
+
+\subsubsection{Desempenho Temporal e Frequência de Operação}
+
+A minimização da carga parasitária permitiu frequências de relógio de até \SI{740}{\kilo\hertz} no 4004, com ciclos de instrução típicos de \SI{10,8}{\micro\second}, patamar suficiente para substituir a lógica de controle discreta. Em primeira ordem, a frequência máxima de operação relaciona-se aos parâmetros do dispositivo por
+\begin{equation}
+\label{eq:fmax}
+f_{max} \propto \frac{\mu \cdot C_{ox} \cdot (V_{DD} - V_{th})^2}{L^2 \cdot C_L}
+\end{equation}
+em que $\mu$ é a mobilidade dos portadores, $L$ o comprimento efetivo do canal (\SI{10}{\micro\meter} no processo original), $V_{DD}$ a tensão de alimentação e $V_{th}$ a tensão de limiar. Pela \cref{eq:fmax}, a redução de $C_L$ obtida com o SGT eleva diretamente $f_{max}$.
+
+\subsubsection{Densidade de Integração e Cargas Ativas}
+
+Faggin introduziu transistores de carga com acoplamento capacitivo (\textit{bootstrapped load}), que eliminam a perda de nível de tensão correspondente a $V_{th}$ nas saídas lógicas e garantem transições mais rápidas nos barramentos internos \cite{faggin1996}. A densidade alcançada foi
+\begin{equation}
+\label{eq:densidade}
+D_{\text{int}} = \frac{N_{\text{transistores}}}{\text{Área}} \approx \frac{2300}{\SI{12}{\milli\meter\squared}} \approx \SI{190}{\text{transistores}\per\milli\meter\squared}
+\end{equation}
+viabilizada em grande parte pelo uso do polissilício como segundo nível condutor.
+
+\begin{table*}[t]
+\caption{Inovações de Faggin no Intel 4004, Formulações Físicas e Aplicações Industriais}
+\label{tab:inovacoes_faggin}
+\centering
+\begin{tabularx}{\textwidth}{p{4.2cm} p{6.2cm} X}
+\toprule
+\textbf{Inovação / Descoberta (Ano)} & \textbf{Formulação Analítica / Princípio Físico} & \textbf{Aplicações e Desdobramentos Industriais} \\
+\midrule
+Porta Autoalinhada de Silício (1968) & $C_{ov} \to \text{mínimo}$ \newline $V_{th} = \Phi_{ms} + 2\phi_F + \frac{Q_d}{C_{ox}} - \frac{Q_{ss}}{C_{ox}}$ & Memórias DRAM (Intel 1103), lógica MOS de alta velocidade e redução de consumo elétrico. \\
+Arquitetura Monolítica em Chip Único (1971) & Barramento de 4 bits multiplexado: $\text{Barramento} = f(t_{ciclo})$ & Calculadoras eletrônicas compactas, equipamentos comerciais e controladores automotivos pioneiros. \\
+Carga Ativa com \textit{Bootstrapping} (1970--1971) & $V_{out} = V_{DD}$ (eliminação da degradação de nível provocada por $V_{th}$) & Amplificadores de barramento interno rápido, células de memória e portas lógicas dinâmicas. \\
+Roteamento em Dupla Camada Condutora (1971) & Topologia ortogonal silício-metal: $\text{Área} \propto \dfrac{1}{\text{camadas}^2}$ & Viabilização do layout manual compacto para blocos de controle em processadores de uso geral. \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+\begin{table*}[t]
+\caption{Comparativo Tecnológico: Porta de Alumínio versus Porta Autoalinhada de Silício (SGT)}
+\label{tab:comparativo_sgt}
+\centering
+\begin{tabularx}{\textwidth}{p{4.2cm} X X}
+\toprule
+\textbf{Parâmetro Técnico} & \textbf{Processo Convencional (Porta de Alumínio)} & \textbf{Processo SGT (Faggin / Intel 4004)} \\
+\midrule
+Alinhamento de Porta & Fotolitográfico manual, sujeito a tolerâncias mecânicas & Autoalinhado por máscara física de polissilício \\
+Capacitância Parasita ($C_{ov}$) & Elevada, limitando a resposta em frequência dos nós internos & Mínima, restrita à difusão lateral sob a borda da porta \\
+Velocidade de Comutação & Frequência de operação restrita a faixas baixas & Aumento de até 5 vezes em velocidade na mesma litografia \\
+Níveis de Conexão no Silício & Apenas uma camada de metalização direta & Duas camadas condutoras utilizáveis (polissilício dopado e alumínio) \\
+Densidade de Integração & Baixa densidade de empacotamento em lógica aleatória & Alta densidade, possibilitando a integração de uma CPU completa \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+As \cref{tab:inovacoes_faggin,tab:comparativo_sgt} sintetizam as inovações e o contraste entre os dois processos.
+
+\subsection{Impactos na Sociedade e na Indústria}
+\label{subsec:impactos_sociedade}
+
+\subsubsection{Da Lógica Fixa ao Firmware}
+
+A definição funcional dos sistemas eletrônicos deixou de depender de alterações na fiação ou em placas físicas e passou a ser determinada por instruções gravadas em memórias ROM. Isso reduziu custos de desenvolvimento e retrabalho industrial.
+
+\subsubsection{Emergência dos Sistemas Embarcados}
+
+Dispositivos dedicados de controle digital proliferaram em equipamentos cotidianos, substituindo relés e contadores mecânicos em bombas de combustível, semáforos, caixas registradoras e eletrodomésticos.
+
+\subsubsection{Automação Industrial}
+
+A introdução de microprocessadores em controladores lógicos industriais viabilizou processos automatizados de alta repetibilidade, deslocando funções operacionais repetitivas para tarefas de supervisão, programação e controle de processos.
+
+\subsubsection{Base Técnica da Microcomputação}
+
+O 4004 conduziu aos processadores de 8 bits subsequentes (Intel 8008 e 8080, e Zilog Z80, também desenvolvido por Faggin) \cite{noyce1981, faggin2021}, que serviram de alicerce aos primeiros computadores pessoais, instrumentos médicos laboratoriais e terminais bancários.

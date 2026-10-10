@@ -1,0 +1,17 @@
+% ==============================================================================
+% secoes/01_introducao.tex - SEÇÃO I: INTRODUÇÃO
+% Tema: Federico Faggin e o Primeiro Microprocessador Monolítico (Intel 4004)
+% ==============================================================================
+
+\section{Introdução}
+\label{sec:introducao}
+
+\IEEEPARstart{N}{o} final da década de 1960, o crescimento exponencial do número de conexões entre circuitos integrados de baixa e média escala de integração (SSI/MSI) encarecia os sistemas digitais e limitava a confiabilidade mecânica e elétrica das placas de circuito impresso. Esse cenário corresponde à chamada ``tirania dos números'' \cite{morton1958}: a complexidade de interconexão crescia mais rapidamente do que a capacidade de integrá-la com segurança, e a lei empírica de dobra da densidade de componentes \cite{moore1965} tornava a questão cada vez mais premente.
+
+Nesse contexto, a fabricante japonesa de calculadoras Busicom contratou a Intel para conceber um conjunto de doze circuitos integrados customizados de função fixa. Em resposta, Marcian E. Hoff e Stanley Mazor propuseram uma arquitetura central programável por software, capaz de substituir a lógica dedicada por instruções armazenadas em memória. A proposta era conceitualmente viável, mas dependia de viabilização física: com a tecnologia MOS de porta de alumínio, a área requerida e as capacitâncias parasitas impediam a integração de uma CPU de uso geral em uma única pastilha economicamente viável \cite{faggin1996}.
+
+Federico Faggin ingressou na Intel em 1970 para liderar o desenvolvimento físico e o projeto do conjunto MCS-4. Sua experiência prévia na criação e na industrialização da porta autoalinhada de silício (\textit{Silicon Gate Technology}, SGT) na Fairchild Semiconductor \cite{faggin1970} foi determinante para materializar a CPU em uma única pastilha de silício industrialmente viável \cite{faggin2021}.
+
+O objetivo deste artigo é analisar as inovações em dispositivos semicondutores e as técnicas de layout concebidas por Faggin, relacionando a quebra de paradigmas técnicos às transformações econômicas e sociais decorrentes da difusão dos microprocessadores. Especificamente, busca-se: (i) analisar a transição da tecnologia MOS de porta metálica para o SGT; (ii) examinar as inovações de circuito, em particular as cargas ativas com \textit{bootstrapping} e o roteamento em dupla camada condutora; e (iii) avaliar as repercussões socioeconômicas, como o surgimento dos sistemas embarcados e da microcomputação.
+
+O artigo está organizado como segue. A \cref{sec:fundamentacao} apresenta a fundamentação teórica de semicondutores; a \cref{sec:metodologia} descreve os métodos documentais adotados; a \cref{sec:resultados} expõe os resultados analíticos de projeto e os impactos na automação e na sociedade; a \cref{sec:discussao} discute os resultados e suas limitações; e a \cref{sec:conclusao} apresenta as conclusões.

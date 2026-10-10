@@ -1,0 +1,45 @@
+% ==============================================================================
+% main.tex - ARQUIVO MESTRE ESTRUTURAL
+% Ponto de entrada para compilação do artigo modular em formato IEEE Transactions
+% ==============================================================================
+\documentclass[journal, twocolumn]{IEEEtran}
+
+% Inclusão das definições globais, pacotes e metadados
+\input{00_config}
+
+\begin{document}
+
+% Renderização do Título, Autoria e Notas Institucionais
+\maketitle
+
+% ------------------------------------------------------------------------------
+% ELEMENTOS TEXTUAIS MODULARES
+% ------------------------------------------------------------------------------
+% Resumo e Palavras-Chave (Abstract e Keywords)
+\input{secoes/00_resumo}
+
+% Seção I: Introdução (Contextualização do problema, objetivos e escopo)
+\input{secoes/01_introducao}
+
+% Seção II: Fundamentação Teórica (Física do SGT e família MCS-4)
+\input{secoes/02_fundamentacao}
+
+% Seção III: Metodologia (Pesquisa histórica, técnica e documental)
+\input{secoes/03_metodologia}
+
+% Seção IV: Resultados (Equações, tabelas e impactos industriais e sociais)
+\input{secoes/04_resultados}
+
+% Seção V: Discussão (Física e arquitetura, economia e limites do PMOS)
+\input{secoes/05_discussao}
+
+% Seção VI: Conclusão
+\input{secoes/06_conclusao}
+
+% ------------------------------------------------------------------------------
+% ELEMENTOS PÓS-TEXTUAIS (BIBLIOGRAFIA IEEE)
+% ------------------------------------------------------------------------------
+\bibliographystyle{IEEEtran}
+\bibliography{pos_textuais/01_referencias}
+
+\end{document}

@@ -1,0 +1,39 @@
+% ==============================================================================
+% secoes/02_fundamentacao.tex - SEÇÃO II: FUNDAMENTAÇÃO TEÓRICA
+% Tema: Federico Faggin e o Primeiro Microprocessador Monolítico (Intel 4004)
+% ==============================================================================
+
+\section{Fundamentação Teórica}
+\label{sec:fundamentacao}
+
+A transição dos dispositivos bipolares para a tecnologia MOS (\textit{Metal-Oxide-Semiconductor}) ofereceu maior densidade de integração e menor consumo estático, mas os processos de fabricação vigentes até o final dos anos 1960 ainda restringiam velocidade e área, o que impedia a integração de um processador completo \cite{mead1980, weste2010}.
+
+\subsection{Porta Metálica versus Porta Autoalinhada de Silício (SGT)}
+\label{subsec:mos_sgt}
+
+Em transistores MOS convencionais com porta de alumínio, as tolerâncias de alinhamento fotolitográfico exigiam que a porta se sobrepusesse geometricamente às regiões de fonte e dreno, para garantir a continuidade do canal. Essa sobreposição, porém, introduzia capacitâncias parasitas que degradavam a resposta em frequência dos circuitos.
+
+O processo SGT, desenvolvido por Faggin em 1968 no centro de pesquisa e desenvolvimento da Fairchild Semiconductor \cite{faggin1970, faggin1969patent}, emprega polissilício dopado, termicamente estável, depositado antes da dopagem de fonte e dreno. A própria porta atua como máscara física para as difusões, de modo que as regiões de fonte e dreno ficam alinhadas à borda da porta e o erro de sobreposição mecânica é eliminado. A viabilidade industrial do processo foi comprovada com o primeiro circuito integrado comercial em SGT, o Fairchild 3708.
+
+\subsection{Propriedades Elétricas e Vantagens de Projeto do SGT}
+\label{subsec:vantagens_sgt}
+
+As vantagens elétricas do SGT são três:
+\begin{enumerate}
+\item \textbf{Redução da capacitância de sobreposição ($C_{ov}$).} Ao eliminar a sobreposição mecânica, a capacitância parasita entre porta e dreno (efeito Miller) reduz-se expressivamente, o que diminui os atrasos de comutação.
+\item \textbf{Estabilidade da tensão de limiar ($V_{th}$).} A função trabalho do polissilício dopado, relacionada ao termo $\Phi_{ms}$ da expressão de $V_{th}$ (\cref{subsec:contribuicoes_tecnicas}), resulta em tensões de limiar mais baixas e reprodutíveis, o que permite operar com menores níveis de tensão e manter compatibilidade com as lógicas da época.
+\item \textbf{Dupla camada de interconexão.} O polissilício condutor funciona como nível adicional de interconexão, abaixo do alumínio, o que permite cruzamentos sem curto-circuito e o roteamento compacto de blocos de lógica aleatória (\textit{random logic}).
+\end{enumerate}
+
+\subsection{A Família MCS-4 (\textit{Micro Computer Set} de 4 bits)}
+\label{subsec:sistema_mcs4}
+
+O MCS-4 é um conjunto modular de quatro circuitos integrados \cite{intel1973mcs4}:
+\begin{itemize}
+\item \textbf{Intel 4001:} memória ROM com portas de entrada e saída embutidas;
+\item \textbf{Intel 4002:} memória RAM com portas de saída;
+\item \textbf{Intel 4003:} registrador de deslocamento para expansão de entrada e saída;
+\item \textbf{Intel 4004:} CPU de 4 bits.
+\end{itemize}
+
+O 4004 integrou cerca de \num{2300} transistores PMOS em processo de \SI{10}{\micro\meter}, em encapsulamento DIP padrão de 16 pinos. A restrição de pinagem foi contornada pela multiplexação temporal do barramento de endereço e dados, o que permitiu acomodar um computador de uso geral com custo de encapsulamento reduzido \cite{faggin1996}.
