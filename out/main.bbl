@@ -111,4 +111,27 @@ F.~Faggin, H.~Feeney, M.~E. Hoff, S.~Mazor, and M.~Shima, ``Oral history panel
   Moderated by Dave House, Computer History Museum, Reference X4024.2007,
   Catalog 102658187, Mountain View, CA, Apr. 2007.
 
+\bibitem{faggin2018howwemade}
+F.~Faggin, ``How we made the microprocessor,'' \emph{Nature Electronics},
+  vol.~1, p.~3, 2018.
+
+\bibitem{intel1988annualreport}
+{Intel Corporation}, ``Intel corporation 1988 annual report: A history of
+  innovation,'' Intel Corporation, Santa Clara, CA, Tech. Rep., 1988.
+
+\bibitem{bls1982futurework}
+{U.S. Bureau of Labor Statistics}, ``The future of work: Does it belong to us
+  or to the robots?'' \emph{Monthly Labor Review}, vol. 105, no.~9, pp. 3--8,
+  Sep. 1982.
+
+\bibitem{nber2022cnc}
+E.~Lewis \emph{et~al.}, ``Computerized machine tools, employment, and labor
+  market dynamics,'' National Bureau of Economic Research, Working Paper 30400,
+  2022.
+
+\bibitem{chmz80panel2007}
+F.~Faggin, M.~Shima, and R.~Ungermann, ``Oral history panel on the development
+  of the {Zilog} {Z80} microprocessor,'' Moderated by David Laws, Computer
+  History Museum, Catalog 102658073, Mountain View, CA, Apr. 2007.
+
 \end{thebibliography}

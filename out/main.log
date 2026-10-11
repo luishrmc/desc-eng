@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.7.10)  11 OCT 2026 16:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.7.10)  11 OCT 2026 17:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -663,10 +663,6 @@ f-dist/fonts/enc/dvips/base/8r.enc}
 
 ]
 
-LaTeX Warning: Reference `sec:resultados' on page 1 undefined on input line 31.
-
-
-
 LaTeX Warning: Reference `sec:discussao' on page 1 undefined on input line 31.
 
 
@@ -677,8 +673,95 @@ Underfull \hbox (badness 6526) in paragraph at lines 14--15
 []\T1/ptm/m/n/10 (+20) Em tran-sis-to-res de efeito de campo Metal-Óxido-
  []
 
-[3] [4] [5]) (./secoes/03_metodologia.tex [6] [7]) (out/main.bbl) [8]
-(out/main.aux
+[3] [4] [5]) (./secoes/03_metodologia.tex [6] [7]) (./secoes/04_resultados.tex
+[8] [9]
+Underfull \hbox (badness 10000) in paragraph at lines 104--104
+[]|\T1/ptm/b/n/8 (+20) Fundamento
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--104
+[]|\T1/ptm/m/n/8 (+20) Tolerância de ali-nha-mento
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--104
+[]|\T1/ptm/m/n/8 (+20) Redução de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--104
+\T1/ptm/m/n/8 (+20) 60% a 80%
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--104
+\T1/ptm/m/n/8 (+20) na ca-pa-ci-tân-cia
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--104
+\T1/ptm/m/n/8 (+20) pa-ra-sita com
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--104
+\OML/cmm/m/it/8 C[] \OMS/cmsy/m/n/8 ^^Y
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--104
+[]|\T1/ptm/m/n/8 (+20) Amplificação por
+ []
+
+
+Underfull \hbox (badness 2698) in paragraph at lines 104--104
+\OT1/cmr/m/n/8 (1 + \OMS/cmsy/m/n/8 j\OML/cmm/m/it/8 A[]\OMS/cmsy/m/n/8 j\OT1/c
+mr/m/n/8 )$\T1/ptm/m/n/8 (+20) , com
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--104
+\T1/ptm/m/n/8 (+20) va-lor ab-so-luto
+ []
+
+
+Underfull \hbox (badness 7963) in paragraph at lines 104--104
+\T1/ptm/m/n/8 (+20) re-du-zido em até
+ []
+
+
+Underfull \hbox (badness 6961) in paragraph at lines 104--104
+[]|\T1/ptm/m/n/8 (+20) Deslocamento po-
+ []
+
+
+Underfull \hbox (badness 2653) in paragraph at lines 104--104
+\T1/ptm/m/n/8 (+20) si-tivo $\OT1/cmr/m/n/8 ^^A^^H[] \OMS/cmsy/m/n/8 ^^Y
+ []
+
+
+Underfull \hbox (badness 3302) in paragraph at lines 104--104
+[]|\T1/ptm/m/n/8 (+20) Ganho de ve-lo-ci-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--104
+\T1/ptm/m/n/8 (+20) re-fra-tá-rio com
+ []
+
+
+Underfull \hbox (badness 5388) in paragraph at lines 121--121
+[]|\T1/ptm/m/n/8 (+20) Autoalinhamento da porta como más-cara:
+ []
+
+) [10] (out/main.bbl
+Underfull \vbox (badness 1466) has occurred while \output is active []
+
+ [11])
+[12
+
+] (out/main.aux
 Package cleveref Info: loaded `brazilian' language definitions on input line 15
 .
 )
@@ -691,16 +774,16 @@ L3 programming layer <2026-01-19>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 949E25AF285E6DE880D40720708CDC77;2865.
+(rerunfilecheck)             Checksum: 5F9D0EEBA03AD647C10BF8777E1F5B8D;3517.
  ) 
 Here is how much of TeX's memory you used:
- 20573 strings out of 469421
- 400518 string characters out of 5467709
- 869417 words of memory out of 5000000
- 48588 multiletter control sequences out of 15000+600000
- 766243 words of font info for 377 fonts, out of 8000000 for 9000
+ 20724 strings out of 469421
+ 402636 string characters out of 5467709
+ 873417 words of memory out of 5000000
+ 48640 multiletter control sequences out of 15000+600000
+ 771731 words of font info for 426 fonts, out of 8000000 for 9000
  61 hyphenation exceptions out of 8191
- 80i,12n,97p,2082b,1066s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 80i,15n,97p,2082b,1215s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texli
@@ -708,18 +791,19 @@ ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
-times/utmri8a.pfb>
-Output written on out/main.pdf (8 pages, 247896 bytes).
+lic/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/ut
+mri8a.pfb>
+Output written on out/main.pdf (12 pages, 297240 bytes).
 PDF statistics:
- 302 PDF objects out of 1000 (max. 8388607)
- 257 compressed objects within 3 object streams
- 70 named destinations out of 1000 (max. 500000)
- 70233 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 445 PDF objects out of 1000 (max. 8388607)
+ 357 compressed objects within 4 object streams
+ 95 named destinations out of 1000 (max. 500000)
+ 76401 words of extra memory for PDF output out of 89155 (max. 10000000)
 
