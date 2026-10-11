@@ -7,7 +7,8 @@
 \providecommand{\BIBentrySTDinterwordspacing}{\spaceskip=0pt\relax}
 \providecommand{\BIBentryALTinterwordstretchfactor}{4}
 \providecommand{\BIBentryALTinterwordspacing}{\spaceskip=\fontdimen2\font plus
-\BIBentryALTinterwordstretchfactor\fontdimen3\font minus \fontdimen4\font\relax}
+\BIBentryALTinterwordstretchfactor\fontdimen3\font minus
+  \fontdimen4\font\relax}
 \providecommand{\BIBforeignlanguage}[2]{{%
 \expandafter\ifx\csname l@#1\endcsname\relax
 \typeout{** WARNING: IEEEtran.bst: No hyphenation pattern has been}%
@@ -21,39 +22,55 @@
 \BIBdecl
 
 \bibitem{morton1958}
-J.~A. Morton, ``The tyranny of large numbers,'' \emph{Bell Laboratories Record}, vol.~36, no.~5, pp. 161--164, 1958.
+J.~A. Morton, ``The tyranny of large numbers,'' \emph{Bell Laboratories
+  Record}, vol.~36, no.~5, pp. 161--164, 1958.
 
 \bibitem{moore1965}
-G.~E. Moore, ``Cramming more components onto integrated circuits,'' \emph{Electronics}, vol.~38, no.~8, pp. 114--117, Apr. 1965.
-
-\bibitem{faggin1996}
-F.~Faggin, M.~E. Hoff, S.~Mazor, and M.~Shima, ``The history of the 4004,'' \emph{IEEE Micro}, vol.~16, no.~6, pp. 10--20, Dec. 1996.
-
-\bibitem{faggin1970}
-F.~Faggin and T.~Klein, ``Silicon gate technology,'' \emph{Solid-State Electronics}, vol.~13, no.~8, pp. 1125--1144, Aug. 1970.
-
-\bibitem{faggin2021}
-F.~Faggin, \emph{Silicon: From the Invention of the Microprocessor to the New Science of Consciousness}.\hskip 1em plus 0.5em minus 0.4em\relax Novato, CA: Waterside Productions, 2021.
+G.~E. Moore, ``Cramming more components onto integrated circuits,''
+  \emph{Electronics}, vol.~38, no.~8, pp. 114--117, Apr. 1965.
 
 \bibitem{mead1980}
-C.~A. Mead and L.~A. Conway, \emph{Introduction to {VLSI} Systems}.\hskip 1em plus 0.5em minus 0.4em\relax Reading, MA: Addison-Wesley, 1980.
-
-\bibitem{weste2010}
-N.~H.~E. Weste and D.~M. Harris, \emph{{CMOS VLSI} Design: A Circuits and Systems Perspective}, 4th~ed.\hskip 1em plus 0.5em minus 0.4em\relax Boston, MA: Addison-Wesley, 2011.
-
-\bibitem{faggin1969patent}
-F.~Faggin, ``Semiconductor device with self-aligned gate,'' US Patent 3,475,234, Oct. 1969, depositada em 1968, concedida em 28 de out. de 1969.
-
-\bibitem{intel1973mcs4}
-\emph{{MCS-4} Micro Computer Set Users Manual}, Intel Corporation, Santa Clara, CA, Feb. 1973.
-
-\bibitem{faggin1974patent}
-F.~Faggin, M.~E. Hoff, and S.~Mazor, ``Memory system for multi-chip digital computer,'' US Patent 3,821,715, Jun. 1974, depositada em 22 de jan. de 1973, concedida em 28 de jun. de 1974.
-
-\bibitem{noyce1981}
-R.~N. Noyce and M.~E. Hoff, ``A history of microprocessor development at {Intel},'' \emph{IEEE Micro}, vol.~1, no.~1, pp. 8--21, Feb. 1981.
+C.~A. Mead and L.~A. Conway, \emph{Introduction to {VLSI} Systems}.\hskip 1em
+  plus 0.5em minus 0.4em\relax Reading, MA: Addison-Wesley, 1980.
 
 \bibitem{cavin2012}
-R.~K. Cavin, P.~Lugli, and V.~V. Zhirnov, ``Evolution of research on semiconductors and computation,'' \emph{Proceedings of the IEEE}, vol. 100, no.~13, pp. 1720--1742, May 2012.
+R.~K. Cavin, P.~Lugli, and V.~V. Zhirnov, ``Evolution of research on
+  semiconductors and computation,'' \emph{Proceedings of the IEEE}, vol. 100,
+  no.~13, pp. 1720--1742, May 2012.
+
+\bibitem{weste2010}
+N.~H.~E. Weste and D.~M. Harris, \emph{{CMOS VLSI} Design: A Circuits and
+  Systems Perspective}, 4th~ed.\hskip 1em plus 0.5em minus 0.4em\relax Boston,
+  MA: Addison-Wesley, 2011.
+
+\bibitem{faggin1970}
+F.~Faggin and T.~Klein, ``Silicon gate technology,'' \emph{Solid-State
+  Electronics}, vol.~13, no.~8, pp. 1125--1144, Aug. 1970.
+
+\bibitem{faggin1969patent}
+F.~Faggin, ``Semiconductor device with self-aligned gate,'' US Patent
+  3,475,234, Oct. 1969, depositada em 1968, concedida em 28 de out. de 1969.
+
+\bibitem{noyce1981}
+R.~N. Noyce and M.~E. Hoff, ``A history of microprocessor development at
+  {Intel},'' \emph{IEEE Micro}, vol.~1, no.~1, pp. 8--21, Feb. 1981.
+
+\bibitem{faggin1996}
+F.~Faggin, M.~E. Hoff, S.~Mazor, and M.~Shima, ``The history of the 4004,''
+  \emph{IEEE Micro}, vol.~16, no.~6, pp. 10--20, Dec. 1996.
+
+\bibitem{intel1973mcs4}
+\emph{{MCS-4} Micro Computer Set Users Manual}, Intel Corporation, Santa Clara,
+  CA, Feb. 1973.
+
+\bibitem{faggin2021}
+F.~Faggin, \emph{Silicon: From the Invention of the Microprocessor to the New
+  Science of Consciousness}.\hskip 1em plus 0.5em minus 0.4em\relax Novato, CA:
+  Waterside Productions, 2021.
+
+\bibitem{faggin1974patent}
+F.~Faggin, M.~E. Hoff, and S.~Mazor, ``Memory system for multi-chip digital
+  computer,'' US Patent 3,821,715, Jun. 1974, depositada em 22 de jan. de 1973,
+  concedida em 28 de jun. de 1974.
 
 \end{thebibliography}

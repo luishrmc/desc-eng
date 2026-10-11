@@ -1,11 +1,30 @@
-Melhore o prompt abaixo para ser empregado com outra ferramenta de IA, mantendo o mesmo contexto e objetivo:
+## 🚀 Optimized Prompt 
 
-O workspace é montado para redigir um artigo voltado a algum tema apresentada durante a disciplina. O tema escolhido vincula-se diretamente à Aula 4 (A Era Eletrônica: Válvula, Transistores e Circuito Integrado). O trabalho analisará a contribuição de Federico Faggin no desenvolvimento da tecnologia de "porta autoalinhada" de silício e no projeto do primeiro microprocessador comercial, o Intel 4004. O texto examina a física dos dispositivos semicondutores, a transição para integração em pastilha única e os reflexos dessa evolução.
+Com base nas diretrizes de GEMINI.md, elabore a especificacao formal da arquitetura multiagente para a escrita incremental das secoes do artigo academico. 
+ 
+Contexto operacional:
+O resumo do artigo ja foi elaborado e revisado. O desenvolvimento deve prosseguir de forma modular para as secoes seguintes. 
+ 
+Instrucoes de execucao:
+1. Inspecionar os arquivos main.tex e o diretorio `secoes/` para identificar a estrutura do documento e determinar qual secao deve ser escrita imediatamente apos o resumo.
+2. Definir formalmente os cinco agentes estabelecidos na secao 2 de GEMINI.md (`orchestrator-agent`, `retriever-agent`, `latex-author-agent`, `latex-compiler-agent`, `technical-critic-agent`), especificando para cada um: 
+ - Papel principal e atribuicoes tecnicas
+ - Modelo atribuido (pro ou flash) 
+ - Skills e ferramentas autorizadas (garantindo modo estrito de leitura para consulta e isolamento para escrita e compilacao)
+ - Regras de governanca e condicoes de acionamento 
+3. Detalhar a maquina de estados da malha fechada para a execucao de cada secao: 
+ - Sequencia de transicao entre recuperacao de evidencias, redacao, compilacao e auditoria tecnica 
+ - Protocolo de aprovacao e criterios formais para liberar a transicao de secao
+ - Procedimento de mitigacao de falhas com teto de cinco iteracoes e comando exato de reversao no git
+4. Apresentar o plano de acao imediato para redigir a primeira secao subsequente ao resumo.
+ 
+Restricoes obrigatorias: 
+- Nao utilizar travessoes em-dash ou en-dash 
+- Nao utilizar ponto e virgula 
+- Nao incluir adjetivos promocionais como pioneiro, revolucionario ou crucial
+- Respeitar a exclusividade de escrita do redator e a exclusividade de compilacao do compilador
 
-O workspace é estruturado para o desenvolvimento de um artigo acadêmico, incluindo seções como introdução, fundamentação, metodologia, resultados e discussão e conclusão. Para tanto, os arquivos .tex são organizados nas pastas secoes e pos_textuais, juntamente com os arquivos main.tex e 00_config.tex. Os arquivos na pasta secoes contêm o conteúdo principal do artigo, sendo dividios em seções específicas, enquanto os arquivos na pasta pos_textuais incluem referências bibliográficas. O arquivo main.tex serve como ponto de entrada para compilar o documento completo, e o arquivo 00_config.tex contém configurações gerais do documento, como pacotes utilizados, formatação e estilo. Além disso, há a pasta img para salvar imagens e gráficos que serão incorporados ao artigo.
-
-Além dos arquivos focados ao documento principal, o workspace também inclui arquivos auxiliares em utils, no qual há os documentos das aulas lecionadas em utils/docs/aulas, há uma referência para o desenvolvimento do artigo em utils/ref tanto um texto para inspiração quanto as regras de formatação e estilo. Por fim, há a pasta utils/search, que contém arquivos de pesquisa e referências adicionais que podem ser úteis para a elaboração do artigo.
-
-Dado o contexto do workspace, indique sugestões de agents que podem ser implementados para auxiliar na redação do artigo acadêmico sobre a contribuição de Federico Faggin e o desenvolvimento do Intel 4004. O a filosofia de utilização dos agents é baseada em loop e implementação de multiplos agentes especializados, cada um comunicando-se entre si de modo que um agente possa solicitar informações ou análises de outro agente, da mesma forma que um agente pode revisar o trabalho realizado por outros agents a fim de tornar o processo de planejamento, execução e revisão mais eficiente. Os agents sugeridos devem utilizas as skills diponíveis no workspace (além da pesquisa realizada em utils/docs/search), mas se houver a necessidade de criar novas skills, estas devem ser claramente definidas e documentadas.
-
-Por fim, a resposta esperada para esse prompt é um lista de sugestões de agents que podem ser implementados para auxiliar na redação do artigo acadêmico sobre a contribuição de Federico Faggin e o desenvolvimento do Intel 4004, considerando a filosofia de utilização baseada em loop e implementação de múltiplos agentes especializados.
+Condicao de parada e controle de fluxo:
+- Modo de operacao: [Interativo por secao / Autonomo continuo]
+- No modo interativo, interrompa a execucao e retorne o controle ao usuario imediatamente apos a aprovacao formal da secao em andamento.
+- No modo continuo, prossiga para a proxima secao apenas se a anterior obtiver parecer formal de aprovacao, interrompendo o ciclo caso qualquer secao atinja o teto de cinco iteracoes sem convergencia.

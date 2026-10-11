@@ -11,6 +11,7 @@ tools:
     - run_command
 skills:
   - latex-writer
+  - refine-text
 permissions:
   read:
     - 00_config.tex
