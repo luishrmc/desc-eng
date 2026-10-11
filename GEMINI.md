@@ -64,5 +64,8 @@ A execucao de cada secao segue a sequencia fechada:
 ## 6. Restricoes Negativas e Invariantes Comportamentais
 - Proibido gerar agentes genericos que unifiquem escrita, compilacao e arbitragem.
 - Proibido utilizar travessoes em-dash, en-dash ou ponto e virgula na producao de textos.
-- Proibido incluir adjetivos vazios ou jargoes promocionais como revolucionario, crucial ou pioneiro.
+- Proibido o uso de \textbf{} no corpo da prosa ou em listas. O negrito fica restrito exclusivamente a elementos estruturais padronizados do documento (ex.: cabecalhos de tabela e comandos de secao).
+- Proibido o uso de listas (itemize ou enumerate) para narrativas ou explicacoes continuas. O texto deve ser redigido prioritariamente em prosa corrida e paragrafos coesos. O uso de listas fica limitado a no maximo um bloco breve por secao, estritamente quando indispensavel para especificacoes tecnicas formais.
+- Proibido o uso de jargoes empolados de IA e academicismos vazios (ex.: "alta heterogeneidade topologica", "filtros criticos rigorosos", "confluencia interdisciplinar", "vertices epistemicos"). Adotar linguagem tecnica natural, direta e humana de engenharia.
+- Proibido o uso inflado e desnecessario de termos como "fundamental", "critico" ou "essencial". Esses vocabulos so devem ser empregados quando houver suporte fisico e quantitativo estrito para a afirmacao.
 - Proibido transitar entre secoes do artigo sem parecer formal de aprovacao emitido pelo revisor.

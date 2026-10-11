@@ -25,3 +25,10 @@ Este arquivo registra armadilhas sintáticas, padrões de erro do compilador LaT
 ## 4. Dependências de Referências e Múltiplas Passagens
 - **Padrão Observado:** Avisos de *undefined references* ou *undefined citations* ocorrem naturalmente na primeira passagem do `pdflatex` antes da resolução do arquivo `.aux` e `.bbl`.
 - **Regra Preventiva:** Se o código de saída for `0` e o `latexmk` concluir as passagens de convergência com `out/main.blg` limpo, avisos transitórios da primeira passagem são automaticamente resolvidos.
+
+---
+
+## 5. Higiene Tipográfica Pré-Compilação
+- **Padrão de Erro / Desvio:** Ocorrência de `\textbf{}` no corpo do texto ou no início de itens em listas, fragmentando a mancha tipográfica do formato IEEE.
+- **Regra Preventiva:** `\textbf{}` é estritamente proibido no corpo da prosa e nas listas. Reservar o comando unicamente para cabeçalhos de tabela (`\toprule`).
+- **Controle de Listas:** Teto de no máximo um ambiente `itemize` ou `enumerate` por seção. O texto deve ser estruturado prioritariamente em parágrafos narrativos contínuos de quatro a sete sentenças.

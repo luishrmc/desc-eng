@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.7.10)  11 OCT 2026 15:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.7.10)  11 OCT 2026 16:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -677,9 +677,7 @@ Underfull \hbox (badness 6526) in paragraph at lines 14--15
 []\T1/ptm/m/n/10 (+20) Em tran-sis-to-res de efeito de campo Metal-Óxido-
  []
 
-[3] [4] [5] [6]) (./secoes/03_metodologia.tex [7]) (out/main.bbl [8]) [9
-
-]
+[3] [4] [5]) (./secoes/03_metodologia.tex [6] [7]) (out/main.bbl) [8]
 (out/main.aux
 Package cleveref Info: loaded `brazilian' language definitions on input line 15
 .
@@ -693,16 +691,16 @@ L3 programming layer <2026-01-19>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 956EB35E925267E957B72931518AB2DA;2870.
+(rerunfilecheck)             Checksum: 949E25AF285E6DE880D40720708CDC77;2865.
  ) 
 Here is how much of TeX's memory you used:
- 20628 strings out of 469421
- 401049 string characters out of 5467709
- 868417 words of memory out of 5000000
- 48591 multiletter control sequences out of 15000+600000
- 769192 words of font info for 406 fonts, out of 8000000 for 9000
+ 20573 strings out of 469421
+ 400518 string characters out of 5467709
+ 869417 words of memory out of 5000000
+ 48588 multiletter control sequences out of 15000+600000
+ 766243 words of font info for 377 fonts, out of 8000000 for 9000
  61 hyphenation exceptions out of 8191
- 80i,12n,97p,2082b,1213s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 80i,12n,97p,2082b,1066s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texli
@@ -718,10 +716,10 @@ sr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
 times/utmri8a.pfb>
-Output written on out/main.pdf (9 pages, 254064 bytes).
+Output written on out/main.pdf (8 pages, 247896 bytes).
 PDF statistics:
- 317 PDF objects out of 1000 (max. 8388607)
- 271 compressed objects within 3 object streams
- 79 named destinations out of 1000 (max. 500000)
- 74329 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 302 PDF objects out of 1000 (max. 8388607)
+ 257 compressed objects within 3 object streams
+ 70 named destinations out of 1000 (max. 500000)
+ 70233 words of extra memory for PDF output out of 74296 (max. 10000000)
 

@@ -61,7 +61,7 @@ A contração de $C_{gd}$ e o encurtamento das interconexões permitiram uma red
 
 \begin{figure}[!t]
 \centering
-\fbox{\parbox{0.92\columnwidth}{\centering\vspace{1cm}\textbf{[Figura 1: Corte transversal comparativo entre a porta de alumínio e o SGT]}\\\small(a) Porta metálica com tolerância de alinhamento e túneis difusos no substrato, (b) Porta de polissilício autoalinhada com contatos enterrados e dupla camada condutora.\\\textit{Arquivo esperado: img/sgt\_vs\_metalgate.pdf}}\vspace{1cm}}
+\fbox{\parbox{0.92\columnwidth}{\centering\vspace{1cm}[Figura 1: Corte transversal comparativo entre a porta de alumínio e o SGT]\\\small(a) Porta metálica com tolerância de alinhamento e túneis difusos no substrato, (b) Porta de polissilício autoalinhada com contatos enterrados e dupla camada condutora.\\\textit{Arquivo esperado: img/sgt\_vs\_metalgate.pdf}}\vspace{1cm}}
 \caption{Comparação em corte transversal entre o transistor MOS de porta de alumínio e a tecnologia de porta autoalinhada de silício (SGT).}
 \label{fig:sgt_vs_metalgate}
 \end{figure}
@@ -99,11 +99,7 @@ Substituindo essas expressões na \cref{eq:vth_geral}, obtém-se a formulação 
 V_{th} = \Phi_{ms} - \frac{Q_{ss}}{C_{ox}} - 2\phi_F - \frac{\sqrt{2 q \varepsilon_{Si} N_D (2\phi_F + |V_{SB}|)}}{C_{ox}}.
 \end{equation}
 
-A substituição do eletrodo de alumínio por silício policristalino com dopagem degenerada tipo $p^+$ modifica diretamente o termo $\Phi_{ms}$:
-\begin{enumerate}
-\item Para a porta de alumínio sobre silício tipo n, com $\Phi_m \approx \SI{4,10}{\electronvolt}$ e $\Phi_s \approx \SI{4,31}{\electronvolt}$, resulta $\Phi_{ms,Al} \approx \SI{-0,21}{\volt}$.
-\item Para a porta de polissilício tipo $p^+$, o nível de Fermi localiza-se junto ao topo da banda de valência, fornecendo $\Phi_{poly(p^+)} \approx \chi + E_g \approx \SI{4,05}{\electronvolt} + \SI{1,12}{\electronvolt} = \SI{5,17}{\electronvolt}$, o que produz $\Phi_{ms,poly} \approx \SI{5,17}{\electronvolt} - \SI{4,31}{\electronvolt} \approx \SI{+0,86}{\volt}$.
-\end{enumerate}
+A substituição do eletrodo de alumínio por silício policristalino com dopagem degenerada tipo $p^+$ modifica diretamente o termo $\Phi_{ms}$. Para a porta de alumínio sobre silício tipo n, com $\Phi_m \approx \SI{4,10}{\electronvolt}$ e $\Phi_s \approx \SI{4,31}{\electronvolt}$, resulta $\Phi_{ms,Al} \approx \SI{-0,21}{\volt}$. Para a porta de polissilício tipo $p^+$, o nível de Fermi localiza-se junto ao topo da banda de valência, fornecendo $\Phi_{poly(p^+)} \approx \chi + E_g \approx \SI{4,05}{\electronvolt} + \SI{1,12}{\electronvolt} = \SI{5,17}{\electronvolt}$, o que produz $\Phi_{ms,poly} \approx \SI{5,17}{\electronvolt} - \SI{4,31}{\electronvolt} \approx \SI{+0,86}{\volt}$.
 
 A diferença líquida gerada pela troca de material corresponde a:
 \begin{equation}
@@ -115,11 +111,7 @@ Como esse incremento atua de forma aditiva na equação de $V_{th}$, a magnitude
 
 O termo associado às cargas de interface ($-Q_{ss}/C_{ox}$) exerce influência sobre a tensão de corte porque $Q_{ss}$ exibe invariavelmente sinal positivo devido a espécies iônicas residuais e ligações incompletas na fronteira entre a rede de silício e o óxido térmico. Logo, $-Q_{ss}/C_{ox} < 0$, o que desloca $V_{th}$ para magnitudes ainda mais negativas em canais p.
 
-A magnitude de $Q_{ss}$ depende da orientação cristalográfica do substrato:
-\begin{enumerate}
-\item Na orientação $\langle 111 \rangle$, a maior densidade superficial de átomos resulta em concentrações de carga de interface de $Q_{ss}/q \approx \SIrange{4e11}{5e11}{\per\centi\meter\squared}$. Em processos com óxido de \SI{100}{\nano\meter} ($C_{ox} \approx \SI{34,5}{\nano\farad\per\centi\meter\squared}$), essa componente contribui com \SI{-1,9}{\volt} a \SI{-2,3}{\volt} para a tensão de corte, elevando o módulo total $|V_{th}|$ para a faixa de \SI{-3,5}{\volt} a \SI{-5,0}{\volt}.
-\item Na orientação $\langle 100 \rangle$, a menor densidade atômica superficial permite restringir a concentração de cargas para $Q_{ss}/q \approx \SIrange{0,5e11}{1,0e11}{\per\centi\meter\squared}$, reduzindo o deslocamento associado para o intervalo de \SI{-0,2}{\volt} a \SI{-0,5}{\volt}.
-\end{enumerate}
+A magnitude de $Q_{ss}$ depende da orientação cristalográfica do substrato. Na orientação $\langle 111 \rangle$, a maior densidade superficial de átomos resulta em concentrações de carga de interface de $Q_{ss}/q \approx \SIrange{4e11}{5e11}{\per\centi\meter\squared}$. Em processos com óxido de \SI{100}{\nano\meter} ($C_{ox} \approx \SI{34,5}{\nano\farad\per\centi\meter\squared}$), essa componente contribui com \SI{-1,9}{\volt} a \SI{-2,3}{\volt} para a tensão de corte, elevando o módulo total $|V_{th}|$ para a faixa de \SI{-3,5}{\volt} a \SI{-5,0}{\volt}. Em contrapartida, na orientação $\langle 100 \rangle$, a menor densidade atômica superficial permite restringir a concentração de cargas para $Q_{ss}/q \approx \SIrange{0,5e11}{1,0e11}{\per\centi\meter\squared}$, reduzindo o deslocamento associado para o intervalo de \SI{-0,2}{\volt} a \SI{-0,5}{\volt}.
 
 Ao combinar a modulação de $\Phi_{ms}$ com o emprego de lâminas com orientação $\langle 100 \rangle$ e ciclos térmicos de recozimento em alta temperatura, o processo SGT alcançou tensões de limiar reprodutíveis entre \SI{-1,5}{\volt} e \SI{-2,5}{\volt} \cite{faggin1970, klein1972patent}. A \cref{tab:comparacao_eletrica} sintetiza os principais parâmetros elétricos e de interface das duas abordagens tecnológicas.
 
@@ -182,52 +174,36 @@ V_G(t) \approx V_{G,inicial} + \Delta V_{out}.
 
 Essa sobretensão dinâmica garante que a magnitude da tensão porta-fonte $|V_{GS}|$ permaneça superior a $|V_{th}|$ ao longo de todo o ciclo transitório de subida. Com isso, o transistor de carga permanece operando na região de condução linear (região de triodo), conduzindo corrente elevada até que o nó de saída atinja plenamente o potencial de alimentação ($V_{out} = V_{DD}$). A eliminação da atenuação por tensão de limiar restaura as margens de ruído lógicas e assegura tempos de comutação ascendente expressivamente menores \cite{faggin1972fourchip}.
 
-Em arranjos regulares de memória, como matrizes de ROM e RAM, os transistores repetem-se segundo malhas geométricas uniformes. Em contrapartida, unidades centrais de processamento contêm blocos extensos de lógica aleatória (\textit{random logic}), tais como decodificadores de instrução, unidades aritméticas e lógicas, circuitos de controle e multiplexadores, cujas rotas de interconexão exibem alta heterogeneidade topológica. Para estruturar esse ambiente físico no Intel 4004 sem recorrer a ferramentas automatizadas de síntese, inexistentes no período, Faggin estabeleceu uma metodologia estruturada de leiaute baseada em roteamento ortogonal em duas camadas condutoras independentes \cite{faggin1996, faggin2021}. As trilhas condutoras de silício policristalino dopado foram alocadas preferencialmente ao longo de um eixo de coordenadas principal (direção vertical), enquanto as pistas metálicas de alumínio foram restritas ao eixo ortogonal perpendicular (direção horizontal). As conexões elétricas entre as duas camadas foram realizadas por vias de contato verticais metal-polissilício, ao passo que as derivações para o substrato ativo foram efetuadas pelos contatos enterrados. Essa disciplina de desenho suprimiu cruzamentos tortuosos, reduziu as capacitâncias distribuídas de acoplamento mútuo e eliminou áreas ociosas de silício, viabilizando a integração de uma CPU funcional no espaço restrito da pastilha.
+Em arranjos regulares de memória, como matrizes de ROM e RAM, os transistores repetem-se segundo malhas geométricas uniformes. Em contrapartida, unidades centrais de processamento contêm blocos extensos de lógica aleatória (\textit{random logic}), tais como decodificadores de instrução, unidades aritméticas e lógicas, circuitos de controle e multiplexadores, cujas rotas de interconexão apresentam percursos complexos e irregulares. Para estruturar esse ambiente físico no Intel 4004 sem recorrer a ferramentas automatizadas de síntese, inexistentes no período, Faggin estabeleceu uma metodologia estruturada de leiaute baseada em roteamento ortogonal em duas camadas condutoras independentes \cite{faggin1996, faggin2021}. As trilhas condutoras de silício policristalino dopado foram alocadas preferencialmente ao longo de um eixo de coordenadas principal (direção vertical), enquanto as pistas metálicas de alumínio foram restritas ao eixo ortogonal perpendicular (direção horizontal). As conexões elétricas entre as duas camadas foram realizadas por vias de contato verticais metal-polissilício, ao passo que as derivações para o substrato ativo foram efetuadas pelos contatos enterrados. Essa disciplina de desenho suprimiu cruzamentos tortuosos, reduziu as capacitâncias distribuídas de acoplamento mútuo e eliminou áreas ociosas de silício, viabilizando a integração de uma CPU funcional no espaço restrito da pastilha.
 
 \subsection{Arquitetura do Sistema MCS-4 e Barramento Multiplexado}
 \label{subsec:arquitetura_mcs4_barramento}
 
-A família de circuitos integrados MCS-4 (\textit{Micro Computer Set}) constitui um sistema microprocessado modular particionado em quatro circuitos integrados em tecnologia PMOS SGT de \SI{10}{\micro\meter}, acondicionados em encapsulamentos cerâmicos DIP de 16 pinos \cite{intel1973mcs4, noyce1981}:
-\begin{enumerate}
-\item \textbf{Intel 4004 (Unidade Central de Processamento):} processador monolítico paralelo de 4 bits integrado em pastilha de \SI{12}{\milli\meter\squared} com cerca de \num{2300} transistores. Apresenta uma unidade lógica e aritmética (ULA) de 4 bits com aritmética binária e correção decimal para código binário codificado em decimal (BCD), acumulador de 4 bits, indicador de transporte (\textit{carry}), banco com 16 registradores de índice de 4 bits (passíveis de agrupamento como oito pares de registradores de 8 bits para endereçamento indireto), contador de programa de 12 bits associado a uma pilha de retorno de sub-rotinas de três níveis de profundidade e repertório de 46 instruções, sendo 41 de uma palavra (8 bits) e 5 de duas palavras (16 bits). Opera sob relógio bifásico com frequência nominal entre \SI{740}{\kilo\hertz} e \SI{750}{\kilo\hertz}.
-\item \textbf{Intel 4001 (Memória ROM e Entrada/Saída):} memória somente de leitura mascarada com capacidade de \num{2048} bits estruturados em 256 palavras de 8 bits. Incorpora uma porta paralela de 4 bits de entrada e saída programável por metalização. O barramento suporta a conexão de até 16 unidades 4001, totalizando \num{4096} palavras de programa de 8 bits (\SI{4}{\kibi\byte}).
-\item \textbf{Intel 4002 (Memória RAM e Saída):} memória dinâmica de dados de 320 bits distribuídos em quatro registradores de 20 caracteres de 4 bits. Cada registrador divide-se em 16 caracteres de dados e 4 caracteres de estado para controle e identificação de sinais numéricos em calculadoras. Inclui uma porta paralela de saída de 4 bits. O circuito é decodificado por quatro linhas de controle CM-RAM, viabilizando o acoplamento de até 16 circuitos 4002 no sistema, somando \num{5120} bits de dados.
-\item \textbf{Intel 4003 (Expansor Estático de Entrada e Saída):} registrador de deslocamento estático de 10 bits dotado de entrada serial, saída serial e dez saídas paralelas independentes com retenção estática. Permite ligação em cascata para conexão de teclados, mostradores e impressoras sem requerer as fases de relógio dinâmico da CPU.
-\end{enumerate}
+A família de circuitos integrados MCS-4 (\textit{Micro Computer Set}) constitui um sistema microprocessado modular particionado em quatro componentes em tecnologia PMOS SGT de \SI{10}{\micro\meter}, acondicionados em encapsulamentos cerâmicos DIP de 16 pinos \cite{intel1973mcs4, noyce1981}. O processador central Intel 4004 reúne cerca de \num{2300} transistores em pastilha de \SI{12}{\milli\meter\squared}, incorporando uma unidade lógica e aritmética de 4 bits com correção decimal para BCD, acumulador, indicador de transporte (\textit{carry}), 16 registradores de índice de 4 bits, contador de programa de 12 bits com pilha de sub-rotinas de três níveis e repertório de 46 instruções, operando sob relógio bifásico com frequência nominal entre \SI{740}{\kilo\hertz} e \SI{750}{\kilo\hertz}. A memória de programa Intel 4001 integra \num{2048} bits mascarados em 256 palavras de 8 bits e uma porta paralela de 4 bits para entrada e saída, suportando até 16 unidades no barramento comum (\SI{4}{\kibi\byte}). O armazenamento de dados é suprido pela memória dinâmica Intel 4002 de 320 bits, organizada em quatro registradores de 20 caracteres de 4 bits com porta de saída, decodificada por quatro linhas de controle CM-RAM. Por fim, o circuito Intel 4003 atua como expansor estático de entrada e saída por meio de um registrador de deslocamento de 10 bits com saídas paralelas para interfaceamento com teclados, mostradores e impressoras.
 
 Em 1971, as restrições de custo e confiabilidade da indústria impunham o uso do encapsulamento padrão DIP de 16 pinos, tornando inviável a alocação de pinos dedicados isolados para dados, endereços e comandos de controle. Para contornar essa limitação física, a arquitetura adotou um barramento bidirecional multiplexado no tempo de 4 bits ($D_0$ a $D_3$) para o intercâmbio de sinais entre os quatro circuitos integrados da família \cite{intel1973mcs4, faggin1974patent}.
 
-A pinagem dos 16 terminais do processador Intel 4004 foi distribuída de forma rigorosa:
-\begin{itemize}
-\item Pinos $D_0$, $D_1$, $D_2$ e $D_3$ (quatro pinos): barramento bidirecional multiplexado de dados, endereços e instruções.
-\item Pinos $\phi_1$ e $\phi_2$ (dois pinos): entradas de relógio bifásico não sobreposto.
-\item Pino \textit{SYNC} (um pino): saída de sincronização que demarca o início de cada ciclo de instrução.
-\item Pino \textit{RESET} (um pino): entrada de reinicialização para inicialização dos registradores internos e do contador de programa.
-\item Pino \textit{TEST} (um pino): entrada para teste lógico em instruções condicionais de salto.
-\item Pinos CM-RAM0, CM-RAM1, CM-RAM2 e CM-RAM3 (quatro pinos): linhas de habilitação de bancos de memória RAM 4002.
-\item Pino CM-ROM (um pino): linha de seleção de bancos de memória ROM 4001.
-\item Pinos $V_{SS}$ (\SI{+5}{\volt}) e $V_{DD}$ (\SI{-10}{\volt}) (dois pinos): terminais de alimentação elétrica do componente.
-\end{itemize}
+A distribuição dos 16 terminais do processador Intel 4004 organiza-se em funções específicas: quatro pinos bidirecionais ($D_0$ a $D_3$) para o barramento multiplexado de dados, endereços e instruções, dois pinos de entrada para o relógio bifásico não sobreposto ($\phi_1$ e $\phi_2$), uma saída de sincronização (\textit{SYNC}), uma entrada de reinicialização (\textit{RESET}), uma entrada para testes lógicos de salto (\textit{TEST}), quatro linhas de seleção de memória RAM (CM-RAM0 a CM-RAM3), uma linha de habilitação de memória ROM (CM-ROM) e dois terminais de alimentação elétrica ($V_{SS}$ a \SI{+5}{\volt} e $V_{DD}$ a \SI{-10}{\volt}).
 
 O relógio bifásico emprega duas fases de onda quadradas não sobrepostas ($\phi_1$ e $\phi_2$). Com o período de relógio especificado em \SI{1,35}{\micro\second} (frequência de \SI{740,7}{\kilo\hertz}), cada instrução de uma palavra (8 bits) requer oito períodos de relógio consecutivos para completar sua execução, estabelecendo um ciclo básico de instrução de \SI{10,8}{\micro\second} e uma capacidade de processamento de aproximadamente \num{92600} instruções por segundo. Instruções de duas palavras (16 bits) demandam 16 períodos de relógio consecutivos (\SI{21,6}{\micro\second}).
 
 O ciclo de instrução de \SI{10,8}{\micro\second} reparte-se cronologicamente em oito subciclos de temporização sob as fases do relógio bifásico:
 \begin{enumerate}
-\item \textbf{Subciclo A1 (\textit{Address 1}):} a CPU transmite pelo barramento de 4 bits os quatro bits menos significativos do endereço de memória ROM ($A_0$ a $A_3$).
-\item \textbf{Subciclo A2 (\textit{Address 2}):} a CPU envia pelo barramento os quatro bits intermediários do endereço de ROM ($A_4$ a $A_7$).
-\item \textbf{Subciclo A3 (\textit{Address 3}):} a CPU transmite os quatro bits mais significativos do endereço ($A_8$ a $A_{11}$), completando o endereço de 12 bits para seleção de uma entre \num{4096} palavras na memória de programa.
-\item \textbf{Subciclo M1 (\textit{Memory 1}):} o circuito 4001 decodifica o endereço internamente e devolve no barramento os quatro bits superiores da palavra de instrução, denominados código de operação (OPR).
-\item \textbf{Subciclo M2 (\textit{Memory 2}):} a ROM devolve no barramento os quatro bits inferiores da palavra de instrução, denominados modificador de operação (OPA), permitindo que a CPU armazene a instrução completa de 8 bits em seu registrador interno de instruções.
-\item \textbf{Subciclo X1 (\textit{Execute 1}):} a CPU decodifica a instrução recebida e inicia a execução lógica ou aritmética correspondente na ULA e no banco de registradores de índice.
-\item \textbf{Subciclo X2 (\textit{Execute 2}):} a CPU conclui as operações na ULA, atualiza o registrador acumulador e sinaliza os indicadores de condição de transporte (\textit{carry}).
-\item \textbf{Subciclo B (\textit{Bus / Data / I/O}):} transfere-se o dado de 4 bits entre a CPU e as portas de entrada e saída ou os caracteres de dados da memória RAM 4002.
+\item Subciclo A1 (\textit{Address 1}): transmissão dos quatro bits menos significativos do endereço de memória ROM ($A_0$ a $A_3$).
+\item Subciclo A2 (\textit{Address 2}): envio dos quatro bits intermediários do endereço de ROM ($A_4$ a $A_7$).
+\item Subciclo A3 (\textit{Address 3}): envio dos quatro bits mais significativos ($A_8$ a $A_{11}$), completando o endereço de 12 bits para seleção de palavra na ROM.
+\item Subciclo M1 (\textit{Memory 1}): leitura pela ROM dos quatro bits superiores da palavra de instrução (código de operação, OPR).
+\item Subciclo M2 (\textit{Memory 2}): leitura dos quatro bits inferiores da instrução (modificador de operação, OPA), armazenando a instrução completa no registrador da CPU.
+\item Subciclo X1 (\textit{Execute 1}): decodificação da instrução e início da execução lógica ou aritmética na ULA e registradores.
+\item Subciclo X2 (\textit{Execute 2}): conclusão das operações na ULA, atualização do acumulador e sinalização dos indicadores de transporte (\textit{carry}).
+\item Subciclo B (\textit{Bus / Data / I/O}): transferência do dado de 4 bits entre a CPU e as portas de entrada e saída ou caracteres da memória RAM 4002.
 \end{enumerate}
 
 A \cref{fig:mcs4_bus_timing} apresenta o diagrama em blocos da interconexão dos quatro componentes da família MCS-4 através do barramento multiplexado compartilhado e o cronograma temporal detalhado das oito fases do ciclo de instrução.
 
 \begin{figure}[!t]
 \centering
-\fbox{\parbox{0.92\columnwidth}{\centering\vspace{1cm}\textbf{[Figura 2: Arquitetura de barramento e cronograma temporal do MCS-4]}\\\small Diagrama em blocos dos CIs 4001, 4002, 4003 e 4004 interconectados pelo barramento multiplexado de 4 bits e diagrama de tempo das 8 fases do ciclo de instrução sob relógio bifásico.\\\textit{Arquivo esperado: img/mcs4\_bus\_timing.pdf}}\vspace{1cm}}
+\fbox{\parbox{0.92\columnwidth}{\centering\vspace{1cm}[Figura 2: Arquitetura de barramento e cronograma temporal do MCS-4]\\\small Diagrama em blocos dos CIs 4001, 4002, 4003 e 4004 interconectados pelo barramento multiplexado de 4 bits e diagrama de tempo das 8 fases do ciclo de instrução sob relógio bifásico.\\\textit{Arquivo esperado: img/mcs4\_bus\_timing.pdf}}\vspace{1cm}}
 \caption{Arquitetura de barramento compartilhado e cronograma temporal de multiplexação do sistema MCS-4.}
 \label{fig:mcs4_bus_timing}
 \end{figure}

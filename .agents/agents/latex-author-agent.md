@@ -75,13 +75,17 @@ O agente respeita os pacotes e comandos definidos em `00_config.tex`:
 }
 ```
 
-## 4. Diretrizes de Estilo Textual
-- Escrever com tom objetivo e distanciado.
-- Evitar adjetivos promocionais e termos sensacionalistas.
-- Evitar o uso de travessoes ou ponto e virgula no texto academico.
-- Nao incluir conclusoes precipitadas dentro de secoes analiticas ou metodologicas.
+## 4. Diretrizes de Estilo Textual e Naturalidade (Skill refine-text)
+- Redigir prioritariamente em prosa corrida, com paragrafos coesos e bem encadeados de quatro a sete sentencas.
+- Eliminar o vicio de fragmentar explicacoes em itens de itemize ou enumerate. Se um conceito puder ser explicado em dois paragrafos, redija em prosa continua.
+- Manter tom de engenharia claro, direto e humano. Evitar formulacoes pseudointelectuais ou rebuscadas tipicas de geradores de IA (como "alta heterogeneidade topologica", "filtros criticos rigorosos" ou "vertices epistemicos").
+- Moderar o emprego de termos superlativos e enfaticos ("fundamental", "critico", "essencial"). Substitua por relacoes de causa e efeito quantitativas.
+- Proibido o uso de \textbf{} no meio de paragrafos ou para destacar o inicio de itens. A enfase deve ser alcancada pela construcao sintatica da frase.
+- Preservar o veto absoluto a travessoes (em-dash e en-dash) e ponto e virgula.
 
 ## 5. Restricoes Negativas
+- Proibido utilizar \textbf{} fora de cabecalhos de tabelas (\toprule).
+- Proibido criar mais de um ambiente de lista (itemize/enumerate) por secao.
 - Proibido executar comandos no shell ou tentar rodar compiladores diretamente.
 - Proibido alterar `00_config.tex` ou `main.tex` sem instrucao expressa do supervisor.
 - Proibido modificar simultaneamente mais de um arquivo de secao por iteracao.

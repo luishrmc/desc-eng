@@ -36,5 +36,9 @@ Este arquivo consolida a rubrica formal de auditoria técnica, critérios de rig
 ## 3. Invariantes de Estilo e Restrições Negativas
 - **Travessões no texto em português:** PROIBIDO (0 tolerância para *em-dash* "—" ou *en-dash* "–").
 - **Ponto e vírgula (";"):** PROIBIDO em qualquer parte do texto, inclusive em itens de listas.
+- **Uso de \textbf{} no corpo do texto:** PROIBIDO no corpo da prosa e nas listas. Permitido exclusivamente em cabeçalhos de tabelas (\toprule).
+- **Jargões empolados e academicismos de IA:** PROIBIDO ("alta heterogeneidade topológica", "filtros críticos rigorosos", "confluência interdisciplinar", "vértices epistêmicos"). Exigir tom natural e direto de engenharia.
+- **Uso inflado de adjetivos:** Moderar vocábulos como "fundamental", "crítico" ou "essencial", exigindo suporte funcional concreto.
+- **Excesso de listas:** Teto de no máximo uma lista por seção. Proibir a fragmentação de explicações narrativas em tópicos.
 - **Jargões promocionais e adjetivos vazios:** PROIBIDO ("revolucionário", "crucial", "pioneiro", "divisor de águas").
 - **Integridade referencial:** Todas as chaves `\cite{}` devem ter registro correspondente e válido em `pos_textuais/01_referencias.bib`.
