@@ -6,29 +6,53 @@
 \section{Metodologia}
 \label{sec:metodologia}
 
-\subsection{Tipo de Estudo}
+\subsection{Abordagem Metodológica e Enquadramento Epistemológico}
 \label{subsec:metodologia_abordagem}
 
-Trata-se de pesquisa histórica e analítica, de base técnica e documental, voltada à interface entre a física dos dispositivos semicondutores e a arquitetura de computadores.
+\IEEEPARstart{E}{ste} estudo fundamenta-se em uma abordagem interdisciplinar histórica, analítica e documental, situada na confluência entre a física de semicondutores de estado sólido, a engenharia de processos de microeletrônica e a microarquitetura de computadores. A investigação busca superar duas vertentes analíticas frequentes na literatura técnica, cujas perspectivas isoladas mostram-se insuficientes para explicar a materialização do microprocessador monolítico.
 
-\subsection{Fontes Primárias e Secundárias}
-\label{subsec:metodologia_coleta}
+A primeira vertente consiste na historiografia puramente microarquitetural e funcional da computação, que costuma reduzir a gênese do processador à formulação de diagramas de blocos de alto nível e à definição do repertório de instruções. Sob essa abordagem, a implementação física é tratada como mera etapa de engenharia rotineira de conversão de lógica em leiaute. Tal postura desconsidera as severas barreiras materiais, termodinâmicas e eletrostáticas que delimitavam a viabilidade de circuitos integrados em larga escala no início da década de 1970. A segunda vertente corresponde à literatura especializada em física do estado sólido, que costuma confinar suas análises ao comportamento isolado de estruturas metal-óxido-semicondutor elementares, omitindo os desafios de sua integração massiva em blocos de lógica aleatória complexa.
 
-As fontes primárias consistem em:
+O enquadramento epistemológico adotado estabelece uma ponte sistemática entre a história da tecnologia e a modelagem analítica de circuitos integrados. O objetivo central é demonstrar como limites físicos materiais intransponíveis (como as capacitâncias parasitas de sobreposição porta-dreno e porta-fonte, o efeito Miller, as instabilidades na tensão de limiar, as resistências de folha das camadas condutoras e as restrições de encapsulamento) condicionaram de forma determinística as opções arquiteturais adotadas no conjunto MCS-4. A transição da concepção lógica para a pastilha monolítica funcional é analisada como um processo de síntese técnica no qual as fronteiras físicas de materiais governam o espaço de viabilidade da arquitetura de computadores.
+
+\subsection{Corpus Documental e Tipologia de Fontes}
+\label{subsec:metodologia_corpus}
+
+A sustentação empírica da pesquisa baseia-se na exploração de um corpus documental organizado em duas categorias principais, correspondentes a fontes primárias de época e fontes secundárias especializadas.
+
+As fontes primárias compreendem patentes industriais, manuais de projeto, folhas de dados de fabricantes e registros de história oral dos participantes diretos do projeto. O núcleo de patentes analisadas inclui:
 \begin{itemize}
-\item patentes industriais de Federico Faggin sobre dispositivos MOS e métodos de fabricação com porta de silício, como a US Patent 3.475.234 \cite{faggin1969patent}, e a patente US 3.821.715 sobre o sistema de memória do computador multichip \cite{faggin1974patent};
-\item manuais técnicos e notas de aplicação da Intel, em particular o \textit{MCS-4 Micro Computer Set Users Manual} \cite{intel1973mcs4};
-\item documentos autobiográficos e artigos memoriais técnicos de Faggin sobre o desenvolvimento da arquitetura e das regras de layout do 4004 \cite{faggin1996, faggin2021}.
+\item A patente US 3.475.234, requerida pela Bell Telephone Laboratories em 1967 e concedida em 1969 a Robert E. Kerwin, Donald L. Klein e John C. Sarace \cite{kerwin1969patent}. Esse documento representa a prova de conceito laboratorial da técnica de porta autoalinhada para estruturas metal-isolante-semicondutor, empregando silício amorfo como máscara física de difusão. A despeito do avanço conceitual, a fragilidade mecânica e a quebra da fina película nos degraus de óxido inviabilizavam a produção industrial repetível.
+\item A patente US 3.673.471, concedida em 1972 à Fairchild Camera and Instrument Corporation e desenvolvida por Thomas Klein e Federico Faggin \cite{klein1972patent}. O texto protege o processo de industrialização da tecnologia de porta de silício (\textit{Silicon Gate Technology}, SGT), fundamentado na deposição por fase de vapor de silício policristalino dopado degeneradamente com boro, no controle preciso da tensão de limiar com redução de aproximadamente \SI{1,1}{\volt} em transistores de canal p e no recozimento térmico em alta temperatura com purificação por captura iônica de fósforo.
+\item A patente US 3.699.646, outorgada à Intel Corporation em 1972 em nome de Leslie L. Vadasz \cite{vadasz1972patent}. A invenção protege a estrutura e o método de fabricação do contato enterrado (\textit{buried contact}). Conforme registros técnicos e historiográficos, essa técnica foi concebida e implementada operacionalmente por Federico Faggin, que realizara testes preliminares na Fairchild em 1968 e transferiu o método para viabilizar a densidade do Intel 4004. O contato enterrado estabelece uma junção direta entre o polissilício e as regiões de difusão sem janelas para o alumínio, reduzindo a área de leiaute.
+\item A patente US 3.821.715, depositada em 1973 e concedida à Intel Corporation em 1974 a Marcian E. Hoff, Stanley Mazor e Federico Faggin \cite{faggin1974patent}. O documento formaliza o sistema de memória e o barramento comum bidirecional de 4 bits compartilhado entre a CPU e os circuitos de suporte, permitindo o particionamento do sistema computacional em encapsulamentos de apenas 16 pinos.
 \end{itemize}
 
-As fontes secundárias compreendem:
-\begin{itemize}
-\item periódicos especializados em história da tecnologia e dos semicondutores, como \textit{IEEE Micro} e \textit{Proceedings of the IEEE} \cite{noyce1981, cavin2012};
-\item tratados clássicos de circuitos integrados e arquitetura de computadores \cite{mead1980, weste2010};
-\item estudos socioeconômicos sobre automação industrial e difusão de tecnologias digitais nas últimas décadas do século XX.
-\end{itemize}
+O corpus de fontes primárias inclui ainda a folha de dados técnica contemporânea \textit{Intel MCS-4 Micro Computer Set Data Sheet} de novembro de 1971 \cite{intel1971datasheet}, que registra as tensões de alimentação, os tempos de propagação sob relógio bifásico e os parâmetros de carga. Adiciona-se a esse registro o manual de engenharia \textit{Intel MCS-4 Micro Computer Set Users Manual} de fevereiro de 1973 \cite{intel1973mcs4}, no qual se detalham a pinagem física, os oito subciclos temporais da instrução e o conjunto formal de 46 comandos.
 
-\subsection{Procedimento de Análise}
+No âmbito dos testemunhos diretos e memoriais técnicos, examinam-se o artigo inaugural sobre o processo SGT publicado por Faggin e Klein em 1970 \cite{faggin1970}, o artigo comemorativo de 1996 assinado conjuntamente por Faggin, Hoff, Mazor e Shima \cite{faggin1996}, a autobiografia de Faggin \cite{faggin2021} e as transcrições de história oral preservadas pelo Computer History Museum, contemplando a entrevista individual de Faggin realizada em 2004 \cite{chm2004faggin} e o painel técnico de 2007 reunindo os projetistas do MCS-4 \cite{chm2007panel}.
+
+As fontes secundárias compreendem tratados clássicos de física de dispositivos e circuitos integrados, com ênfase nas obras de Sze e Ng \cite{sze2006} para modelagem eletrostática e densidade de carga em interfaces de silício, Mead e Conway \cite{mead1980} para princípios de escalamento geométrico e projeto estruturado em silício, e Weste e Harris \cite{weste2010} para cálculo analítico de atrasos transitórios e resposta de inversores MOS. Completam esse núcleo artigos analíticos do IEEE, como as reflexões de Morton \cite{morton1958} sobre a tirania dos números, o panorama histórico de Noyce e Hoff \cite{noyce1981} e a revisão de Cavin, Lugli e Zhirnov \cite{cavin2012} a respeito da evolução de semicondutores.
+
+\subsection{Protocolo de Triangulação Epistêmica e Análise Comparativa}
 \label{subsec:metodologia_triangulacao}
 
-O procedimento consiste na triangulação sistemática entre três conjuntos de dados: (i) a física de dispositivos semicondutores; (ii) os parâmetros analíticos dos circuitos integrados, extraídos de patentes e manuais; e (iii) os relatórios históricos sobre a difusão industrial dos microprocessadores. As relações analíticas da \cref{sec:resultados} são tratadas como modelos de primeira ordem, usados para explicitar tendências, e não para reproduzir valores de projeto.
+Para assegurar a objetividade das conclusões, o estudo emprega um protocolo de triangulação epistêmica estruturado em três vértices complementares de validação, ilustrado na \cref{fig:metodologia_triangulacao}.
+
+\begin{figure}[!t]
+\centering
+\fbox{\parbox{0.92\columnwidth}{\centering\vspace{1cm}\textbf{[Figura 3: Fluxograma Metodológico de Triangulação Epistêmica]}\\\small Convergência e validação cruzada entre a modelagem analítica da física de semicondutores (Vértice A), o corpus documental contemporâneo de patentes e manuais técnicos (Vértice B) e os relatos dos projetistas e história oral (Vértice C).\\\textit{Arquivo esperado: img/metodologia\_triangulacao.pdf}}\vspace{1cm}}
+\caption{Fluxograma do método de triangulação epistêmica empregado no estudo.}
+\label{fig:metodologia_triangulacao}
+\end{figure}
+
+O primeiro vértice (Vértice A) é constituído pela modelagem analítica de primeira ordem da física de semicondutores, que estabelece as relações paramétricas de capacitância de sobreposição, resistência de condução e atraso de comutação sob leis físicas estritas. O segundo vértice (Vértice B) baseia-se nas evidências materiais e documentais contemporâneas geradas entre 1969 e 1974, compreendendo as reivindicações de patentes, os diagramas elétricos de manuais de projeto e os artefatos de silício catalogados. O terceiro vértice (Vértice C) reúne os testemunhos técnicos e a história oral dos projetistas, fornecendo o contexto das decisões heurísticas de engenharia.
+
+A integração entre esses vértices obedece a filtros críticos rigorosos voltados à mitigação de vieses retrospectivos e falhas de memória inerentes a depoimentos orais colhidos décadas após os eventos:
+\begin{itemize}
+\item Acareação de testemunhos divergentes. Realiza-se o confronto cruzado entre depoimentos de diferentes participantes, como no caso das discrepâncias sobre o número inicial de circuitos encomendados pela Busicom, confrontando relatos que mencionam doze componentes específicos com anotações contratuais e revisões lógicas de 1969.
+\item Primazia do documento e do artefato contemporâneo. Diante de qualquer conflito entre lembranças retrospectivas e registros síncronos, prevalece a evidência documental de época, consubstanciada em datas de protocolos de patentes, folhas de dados industriais e características físicas observáveis nas máscaras de difusão da pastilha, incluindo as iniciais gravadas no silício.
+\item Auditoria analítica por leis físicas de transporte e capacitâncias. Nenhuma afirmação memorialística é aceita sem a devida verificação de sua plausibilidade física por meio das equações de transporte de carga, resistência de canal e acoplamento capacitivo.
+\end{itemize}
+
+Convém estabelecer um esclarecimento metodológico a respeito das estimativas de desempenho contrafactuais discutidas ao longo do trabalho, tais como o cálculo da área de silício requerida e a frequência máxima teórica caso o circuito fosse concebido em tecnologia de porta metálica de alumínio sem contato enterrado. Essas estimativas constituem deduções analíticas fundamentadas em modelos clássicos de escalamento geométrico e constantes de tempo RC, e não medições experimentais diretas em protótipos físicos inexistentes. A formulação matemática permite isolar o ganho específico propiciado pelas inovações de processo sem recorrer a especulações desprovidas de respaldo analítico.

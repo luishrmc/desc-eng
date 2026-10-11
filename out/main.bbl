@@ -73,4 +73,42 @@ F.~Faggin, M.~E. Hoff, and S.~Mazor, ``Memory system for multi-chip digital
   computer,'' US Patent 3,821,715, Jun. 1974, depositada em 22 de jan. de 1973,
   concedida em 28 de jun. de 1974.
 
+\bibitem{sze2006}
+S.~M. Sze and K.~K. Ng, \emph{Physics of Semiconductor Devices}, 3rd~ed.\hskip
+  1em plus 0.5em minus 0.4em\relax Hoboken, NJ: John Wiley \& Sons, 2006.
+
+\bibitem{kerwin1969patent}
+R.~E. Kerwin, D.~L. Klein, and J.~C. Sarace, ``Method for making {MIS}
+  structures,'' US Patent 3,475,234, Oct. 1969, depositada em 27 de mar. de
+  1967, concedida em 28 de out. de 1969.
+
+\bibitem{klein1972patent}
+T.~Klein and F.~Faggin, ``Doped semiconductor electrodes for {MOS} type
+  devices,'' US Patent 3,673,471, Jun. 1972, depositada em 8 de out. de 1970,
+  concedida em 27 de jun. de 1972.
+
+\bibitem{vadasz1972patent}
+L.~L. Vadasz, ``Semiconductor device and method of making same,'' US Patent
+  3,699,646, Oct. 1972, depositada em 28 de dez. de 1970, concedida em 24 de
+  out. de 1972.
+
+\bibitem{faggin1972fourchip}
+F.~Faggin and M.~E. Hoff, ``Standard parts and custom design merge in four-chip
+  processor kit,'' \emph{Electronics}, vol.~45, no.~9, pp. 112--116, Apr. 1972.
+
+\bibitem{intel1971datasheet}
+\emph{{MCS-4} Micro Computer Set Data Sheet}, Intel Corporation, Santa Clara,
+  CA, Nov. 1971.
+
+\bibitem{chm2004faggin}
+F.~Faggin, ``Oral history of {Federico Faggin},'' Oral History Interview by Rob
+  Gardner, Computer History Museum, Reference X2941.2005, Catalog 102658025,
+  Mountain View, CA, Aug. 2004.
+
+\bibitem{chm2007panel}
+F.~Faggin, H.~Feeney, M.~E. Hoff, S.~Mazor, and M.~Shima, ``Oral history panel
+  on the development and promotion of the {Intel} 4004 microprocessor,''
+  Moderated by Dave House, Computer History Museum, Reference X4024.2007,
+  Catalog 102658187, Mountain View, CA, Apr. 2007.
+
 \end{thebibliography}

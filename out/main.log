@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.7.10)  11 OCT 2026 14:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.7.10)  11 OCT 2026 15:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -663,14 +663,6 @@ f-dist/fonts/enc/dvips/base/8r.enc}
 
 ]
 
-LaTeX Warning: Reference `sec:fundamentacao' on page 1 undefined on input line 
-31.
-
-
-LaTeX Warning: Reference `sec:metodologia' on page 1 undefined on input line 31
-.
-
-
 LaTeX Warning: Reference `sec:resultados' on page 1 undefined on input line 31.
 
 
@@ -680,9 +672,15 @@ LaTeX Warning: Reference `sec:discussao' on page 1 undefined on input line 31.
 
 LaTeX Warning: Reference `sec:conclusao' on page 1 undefined on input line 31.
 
-) (out/main.bbl [2]) [3
+) (./secoes/02_fundamentacao.tex [2]
+Underfull \hbox (badness 6526) in paragraph at lines 14--15
+[]\T1/ptm/m/n/10 (+20) Em tran-sis-to-res de efeito de campo Metal-Óxido-
+ []
 
-] (out/main.aux
+[3] [4] [5] [6]) (./secoes/03_metodologia.tex [7]) (out/main.bbl [8]) [9
+
+]
+(out/main.aux
 Package cleveref Info: loaded `brazilian' language definitions on input line 15
 .
 )
@@ -695,29 +693,35 @@ L3 programming layer <2026-01-19>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 7CF5DC62A320848741DBE06C30C95A11;201.
+(rerunfilecheck)             Checksum: 956EB35E925267E957B72931518AB2DA;2870.
  ) 
 Here is how much of TeX's memory you used:
- 20259 strings out of 469421
- 396051 string characters out of 5467709
- 866417 words of memory out of 5000000
- 48468 multiletter control sequences out of 15000+600000
- 748006 words of font info for 280 fonts, out of 8000000 for 9000
+ 20628 strings out of 469421
+ 401049 string characters out of 5467709
+ 868417 words of memory out of 5000000
+ 48591 multiletter control sequences out of 15000+600000
+ 769192 words of font info for 406 fonts, out of 8000000 for 9000
  61 hyphenation exceptions out of 8191
- 80i,6n,83p,2082b,1211s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/u
-tmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on out/main.pdf (3 pages, 134808 bytes).
+ 80i,12n,97p,2082b,1213s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
+times/utmri8a.pfb>
+Output written on out/main.pdf (9 pages, 254064 bytes).
 PDF statistics:
- 117 PDF objects out of 1000 (max. 8388607)
- 91 compressed objects within 1 object stream
- 20 named destinations out of 1000 (max. 500000)
- 54801 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 317 PDF objects out of 1000 (max. 8388607)
+ 271 compressed objects within 3 object streams
+ 79 named destinations out of 1000 (max. 500000)
+ 74329 words of extra memory for PDF output out of 89155 (max. 10000000)
 
