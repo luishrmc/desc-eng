@@ -1,1 +1,1 @@
-skills de planejamento: Deve gerar um arquivo Markdown em utils/prompts com o arquivo contendo o nome da skill e o conteúdo referente à sugestão de planejamento que a skill oferece. Além disso, deve sempre fazer uma revisão do conteúdo para assegurar que o Makrdown não esteja corrompido e que a formatação esteja correta.
+agy --conversation=05f075b7-5b73-49fc-ac98-0c16639b8710
