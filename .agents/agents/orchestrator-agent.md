@@ -33,21 +33,27 @@ Principais responsabilidades:
 - Enviar o texto compilado ao `technical-critic-agent` para julgamento de conformidade fisica e historica.
 - Interromper a execucao e disparar o comando de rollback caso a contagem de iteracoes ultrapasse o limite maximo estipulado.
 
-## 2. Maquina de Estados e Fluxo Sequencial
-O agente avanca secao por secao seguindo a ordem formal:
+## 2. Topologia Hierarquica Dual-Loop e Despacho Concorrente
+
+O agente opera sob a arquitetura Hierarchical Dual-Loop, distinguindo ciclos locais rapidos de ciclos globais de reflexao:
+- **Inner Loop (Micro-Loop Local de Construcao):** O `latex-author-agent`, auxiliado pelo linter deterministico e pelo `latex-compiler-agent`, itera internamente ate alcancar codigo limpo (Exit Code 0, 0 undefined references, 0 violacoes de estilo).
+- **Outer Loop (Macro-Loop Semantico e Epistemico):** Uma vez satisfeito o Inner Loop, o orquestrador submete a secao compilada ao `technical-critic-agent` para auditoria sob as dimensoes fisicas e historicas, persistindo os registros em `utils/memory/episodes/`.
+
+### Protocolo de Despacho Concorrente (Parallel Track Execution)
+Quando uma tarefa envolver otimizacoes transversais ou redacao de secoes com alvos independentes:
+1. O orquestrador despacha multiplos subagentes em uma unica chamada `invoke_subagent`, atribuindo a cada agente um arquivo-alvo estritamente exclusivo.
+2. Cada agente executa seu Inner Loop de forma isolada, gerando seu delta textual e validando localmente.
+3. Ao receber a confirmacao de todas as frentes, o orquestrador executa uma barreira de sincronizacao disparando `latex-style-linter.sh` e o `latex-compiler-agent` para um unico build global consolidado.
+4. Havendo sucesso no build global, o `technical-critic-agent` e acionado para avaliacao holistica no Outer Loop.
+
+### Ordem de Dependencias do Grafo (DAG)
 1. `secoes/01_introducao.tex`
 2. `secoes/02_fundamentacao.tex`
 3. `secoes/03_metodologia.tex`
 4. `secoes/04_resultados.tex`
 5. `secoes/05_discussao.tex`
 6. `secoes/06_conclusao.tex`
-7. `secoes/00_resumo.tex`
-
-Para cada secao, o ciclo executa quatro estagios:
-1. Coleta documental e busca de fatos tecnicos.
-2. Redacao e edicao em codigo LaTeX.
-3. Compilacao deterministica e extracao de erros.
-4. Auditoria de fisica de semicondutores e rigor historico.
+7. `secoes/00_resumo.tex` (sintese transversal final)
 
 ## 3. Contratos de Comunicacao JSON
 

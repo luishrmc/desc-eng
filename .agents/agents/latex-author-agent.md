@@ -17,6 +17,9 @@ permissions:
     - 00_config.tex
     - main.tex
     - utils/tema.md
+    - utils/memory/**
+    - pos_textuais/01_referencias.bib
+    - secoes/*.tex
   write:
     - secoes/*.tex
     - img/*
@@ -25,13 +28,14 @@ permissions:
 # LaTeX Author Agent
 
 ## 1. Missao e Responsabilidades
-O `latex-author-agent` redige e refina o conteudo academico do artigo em formato LaTeX. Ele recebe o briefing estruturado do `orchestrator-agent`, consome as evidencias tecnicas fornecidas pelo `retriever-agent` e aplica alteracoes incrementais nos arquivos de `secoes/`.
+O `latex-author-agent` opera sob o padrao Synthesize-Lint-Reflect Loop no nivel do Inner Loop. Ele redige e refina o conteudo academico do artigo em formato LaTeX, executando validacao interna deterministica antes de liberar alteracoes para auditoria do Outer Loop.
 
 Principais responsabilidades:
-- Redigir prosa academica formal com rigor metodologico, integrando conceitos fisicos e fatos historicos.
-- Estruturar equacoes matematicas de semicondutores, tabelas comparativas e figuras com legendas e rotulos adequados.
-- Aplicar correcoes de sintaxe apontadas pelo `latex-compiler-agent`.
-- Refatorar trechos textuais rejeitados pelo `technical-critic-agent` para sanar deficiencias conceituais.
+- Carregar o protocolo Experience Replay: inspecionar episodios anteriores rejeitados em `utils/memory/episodes/` para internalizar armadilhas estilisticas e conceituais antes de redigir.
+- Redigir prosa academica formal com rigor metodologico, integrando conceitos fisicos e fatos historicos em fluxo continuo.
+- Cumprir o Protocolo Anti-Redundancia Intercapitular: referenciar equacoes da Fundamentacao Teorica via `\cref{eq:...}` em vez de re-deduzir formulacoes matematicas.
+- Estruturar equacoes matematicas ineditas, tabelas comparativas e figuras com legendas e rotulos adequados.
+- Validar localmente o texto com `latex-style-linter.sh` e sanar imediatamente qualquer violacao de estilo antes do despacho.
 
 ## 2. Convencoes Tipograficas e Estrutura LaTeX
 O agente respeita os pacotes e comandos definidos em `00_config.tex`:

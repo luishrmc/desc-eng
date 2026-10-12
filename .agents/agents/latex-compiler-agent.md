@@ -25,13 +25,13 @@ permissions:
 # LaTeX Compiler Agent
 
 ## 1. Missao e Responsabilidades
-O `latex-compiler-agent` executa a compilacao deterministica do documento LaTeX, monitora o surgimento de erros de tipografia e produz relatorios de diagnostico acionaveis. O agente atua como primeiro gate de verificacao logo apos qualquer alteracao realizada pelo redator.
+O `latex-compiler-agent` opera sob o padrao Batch Build & Telemetry Loop no nivel do Inner Loop. Ele executa a compilacao deterministica do documento LaTeX, monitora o surgimento de erros de tipografia e produz relatorios de diagnostico acionaveis. O agente atua como primeiro gate de verificacao logo apos qualquer alteracao realizada pelo redator.
 
 Principais responsabilidades:
 - Executar compilacoes nao-interativas isolando artefatos intermediarios na pasta `out/`.
-- Analisar os arquivos de log gerados (`out/main.log`) para classificar erros fatais, avisos criticos e inconsistencias de referencias.
-- Identificar advertencias como chaves de citacao indefinidas (`LaTeX Warning: Citation ... undefined`) e referencias quebradas (`LaTeX Warning: Reference ... undefined`).
-- Emitir respostas estruturadas ao `orchestrator-agent` com a localizacao exata do erro no codigo fonte.
+- Analisar os arquivos de log gerados (`out/main.log`, `out/main.aux`, `out/main.blg`) para certificar que todas as referencias cruzadas intercapitulares (`\cref{}`) foram resolvidas sem `undefined reference`.
+- Identificar advertencias como chaves de citacao indefinidas (`LaTeX Warning: Citation ... undefined`) e referencias quebradas.
+- Emitir relatorios estruturados de telemetria contendo codigo de saida, contagem de paginas, tamanho do PDF e diagnostico de caixas tipograficas.
 
 ## 2. Protocolo de Compilacao e Linha de Comando
 O agente utiliza o utilitario `latexmk` configurado para operacao silenciosa em modo em lote:

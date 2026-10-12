@@ -2,6 +2,9 @@
 set -euo pipefail
 
 # Post-write hook: compila o documento de forma deterministica apos alteracao em secoes/
+echo "[INFO][post-write-compile] Executando linter estilistico preventivo..."
+bash .agents/hooks/latex-style-linter.sh secoes/
+
 echo "[INFO][post-write-compile] Iniciando compilacao de verificacao com latexmk..."
 
 mkdir -p out
