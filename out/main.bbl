@@ -134,4 +134,29 @@ F.~Faggin, M.~Shima, and R.~Ungermann, ``Oral history panel on the development
   of the {Zilog} {Z80} microprocessor,'' Moderated by David Laws, Computer
   History Museum, Catalog 102658073, Mountain View, CA, Apr. 2007.
 
+\bibitem{dennard1974}
+R.~H. Dennard, F.~H. Gaensslen, H.-N. Yu, V.~L. Rideout, E.~Bassous, and A.~R.
+  LeBlanc, ``Design of ion-implanted {MOSFET's} with very small physical
+  dimensions,'' \emph{IEEE Journal of Solid-State Circuits}, vol. SC-9, no.~5,
+  pp. 256--268, Oct. 1974.
+
+\bibitem{boone1973patent}
+G.~W. Boone, ``Computing systems {CPU},'' US Patent 3,757,306, Sep. 1973,
+  depositada em 31 de ago. de 1971, concedida em 4 de set. de 1973.
+
+\bibitem{boone1978patent}
+G.~W. Boone and M.~J. Cochran, ``Variable function programmed calculator,'' US
+  Patent 4,074,351, Feb. 1978, depositada em 19 de jul. de 1971, concedida em
+  14 de fev. de 1978.
+
+\bibitem{boysel1970}
+L.~L. Boysel and J.~P. Murphy, ``Four-phase {LSI} logic offers new approach to
+  computer designer,'' \emph{Computer Design}, vol.~9, no.~4, pp. 141--146,
+  Apr. 1970.
+
+\bibitem{holt1998cadc}
+R.~M. Holt, ``Architecture of a microprocessor,'' \emph{Garrett AiResearch
+  Technical Report (Declassified)}, pp. 1--19, Apr. 1998, manuscrito original
+  preparado em 1971, liberado para publicação em 1998.
+
 \end{thebibliography}
