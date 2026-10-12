@@ -322,8 +322,6 @@ INPUT ./secoes/02_fundamentacao.tex
 INPUT ./secoes/02_fundamentacao.tex
 INPUT ./secoes/02_fundamentacao.tex
 INPUT secoes/02_fundamentacao.tex
-INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmb8t.vf
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmr8t.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmri8t.vf
@@ -367,6 +365,11 @@ INPUT secoes/05_discussao.tex
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmr8c.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmri8t.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
+INPUT ./secoes/06_conclusao.tex
+INPUT ./secoes/06_conclusao.tex
+INPUT ./secoes/06_conclusao.tex
+INPUT ./secoes/06_conclusao.tex
+INPUT secoes/06_conclusao.tex
 INPUT out/main.bbl
 INPUT out/main.bbl
 INPUT out/main.bbl
