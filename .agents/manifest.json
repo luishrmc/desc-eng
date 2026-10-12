@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "project": "Artigo Academico Federico Faggin e Intel 4004",
+  "version": "1.0.0",
+  "topology": "Supervisor-Worker com Duplo Gate de Validacao",
+  "governance": {
+    "max_iterations_per_section": 5,
+    "stagnation_threshold": 2,
+    "rollback_action": "git checkout HEAD -- {target_file}"
+  },
+  "agents": [
+    {
+      "name": "orchestrator-agent",
+      "definition": ".agents/agents/orchestrator-agent.md",
+      "role": "Supervisor central de fluxo e estado do DAG",
+      "model": "pro",
+      "permissions": {
+        "read": ["utils/tema.md", "main.tex", "secoes/*.tex"],
+        "write": []
+      },
+      "tools_allowed": ["run_command", "send_message", "view_file"],
+      "skills": ["plan-agents", "plan-hooks"]
+    },
+    {
+      "name": "retriever-agent",
+      "definition": ".agents/agents/retriever-agent.md",
+      "role": "Especialista em recuperacao documental e pesquisa historica",
+      "model": "flash",
+      "permissions": {
+        "read": [
+          "utils/docs/aulas/**",
+          "utils/docs/ref/**",
+          "utils/docs/search/**",
+          "pos_textuais/01_referencias.bib"
+        ],
+        "write": []
+      },
+      "tools_allowed": ["view_file", "search-retriever"],
+      "skills": ["search-retriever"]
+    },
+    {
+      "name": "latex-author-agent",
+      "definition": ".agents/agents/latex-author-agent.md",
+      "role": "Redator tecnico academico em codigo LaTeX",
+      "model": "pro",
+      "permissions": {
+        "read": ["00_config.tex", "main.tex", "utils/tema.md"],
+        "write": ["secoes/*.tex", "img/*"]
+      },
+      "tools_allowed": ["view_file", "replace_file_content", "write_to_file"],
+      "skills": ["latex-writer"]
+    },
+    {
+      "name": "latex-compiler-agent",
+      "definition": ".agents/agents/latex-compiler-agent.md",
+      "role": "Verificador de compilacao deterministica e analise de logs",
+      "model": "flash",
+      "permissions": {
+        "read": [
+          "main.tex",
+          "00_config.tex",
+          "secoes/*.tex",
+          "pos_textuais/*.bib",
+          "out/*.log"
+        ],
+        "write": ["out/*"]
+      },
+      "tools_allowed": ["run_command", "view_file"],
+      "skills": ["latex-build"]
+    },
+    {
+      "name": "technical-critic-agent",
+      "definition": ".agents/agents/technical-critic-agent.md",
+      "role": "Auditor critico de fisica de semicondutores e rigor historico",
+      "model": "pro",
+      "permissions": {
+        "read": [
+          "secoes/*.tex",
+          "utils/tema.md",
+          "utils/docs/aulas/**",
+          "pos_textuais/01_referencias.bib"
+        ],
+        "write": []
+      },
+      "tools_allowed": ["view_file"],
+      "skills": ["academic-review"]
+    }
+  ],
+  "pipeline_sequence": [
+    "secoes/01_introducao.tex",
+    "secoes/02_fundamentacao.tex",
+    "secoes/03_metodologia.tex",
+    "secoes/04_resultados.tex",
+    "secoes/05_discussao.tex",
+    "secoes/06_conclusao.tex",
+    "secoes/00_resumo.tex"
+  ]
+}
