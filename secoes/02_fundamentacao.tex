@@ -6,58 +6,58 @@
 \section{Fundamentação Teórica}
 \label{sec:fundamentacao}
 
-A transição dos dispositivos bipolares para a tecnologia Metal-Óxido-Semicondutor (MOS) no final da década de 1960 fundamentou-se no potencial dessa família de componentes para proporcionar maior densidade de integração e consumo nulo de corrente estática nos eletrodos de controle \cite{cavin2012, mead1980}. Todavia, a tecnologia MOS predominante até 1968, estruturada em transistores PMOS com porta de alumínio sobre substratos de silício com orientação cristalográfica $\langle 111 \rangle$, defrontava-se com restrições severas de natureza eletrostática, térmica e de leiaute \cite{faggin1970, sze2006}. As imprecisões no alinhamento litográfico exigiam sobreposições geométricas entre a porta metálica e as difusões de fonte e dreno, introduzindo capacitâncias parasitas que limitavam a frequência de comutação. Simultaneamente, o módulo elevado da tensão de limiar requeria fontes de polarização superiores a \SI{20}{\volt}, impedindo a conexão direta com circuitos lógicos bipolares. Além disso, o baixo ponto de fusão do alumínio impedia tratamentos térmicos posteriores à metalização e confinava o circuito a um único nível condutor de fiação. A superação simultânea desses entraves exigiu a formulação de novos princípios de física de dispositivos e metodologias estruturadas de projeto físico de circuitos integrados.
+A transição dos dispositivos bipolares para a tecnologia Metal-Óxido-Semicondutor (MOS) no final da década de 1960 fundamentou-se na maior densidade de integração e no consumo nulo de corrente estática nos eletrodos de controle \cite{cavin2012, mead1980}. Todavia, a tecnologia MOS predominante até 1968, estruturada em transistores PMOS com porta de alumínio sobre silício $\langle 111 \rangle$, defrontava-se com severas restrições eletrostáticas, térmicas e de leiaute \cite{faggin1970, sze2006}. Imprecisões litográficas exigiam sobreposições geométricas entre a porta metálica e as difusões de fonte e dreno, introduzindo capacitâncias parasitas que limitavam a frequência de chaveamento. Simultaneamente, o módulo elevado da tensão de limiar requeria fontes de alimentação superiores a \SI{20}{\volt}, impedindo a conexão direta com circuitos lógicos bipolares, enquanto o baixo ponto de fusão do alumínio impedia recozimentos em alta temperatura após a metalização e confinava o circuito a um único nível condutor de fiação. A superação simultânea desses entraves exigiu novos princípios físicos e metodologias estruturadas de projeto físico de circuitos integrados.
 
 \subsection{Modelagem Física da Porta Metálica versus SGT}
 \label{subsec:modelagem_fisica_sgt}
 
-Em transistores de efeito de campo Metal-Óxido-Semicondutor (MOS), a capacitância por unidade de área do dielétrico de porta ($C_{ox}$) é definida pela permissividade dielétrica do dióxido de silício ($\varepsilon_{ox} = \kappa_{ox}\varepsilon_0$, sendo $\kappa_{ox} \approx 3{,}9$ e $\varepsilon_{ox} \approx \SI{3,45e-11}{\farad\per\meter}$) dividida pela espessura física do óxido de porta ($t_{ox}$):
+Em transistores de efeito de campo Metal-Óxido-Semicondutor (MOS), a capacitância por unidade de área do dielétrico de porta ($C_{ox}$) é definida pela permissividade dielétrica do dióxido de silício ($\varepsilon_{ox} = \kappa_{ox}\varepsilon_0$, sendo $\kappa_{ox} \approx 3{,}9$ e $\varepsilon_{ox} \approx \SI{3,45e-11}{\farad\per\meter}$) sobre a espessura física do óxido de porta ($t_{ox}$):
 \begin{equation}
 \label{eq:cox}
 C_{ox} = \frac{\varepsilon_{ox}}{t_{ox}}.
 \end{equation}
 
-A capacitância geométrica de sobreposição ($C_{ov}$) entre o eletrodo de porta e as regiões ativas de difusão de fonte ou dreno é modelada por:
+A capacitância geométrica de sobreposição ($C_{ov}$) entre o eletrodo de porta e as difusões ativas de fonte ou dreno é modelada por:
 \begin{equation}
 \label{eq:cov}
 C_{ov} = C_{ox} W L_{ov}
 \end{equation}
-em que $W$ denota a largura física do canal e $L_{ov}$ expressa o comprimento longitudinal de sobreposição entre o condutor de porta e a região dopada adjacente.
+em que $W$ denota a largura física do canal e $L_{ov}$ expressa o comprimento longitudinal de sobreposição sobre a região dopada adjacente.
 
-No processo convencional com porta metálica de alumínio, as regiões de fonte e dreno eram introduzidas no substrato por difusão térmica antes da deposição da camada de metal. Devido às tolerâncias de alinhamento mecânico e óptico das fotomáscaras litográficas, o projeto exigia uma margem geométrica de segurança $\Delta L_{align}$, com valores situados tipicamente entre \SI{3}{\micro\meter} e \SI{5}{\micro\meter}. O comprimento total de sobreposição correspondia a:
+No processo convencional com porta metálica de alumínio, fonte e dreno eram introduzidos por difusão térmica antes da deposição metálica. Tolerâncias de alinhamento mecânico e óptico das fotomáscaras impunham uma margem geométrica de segurança $\Delta L_{align}$ situada tipicamente entre \SI{3}{\micro\meter} e \SI{5}{\micro\meter}, resultando em sobreposição total dada por:
 \begin{equation}
 \label{eq:lov_metal}
 L_{ov,metal} = \Delta L_{align} + L_{diff,lat}
 \end{equation}
-em que $L_{diff,lat} \approx 0{,}75 x_j$ representa a difusão lateral de impurezas dopantes sob a borda do óxido, sendo $x_j$ a profundidade metalúrgica de junção.
+em que $L_{diff,lat} \approx 0{,}75 x_j$ representa a difusão lateral de dopantes sob a borda do óxido, sendo $x_j$ a profundidade metalúrgica de junção.
 
-Na tecnologia de porta autoalinhada de silício (\textit{Silicon Gate Technology}, SGT), inicialmente proposta por Kerwin, Klein e Sarace em âmbito laboratorial \cite{kerwin1969patent} e desenvolvida industrialmente por Faggin e Klein na Fairchild Semiconductor \cite{faggin1970, klein1972patent}, o eletrodo de silício policristalino dopado é depositado e gravado antes da etapa de difusão de fonte e dreno. Esse filme de polissilício atua como máscara física refratária contra a penetração de dopantes durante a difusão térmica. Com isso, a parcela de tolerância litográfica é suprimida ($\Delta L_{align} = 0$), restando unicamente a difusão térmica lateral inevitável:
+Na tecnologia de porta autoalinhada de silício (\textit{Silicon Gate Technology}, SGT), proposta laboratorialmente por Kerwin, Klein e Sarace \cite{kerwin1969patent} e viabilizada industrialmente por Faggin e Klein na Fairchild Semiconductor \cite{faggin1970, klein1972patent}, o eletrodo de silício policristalino dopado é depositado e gravado antes da etapa de difusão de fonte e dreno. Esse filme de polissilício atua como máscara física refratária contra a penetração de dopantes durante o processo térmico. Com isso, a parcela de tolerância litográfica é suprimida ($\Delta L_{align} = 0$), restando unicamente a difusão lateral térmica inevitável:
 \begin{equation}
 \label{eq:lov_sgt}
 L_{ov,SGT} = L_{diff,lat}.
 \end{equation}
-Essa configuração reduz a sobreposição longitudinal residual por borda em um fator de três a cinco vezes, o que representa uma diminuição de 60\% a 80\% na capacitância parasita em relação ao processo de porta metálica.
+Essa geometria reduz a sobreposição residual por borda em um fator de três a cinco vezes, atenuando a capacitância parasita em 60\% a 80\% comparada ao processo com porta metálica.
 
-O impacto da redução de $C_{ov}$ reflete-se de modo amplificado na capacitância entre porta e dreno ($C_{gd}$) em estágios inversores devido ao efeito Miller. A capacitância dinâmica de entrada efetiva associada a esse acoplamento ($C_{in,Miller}$) durante o chaveamento de sinais é dada por:
+A redução de $C_{ov}$ atenua de forma amplificada a capacitância porta-dreno ($C_{gd}$) pelo efeito Miller. A capacitância dinâmica de entrada durante o chaveamento corresponde a:
 \begin{equation}
 \label{eq:miller}
 C_{in,Miller} = C_{gd} (1 - A_v) = C_{gd} (1 + |A_v|)
 \end{equation}
-em que $A_v = -g_m R_L$ é o ganho de tensão de pequenos sinais do estágio inversor durante a excursão pela região ativa. Em portas lógicas operando com ganhos entre 3 e 5, a capacitância física $C_{gd} \approx C_{ox} W L_{ov,d}$ é multiplicada por um fator entre 4 e 6. Ao eliminar a sobreposição litográfica deliberada, o processo SGT reduz a carga dinâmica de comutação do nó.
+em que $A_v = -g_m R_L$ é o ganho de tensão de pequenos sinais. Com ganhos típicos entre 3 e 5, a capacitância física $C_{gd} \approx C_{ox} W L_{ov,d}$ é multiplicada por fatores entre 4 e 6. A supressão da sobreposição litográfica alivia diretamente esse carregamento dinâmico.
 
-O atraso de propagação de primeira ordem ($\tau_{pd}$) de um estágio inversor MOS é governado pelo produto da resistência equivalente de condução no estado ligado ($R_{on}$) e da capacitância total de carga associada ao nó de saída ($C_L$):
+O atraso de propagação ($\tau_{pd}$) de um inversor MOS depende da resistência equivalente em condução ($R_{on}$) e da capacitância de carga no nó de saída ($C_L$):
 \begin{equation}
 \label{eq:tau_pd}
 \tau_{pd} \approx 0{,}69 R_{on} C_L \approx \frac{C_L \Delta V}{I_{on}}.
 \end{equation}
 
-A capacitância total de carga congrega a componente Miller de sobreposição, a capacitância de entrada das portas subsequentes, as capacitâncias parasitas de junção reversa ($C_{junc}$) e a capacitância distribuída das linhas de fiação ($C_{wire}$):
+A capacitância de carga total engloba o acoplamento Miller, as entradas subsequentes, junções reversas ($C_{junc}$) e fiação distribuída ($C_{wire}$):
 \begin{equation}
 \label{eq:cl_total}
 C_L = C_{gd} (1 + |A_v|) + C_{gate,next} + C_{junc} + C_{wire}.
 \end{equation}
 
-A contração de $C_{gd}$ e o encurtamento das interconexões permitiram uma redução direta de $C_L$. Concomitantemente, o aumento da corrente de dreno em condução ($I_{on}$) proporcionado por um maior sobrepotencial de porta reduziu $R_{on}$. Em consequência, o atraso de propagação por estágio diminuiu em até cinco vezes em comparação com dispositivos PMOS de porta metálica sob mesmo consumo de potência, viabilizando frequências de relógio entre \SI{740}{\kilo\hertz} e \SI{750}{\kilo\hertz} no processador Intel 4004. A \cref{fig:sgt_vs_metalgate} ilustra esquematicamente as diferenças estruturais em corte transversal entre as duas tecnologias.
+A contração de $C_{gd}$ e o encurtamento das interconexões reduziram $C_L$, enquanto correntes de condução ($I_{on}$) superiores diminuíram $R_{on}$. Como resultado, o atraso de propagação por estágio decresceu em até cinco vezes frente ao processo de porta metálica sob mesma dissipação de potência, viabilizando frequências de relógio entre \SI{740}{\kilo\hertz} e \SI{750}{\kilo\hertz} no Intel 4004. A \cref{fig:sgt_vs_metalgate} ilustra as diferenças estruturais em corte transversal entre as duas tecnologias.
 
 \begin{figure}[!t]
 \centering
@@ -69,7 +69,7 @@ A contração de $C_{gd}$ e o encurtamento das interconexões permitiram uma red
 \subsection{Eletrostática da Tensão de Limiar e Propriedades Estruturais}
 \label{subsec:eletrostatica_vth_estruturais}
 
-A tensão de limiar ($V_{th}$) de um transistor PMOS em modo de enriquecimento, construído sobre substrato de silício tipo n, decorre do balanço eletrostático no canal semicondutor:
+A tensão de limiar ($V_{th}$) de um transistor PMOS em modo de enriquecimento sobre silício tipo n decorre do equilíbrio eletrostático no canal semicondutor:
 \begin{equation}
 \label{eq:vth_geral}
 V_{th} = V_{FB} - 2\phi_F - \frac{Q_B}{C_{ox}}.
@@ -80,9 +80,9 @@ A tensão de bandas planas ($V_{FB}$) expressa a influência dos materiais condu
 \label{eq:vfb}
 V_{FB} = \Phi_{ms} - \frac{Q_{ss}}{C_{ox}}
 \end{equation}
-em que $\Phi_{ms} = \Phi_m - \Phi_s$ representa a diferença de função de trabalho entre o condutor de porta e o substrato semicondutor, e $Q_{ss}$ traduz a densidade superficial de cargas fixas positivas presentes na interface entre o óxido de silício e o substrato.
+sendo $\Phi_{ms} = \Phi_m - \Phi_s$ a diferença de função de trabalho entre porta e substrato, e $Q_{ss}$ a densidade superficial de cargas fixas positivas na interface óxido-silício.
 
-O potencial de Fermi no substrato tipo n ($\phi_F$) e a densidade de carga espacial na região de depleção ($Q_B$) são formulados por:
+O potencial de Fermi ($\phi_F$) e a densidade de carga espacial na região de depleção ($Q_B$) são formulados por:
 \begin{equation}
 \label{eq:phi_f}
 \phi_F = \frac{k T}{q} \ln\left(\frac{N_D}{n_i}\right)
@@ -91,15 +91,15 @@ O potencial de Fermi no substrato tipo n ($\phi_F$) e a densidade de carga espac
 \label{eq:qb}
 Q_B = \sqrt{2 q \varepsilon_{Si} N_D (2\phi_F + |V_{SB}|)}
 \end{equation}
-em que $N_D$ é a concentração volumétrica de doadores no substrato, $n_i$ é a concentração intrínseca de portadores livres, $q$ é a carga elementar, $\varepsilon_{Si}$ é a permissividade do silício e $V_{SB}$ corresponde ao potencial de polarização reversa de corpo.
+em que $N_D$ representa a concentração volumétrica de doadores no substrato, $n_i$ a concentração intrínseca de portadores livres, $q$ a carga elementar, $\varepsilon_{Si}$ a permissividade do silício e $V_{SB}$ o potencial de corpo.
 
-Substituindo essas expressões na \cref{eq:vth_geral}, obtém-se a formulação expandida da tensão de limiar para dispositivos PMOS:
+A substituição dessas relações em \cref{eq:vth_geral} fornece a expressão expandida de $V_{th}$ para dispositivos PMOS:
 \begin{equation}
 \label{eq:vth_expandido}
 V_{th} = \Phi_{ms} - \frac{Q_{ss}}{C_{ox}} - 2\phi_F - \frac{\sqrt{2 q \varepsilon_{Si} N_D (2\phi_F + |V_{SB}|)}}{C_{ox}}.
 \end{equation}
 
-A substituição do eletrodo de alumínio por silício policristalino com dopagem degenerada tipo $p^+$ modifica diretamente o termo $\Phi_{ms}$. Para a porta de alumínio sobre silício tipo n, com $\Phi_m \approx \SI{4,10}{\electronvolt}$ e $\Phi_s \approx \SI{4,31}{\electronvolt}$, resulta $\Phi_{ms,Al} \approx \SI{-0,21}{\volt}$. Para a porta de polissilício tipo $p^+$, o nível de Fermi localiza-se junto ao topo da banda de valência, fornecendo $\Phi_{poly(p^+)} \approx \chi + E_g \approx \SI{4,05}{\electronvolt} + \SI{1,12}{\electronvolt} = \SI{5,17}{\electronvolt}$, o que produz $\Phi_{ms,poly} \approx \SI{5,17}{\electronvolt} - \SI{4,31}{\electronvolt} \approx \SI{+0,86}{\volt}$.
+A substituição da porta de alumínio por silício policristalino com dopagem degenerada $p^+$ modifica diretamente o termo $\Phi_{ms}$. Para alumínio sobre silício tipo n, com $\Phi_m \approx \SI{4,10}{\electronvolt}$ e $\Phi_s \approx \SI{4,31}{\electronvolt}$, tem-se $\Phi_{ms,Al} \approx \SI{-0,21}{\volt}$. Para polissilício $p^+$, com o nível de Fermi junto ao topo da banda de valência, obtém-se $\Phi_{poly(p^+)} \approx \chi + E_g \approx \SI{4,05}{\electronvolt} + \SI{1,12}{\electronvolt} = \SI{5,17}{\electronvolt}$, produzindo $\Phi_{ms,poly} \approx \SI{5,17}{\electronvolt} - \SI{4,31}{\electronvolt} \approx \SI{+0,86}{\volt}$.
 
 A diferença líquida gerada pela troca de material corresponde a:
 \begin{equation}
@@ -107,13 +107,11 @@ A diferença líquida gerada pela troca de material corresponde a:
 \Delta \Phi_{ms} = \Phi_{ms,poly} - \Phi_{ms,Al} \approx \SI{+0,86}{\volt} - (\SI{-0,21}{\volt}) \approx \SI{+1,07}{\volt}.
 \end{equation}
 
-Como esse incremento atua de forma aditiva na equação de $V_{th}$, a magnitude negativa da tensão de limiar em dispositivos PMOS é reduzida em aproximadamente \SI{1,1}{\volt} em módulo, deslocando os valores típicos de corte de patamares próximos a \SI{-3,5}{\volt} para níveis em torno de \SI{-2,4}{\volt}.
+Esse acréscimo positivo atenua a magnitude negativa de $V_{th}$ em cerca de \SI{1,1}{\volt}, deslocando os valores típicos de corte de patamares próximos a \SI{-3,5}{\volt} para níveis em torno de \SI{-2,4}{\volt}.
 
-O termo associado às cargas de interface ($-Q_{ss}/C_{ox}$) exerce influência sobre a tensão de corte porque $Q_{ss}$ exibe invariavelmente sinal positivo devido a espécies iônicas residuais e ligações incompletas na fronteira entre a rede de silício e o óxido térmico. Logo, $-Q_{ss}/C_{ox} < 0$, o que desloca $V_{th}$ para magnitudes ainda mais negativas em canais p.
+O termo associado às cargas de interface ($-Q_{ss}/C_{ox}$) é negativo devido ao sinal positivo invariável de $Q_{ss}$, deslocando $V_{th}$ para valores ainda mais negativos em canais p. Na orientação cristalográfica $\langle 111 \rangle$, a maior densidade superficial atômica impõe concentrações $Q_{ss}/q \approx \SIrange{4e11}{5e11}{\per\centi\meter\squared}$. Em lâminas com óxido de \SI{100}{\nano\meter} ($C_{ox} \approx \SI{34,5}{\nano\farad\per\centi\meter\squared}$), essa componente contribui com \SI{-1,9}{\volt} a \SI{-2,3}{\volt} para a tensão de corte, elevando $|V_{th}|$ para a faixa de \SIrange{3,5}{5,0}{\volt}. Em contrapartida, na orientação $\langle 100 \rangle$, a menor densidade atômica limita as cargas a $Q_{ss}/q \approx \SIrange{0,5e11}{1,0e11}{\per\centi\meter\squared}$, restringindo o deslocamento ao intervalo de \SIrange{-0,2}{-0,5}{\volt}.
 
-A magnitude de $Q_{ss}$ depende da orientação cristalográfica do substrato. Na orientação $\langle 111 \rangle$, a maior densidade superficial de átomos resulta em concentrações de carga de interface de $Q_{ss}/q \approx \SIrange{4e11}{5e11}{\per\centi\meter\squared}$. Em processos com óxido de \SI{100}{\nano\meter} ($C_{ox} \approx \SI{34,5}{\nano\farad\per\centi\meter\squared}$), essa componente contribui com \SI{-1,9}{\volt} a \SI{-2,3}{\volt} para a tensão de corte, elevando o módulo total $|V_{th}|$ para a faixa de \SI{-3,5}{\volt} a \SI{-5,0}{\volt}. Em contrapartida, na orientação $\langle 100 \rangle$, a menor densidade atômica superficial permite restringir a concentração de cargas para $Q_{ss}/q \approx \SIrange{0,5e11}{1,0e11}{\per\centi\meter\squared}$, reduzindo o deslocamento associado para o intervalo de \SI{-0,2}{\volt} a \SI{-0,5}{\volt}.
-
-Ao combinar a modulação de $\Phi_{ms}$ com o emprego de lâminas com orientação $\langle 100 \rangle$ e ciclos térmicos de recozimento em alta temperatura, o processo SGT alcançou tensões de limiar reprodutíveis entre \SI{-1,5}{\volt} e \SI{-2,5}{\volt} \cite{faggin1970, klein1972patent}. A \cref{tab:comparacao_eletrica} sintetiza os principais parâmetros elétricos e de interface das duas abordagens tecnológicas.
+Ao combinar a modulação de $\Phi_{ms}$ com o emprego de substratos $\langle 100 \rangle$ e ciclos de recozimento térmico em alta temperatura, o processo SGT alcançou tensões de limiar reprodutíveis entre \SI{-1,5}{\volt} e \SI{-2,5}{\volt} \cite{faggin1970, klein1972patent}. A \cref{tab:comparacao_eletrica} sintetiza os parâmetros elétricos e de interface das duas abordagens.
 
 \begin{table}[!t]
 \renewcommand{\arraystretch}{1.2}
@@ -135,71 +133,67 @@ Camadas condutoras & 1 (metal) com túneis & 2 (polissilício e metal) \\
 \end{tabularx}
 \end{table}
 
-A redução da tensão de limiar viabilizou a estratégia de alimentação elétrica adotada no conjunto MCS-4. Empregando $V_{SS} = \SI{+5}{\volt}$ e $V_{DD} = \SI{-10}{\volt}$, a diferença de potencial entre os trilhos permaneceu em \SI{15}{\volt}, atendendo às necessidades internas dos transistores PMOS, enquanto o trilho superior coincidiu com a tensão padronizada de circuitos integrados bipolares da família TTL (\SI{+5}{\volt}). O nível alto de saída do circuito integrado atingia potenciais próximos a \SI{+5}{\volt}, viabilizando o acoplamento direto com portas TTL sem circuitos intermediários de translação de nível.
+A redução da tensão de limiar viabilizou a estratégia de alimentação elétrica adotada no conjunto MCS-4. Empregando $V_{SS} = \SI{+5}{\volt}$ e $V_{DD} = \SI{-10}{\volt}$, a diferença de potencial entre os trilhos permaneceu em \SI{15}{\volt}, atendendo às condições operacionais dos transistores PMOS, enquanto o trilho superior coincidiu com o padrão TTL de \SI{+5}{\volt}. O nível alto de saída aproximou-se de \SI{+5}{\volt}, viabilizando o acoplamento direto com portas lógicas bipolares sem circuitos intermediários de translação de nível.
 
-Sob a ótica de materiais e termodinâmica, o filme de silício policristalino depositado por deposição química em fase de vapor (CVD) exibe estabilidade estrutural em temperaturas superiores a \SI{1100}{\celsius}. Essa natureza refratária possibilita que a porta seja depositada e padronizada antes das etapas de difusão de fonte e dreno, conduzidas em fornos a temperaturas entre \SI{1050}{\celsius} e \SI{1150}{\celsius}. Em contrapartida, o alumínio funde a \SI{660}{\celsius} e forma fase eutética líquida com o silício a \SI{577}{\celsius}, impedindo qualquer tratamento térmico de alta temperatura após sua deposição.
+Sob a ótica de materiais, o silício policristalino depositado por deposição química em fase de vapor (CVD) exibe estabilidade térmica acima de \SI{1100}{\celsius}. Essa natureza refratária permite padronizar a porta antes das difusões de fonte e dreno, conduzidas entre \SI{1050}{\celsius} e \SI{1150}{\celsius}. Em contrapartida, o alumínio funde a \SI{660}{\celsius} e forma fase eutética com o silício a \SI{577}{\celsius}. Acima de \SI{450}{\celsius}, a solubilização do silício no metal induz migração atômica em discordâncias cristalinas. No resfriamento, o alumínio preenche esses vazios gerando espículas condutoras (\textit{spiking}) que perfuram junções rasas ($x_j \le \SI{2}{\micro\meter}$), inutilizando o dispositivo por fuga reversa.
 
-Em temperaturas acima de \SI{450}{\celsius}, o silício dissolve-se no alumínio sólido adjacente, ocorrendo migração atômica preferencial em pontos de discordância da rede cristalina. Durante o resfriamento, o alumínio preenche os vazios gerados no substrato, formando filamentos condutores pontiagudos conhecidos como espículas de alumínio (\textit{spiking}). Em junções rasas ($x_j \le \SI{2}{\micro\meter}$), essas espículas perfuram a profundidade metalúrgica da junção $p-n$, conectando fonte ou dreno ao substrato e inutilizando o componente por corrente de fuga reversa.
-
-A estabilidade térmica do polissilício viabilizou também o processo de purificação e captura iônica com fósforo (\textit{phosphorus gettering}) em etapas com oxicloreto de fósforo ($\text{POCl}_3$) entre \SI{1000}{\celsius} e \SI{1050}{\celsius}. Esse processo fixa íons alcalinos móveis, em particular o sódio ($\text{Na}^+$), no vidro de fosfossilicato superficial (PSG), suprimindo derivas temporais de $V_{th}$ e reduzindo as correntes de fuga das junções polarizadas reversamente.
-
-Além dessas propriedades, o silício policristalino depositado sobre o óxido espesso de campo funciona como uma segunda camada condutora independente de fiação. Em circuitos MOS com uma única camada de alumínio, o cruzamento de duas linhas de sinal sem conexão física exigia a inserção de túneis difusos no substrato (\textit{diffused cross-unders}). Nesses arranjos, o sinal deixava a trilha metálica, ingressava em uma difusão $p^+$ no silício monocristalino e retornava à superfície por uma segunda via de contato metálica. Esse mecanismo impunha elevada resistência parasita de folha (\SIrange{30}{100}{\ohm\text{ por quadrado}}), alta capacitância de junção de substrato e consumo substancial de área de pastilha. Com a tecnologia SGT, o polissilício conduz sinais em um plano condutor intermediário sob a metalização de alumínio, permitindo cruzamentos sem túneis difusos e viabilizando topologias densas de interconexão.
+A estabilidade térmica do polissilício viabilizou também a captura iônica com fósforo (\textit{phosphorus gettering}) em etapas com oxicloreto de fósforo ($\text{POCl}_3$) entre \SI{1000}{\celsius} e \SI{1050}{\celsius}. Esse processo fixa íons alcalinos de sódio ($\text{Na}^+$) no vidro de fosfossilicato (PSG), estabilizando $V_{th}$ contra derivas temporais e reduzindo correntes de fuga. Ademais, o polissilício sobre o óxido de campo atua como segunda camada condutora independente. Em circuitos com camada metálica única, o cruzamento de sinais requeria túneis difusos no substrato (\textit{diffused cross-unders}), nos quais a condução por difusões $p^+$ introduzia resistência de folha na faixa de \SIrange{30}{100}{\ohm\text{ por quadrado}}, alta capacitância parasita e consumo substancial de área. No SGT, a camada condutora intermediária de polissilício elimina esses túneis e viabiliza roteamentos densos sob a metalização de alumínio.
 
 \subsection{Inovações de Circuito e Metodologia de Leiaute no Intel 4004}
 \label{subsec:inovacoes_circuito_leiaute}
 
-A conversão das especificações da arquitetura MCS-4 em circuitos integrados físicos funcionais dependeu de três inovações introduzidas por Faggin: os contatos enterrados, as cargas ativas com elevação capacitiva dinâmica de potencial e o roteamento ortogonal em lógica aleatória \cite{faggin1996, faggin2021}.
+A viabilização prática do sistema MCS-4 decorreu de três inovações desenvolvidas por Faggin: os contatos enterrados, as cargas ativas com elevação capacitiva dinâmica de potencial (\textit{bootstrapping}) e a metodologia de roteamento ortogonal em lógica aleatória \cite{faggin1996, faggin2021}.
 
-No projeto do Intel 4004, Faggin implementou a técnica de contatos enterrados (\textit{buried contacts}), cuja formulação experimental fora iniciada em seus trabalhos na Fairchild Semiconductor e posteriormente formalizada na patente concedida a Leslie L. Vadasz \cite{vadasz1972patent, faggin1996, faggin2021}. O mecanismo físico baseia-se na abertura seletiva de janelas no óxido fino de porta por fotolitografia antes da deposição do filme de silício policristalino. Ao depositar o polissilício sobre a lâmina, o material entra em contato íntimo direto com o silício monocristalino do substrato exposto nas aberturas. Durante a subsequente etapa térmica de difusão de boro em alta temperatura, as espécies dopantes difundem rapidamente ao longo da estrutura granular do polissilício e penetram no substrato monocristalino subjacente. Esse processo gera uma junção dopada $p^+$ contínua, estabelecendo uma conexão ôhmica direta de baixa resistividade entre o silício policristalino e a região difusa do substrato sem interposição de camadas metálicas.
+No Intel 4004, Faggin implementou a técnica de contatos enterrados (\textit{buried contacts}), cuja formulação experimental fora iniciada na Fairchild Semiconductor e posteriormente formalizada na patente concedida a Leslie L. Vadasz \cite{vadasz1972patent, faggin1996, faggin2021}. O mecanismo fundamenta-se na abertura seletiva de janelas no óxido de porta por fotolitografia antes da deposição do filme de silício policristalino. Ao cobrir a lâmina, o polissilício entra em contato íntimo direto com o silício monocristalino do substrato exposto nas aberturas. Durante a difusão térmica subsequente de boro em alta temperatura, as espécies dopantes difundem pela estrutura granular do polissilício e penetram no substrato subjacente. Esse processo forma uma junção dopada $p^+$ contínua, estabelecendo uma conexão ôhmica direta de baixa resistividade entre o silício policristalino e a região difusa do substrato sem interposição de camadas metálicas.
 
-Na metodologia convencional de leiaute em circuitos MOS com camada metálica única, a interligação entre a porta de um transistor e a difusão de dreno de outro elemento adjacente demandava duas aberturas de contato verticais para o alumínio (um contato metal-polissilício e um contato metal-difusão), unidas por uma ilha metálica superior. Essa configuração impunha regras restritivas de espaçamento geométrico, tolerâncias de alinhamento e isolamento de metalização que consumiam ampla área de silício. A eliminação das ilhas de alumínio e das respectivas janelas verticais por meio dos contatos enterrados proporcionou uma economia de até 50\% na área ocupada por interconexões locais nas células lógicas. Essa compactação topológica foi um dos fatores determinantes para acomodar os \num{2300} transistores do processador em uma área de apenas \SI{12}{\milli\meter\squared} \cite{faggin1996, faggin2021}.
+Em leiautes convencionais de camada metálica única, a conexão entre uma porta de polissilício e a difusão de dreno adjacente exigia duas aberturas de contato verticais e uma ponte condutora de alumínio. Regras de espaçamento, alinhamento e isolamento dessas ilhas metálicas consumiam ampla área superficial. A eliminação das ilhas de alumínio e das vias verticais pelos contatos enterrados proporcionou uma economia de até 50\% na área ocupada por interconexões locais nas células lógicas. Essa compactação topológica foi decisiva para integrar os \num{2300} transistores do processador em \SI{12}{\milli\meter\squared} \cite{faggin1996, faggin2021}.
 
-Outro avanço de circuito integrado ao Intel 4004 consistiu na implementação de cargas ativas com elevação capacitiva dinâmica de potencial (\textit{bootstrapping}) \cite{faggin1972fourchip, faggin1996}. Em portas lógicas PMOS convencionais que operam com cargas em modo de enriquecimento com porta conectada à alimentação fixa ($V_{DD}$), o transistor de carga (\textit{pull-up}) conduz corrente enquanto a tensão porta-fonte $|V_{GS}| = |V_G - V_{out}|$ exceder a magnitude da tensão de limiar $|V_{th}|$. À medida que o nó de saída carrega em direção a $V_{DD}$, a elevação de $V_{out}$ reduz continuamente $|V_{GS}|$. Quando o potencial de saída alcança o valor crítico:
+Outro avanço de circuito integrado ao Intel 4004 consistiu na implementação de cargas ativas com elevação capacitiva dinâmica de potencial (\textit{bootstrapping}) \cite{faggin1972fourchip, faggin1996}. Em portas PMOS operando com carga em modo de enriquecimento com porta conectada à alimentação fixa ($V_{DD}$), o transistor de carga conduz corrente enquanto a tensão porta-fonte $|V_{GS}| = |V_G - V_{out}|$ exceder a tensão de limiar $|V_{th}|$. Conforme o nó de saída se eleva em direção a $V_{DD}$, o aumento de $V_{out}$ reduz continuamente $|V_{GS}|$. Quando a saída alcança o nível:
 \begin{equation}
 \label{eq:vout_max_sem_boot}
 V_{out,max} = V_{DD} - |V_{th}|
 \end{equation}
-o canal entra na região de corte pois $|V_{GS}| \le |V_{th}|$. Essa limitação provoca a perda de uma tensão de limiar inteira no nível lógico alto de saída, degradando a margem de ruído do circuito e tornando as transições ascendentes lentas devido à queda quadrática da corrente de carga com a diminuição do sobrepotencial de porta (\textit{overdrive}).
+o canal entra em corte pois $|V_{GS}| \le |V_{th}|$. Essa limitação acarreta a perda de uma tensão de limiar no nível alto de saída, degradando a margem de ruído e tornando as comutações ascendentes lentas pela redução quadrática da corrente de carga.
 
-Para contornar essa degradação, o circuito de carga com \textit{bootstrapping} dinâmico utiliza um arranjo composto por um transistor de isolamento e amostragem, um transistor de carga cujo terminal de porta constitui um nó dinâmico flutuante ($N_G$) e um capacitor integrado explícito ($C_B$) conectado diretamente entre o nó de saída ($V_{out}$) e o nó $N_G$. Durante o intervalo de pré-carga, o transistor de isolamento conduz e carrega o nó $N_G$ a um potencial de polarização negativo. Em seguida, o transistor de isolamento entra em corte, deixando o nó $N_G$ isolado em alta impedância. Quando a saída do estágio comuta e transita bruscamente em direção a $V_{DD}$, o degrau de potencial $\Delta V_{out}$ é acoplado ao nó flutuante por divisão capacitiva:
+Para contornar essa degradação, o circuito de carga com \textit{bootstrapping} dinâmico emprega um transistor de isolamento e amostragem, um transistor de carga com porta conectada a um nó dinâmico flutuante ($N_G$) e um capacitor integrado ($C_B$) conectado diretamente entre a saída ($V_{out}$) e o nó $N_G$. Durante o intervalo de pré-carga, o transistor de isolamento conduz e polariza o nó $N_G$. Em seguida, entra em corte, mantendo $N_G$ isolado em alta impedância. Quando a saída comuta bruscamente em direção a $V_{DD}$, o degrau de potencial $\Delta V_{out}$ é acoplado ao nó flutuante por divisão capacitiva:
 \begin{equation}
 \label{eq:delta_vg_boot}
 \Delta V_G = \left( \frac{C_B}{C_B + C_P} \right) \Delta V_{out}
 \end{equation}
-em que $C_P$ representa a soma das capacitâncias parasitas associadas ao nó $N_G$, incluindo a capacitância de óxido de campo e a capacitância intrínseca porta-canal do transistor de carga. Dimensionando o capacitor integrado de modo que a capacitância de reforço seja substancialmente superior à capacitância parasita ($C_B \gg C_P$), obtém-se $\Delta V_G \approx \Delta V_{out}$. Consequentemente, o potencial instantâneo da porta do transistor de carga é impulsionado além do nível do trilho de alimentação:
+em que $C_P$ representa a soma das capacitâncias parasitas associadas ao nó $N_G$. Dimensionando o capacitor integrado de modo que $C_B \gg C_P$, obtém-se $\Delta V_G \approx \Delta V_{out}$, impulsionando o potencial instantâneo da porta além do trilho de alimentação:
 \begin{equation}
 \label{eq:vg_total_boot}
 V_G(t) \approx V_{G,inicial} + \Delta V_{out}.
 \end{equation}
 
-Essa sobretensão dinâmica garante que a magnitude da tensão porta-fonte $|V_{GS}|$ permaneça superior a $|V_{th}|$ ao longo de todo o ciclo transitório de subida. Com isso, o transistor de carga permanece operando na região de condução linear (região de triodo), conduzindo corrente elevada até que o nó de saída atinja plenamente o potencial de alimentação ($V_{out} = V_{DD}$). A eliminação da atenuação por tensão de limiar restaura as margens de ruído lógicas e assegura tempos de comutação ascendente expressivamente menores \cite{faggin1972fourchip}.
+Essa elevação assegura que $|V_{GS}| > |V_{th}|$ em toda a transição ascendente, mantendo o transistor de carga na região linear de triodo até a excursão plena da saída ($V_{out} = V_{DD}$). O mecanismo restaura as margens de ruído lógicas e assegura transições ascendentes velozes \cite{faggin1972fourchip}.
 
-Em arranjos regulares de memória, como matrizes de ROM e RAM, os transistores repetem-se segundo malhas geométricas uniformes. Em contrapartida, unidades centrais de processamento contêm blocos extensos de lógica aleatória (\textit{random logic}), tais como decodificadores de instrução, unidades aritméticas e lógicas, circuitos de controle e multiplexadores, cujas rotas de interconexão apresentam percursos complexos e irregulares. Para estruturar esse ambiente físico no Intel 4004 sem recorrer a ferramentas automatizadas de síntese, inexistentes no período, Faggin estabeleceu uma metodologia estruturada de leiaute baseada em roteamento ortogonal em duas camadas condutoras independentes \cite{faggin1996, faggin2021}. As trilhas condutoras de silício policristalino dopado foram alocadas preferencialmente ao longo de um eixo de coordenadas principal (direção vertical), enquanto as pistas metálicas de alumínio foram restritas ao eixo ortogonal perpendicular (direção horizontal). As conexões elétricas entre as duas camadas foram realizadas por vias de contato verticais metal-polissilício, ao passo que as derivações para o substrato ativo foram efetuadas pelos contatos enterrados. Essa disciplina de desenho suprimiu cruzamentos tortuosos, reduziu as capacitâncias distribuídas de acoplamento mútuo e eliminou áreas ociosas de silício, viabilizando a integração de uma CPU funcional no espaço restrito da pastilha.
+Diferentemente de matrizes regulares de memória, unidades centrais de processamento contêm blocos extensos de lógica aleatória (\textit{random logic}), como decodificadores, somadores e unidades de controle, cujas rotas de interconexão apresentam percursos irregulares. Na ausência de ferramentas computacionais de síntese física no período, Faggin estabeleceu uma metodologia estruturada de leiaute baseada em roteamento ortogonal em duas camadas condutoras independentes \cite{faggin1996, faggin2021}: trilhas de silício policristalino dopado alocadas preferencialmente ao longo do eixo vertical e pistas metálicas de alumínio confinadas ao eixo horizontal ortogonal. As conexões elétricas entre camadas foram realizadas por vias verticais metal-polissilício, e as derivações para o substrato ativo por contatos enterrados. Essa disciplina geométrica eliminou cruzamentos tortuosos, reduziu capacitâncias parasitas de acoplamento e suprimiu áreas ociosas de pastilha.
 
 \subsection{Arquitetura do Sistema MCS-4 e Barramento Multiplexado}
 \label{subsec:arquitetura_mcs4_barramento}
 
-A família de circuitos integrados MCS-4 (\textit{Micro Computer Set}) constitui um sistema microprocessado modular particionado em quatro componentes em tecnologia PMOS SGT de \SI{10}{\micro\meter}, acondicionados em encapsulamentos cerâmicos DIP de 16 pinos \cite{intel1973mcs4, noyce1981}. O processador central Intel 4004 reúne cerca de \num{2300} transistores em pastilha de \SI{12}{\milli\meter\squared}, incorporando uma unidade lógica e aritmética de 4 bits com correção decimal para BCD, acumulador, indicador de transporte (\textit{carry}), 16 registradores de índice de 4 bits, contador de programa de 12 bits com pilha de sub-rotinas de três níveis e repertório de 46 instruções, operando sob relógio bifásico com frequência nominal entre \SI{740}{\kilo\hertz} e \SI{750}{\kilo\hertz}. A memória de programa Intel 4001 integra \num{2048} bits mascarados em 256 palavras de 8 bits e uma porta paralela de 4 bits para entrada e saída, suportando até 16 unidades no barramento comum (\SI{4}{\kibi\byte}). O armazenamento de dados é suprido pela memória dinâmica Intel 4002 de 320 bits, organizada em quatro registradores de 20 caracteres de 4 bits com porta de saída, decodificada por quatro linhas de controle CM-RAM. Por fim, o circuito Intel 4003 atua como expansor estático de entrada e saída por meio de um registrador de deslocamento de 10 bits com saídas paralelas para interfaceamento com teclados, mostradores e impressoras.
+A família de circuitos integrados MCS-4 (\textit{Micro Computer Set}) constitui um sistema microprocessado modular particionado em quatro componentes em tecnologia PMOS SGT de \SI{10}{\micro\meter}, acondicionados em invólucros cerâmicos DIP de 16 pinos \cite{intel1973mcs4, noyce1981}. O processador central Intel 4004 reúne cerca de \num{2300} transistores em \SI{12}{\milli\meter\squared}, incorporando uma unidade lógica e aritmética de 4 bits com correção decimal para BCD, acumulador, indicador de transporte (\textit{carry}), 16 registradores de índice de 4 bits, contador de programa de 12 bits com pilha de três níveis e repertório de 46 instruções, operando sob relógio bifásico com frequência nominal de \SIrange{740}{750}{\kilo\hertz}. A memória de programa Intel 4001 integra \num{2048} bits mascarados em 256 palavras de 8 bits e porta de entrada e saída de 4 bits, suportando até 16 unidades no barramento comum (\SI{4}{\kibi\byte}). O armazenamento de dados é provido pela memória dinâmica Intel 4002 de 320 bits, organizada em quatro registradores de 20 caracteres de 4 bits com porta de saída, decodificada por quatro linhas de controle CM-RAM. Por fim, o circuito Intel 4003 atua como expansor estático de entrada e saída por meio de um registrador de deslocamento de 10 bits com saídas paralelas para interface com periféricos.
 
-Em 1971, as restrições de custo e confiabilidade da indústria impunham o uso do encapsulamento padrão DIP de 16 pinos, tornando inviável a alocação de pinos dedicados isolados para dados, endereços e comandos de controle. Para contornar essa limitação física, a arquitetura adotou um barramento bidirecional multiplexado no tempo de 4 bits ($D_0$ a $D_3$) para o intercâmbio de sinais entre os quatro circuitos integrados da família \cite{intel1973mcs4, faggin1974patent}.
+As restrições de custo e confiabilidade em 1971 impunham o uso do encapsulamento padrão DIP de 16 pinos, inviabilizando pinos dedicados isolados para dados, endereços e controle. Para contornar essa limitação física, a arquitetura adotou um barramento bidirecional multiplexado no tempo de 4 bits ($D_0$ a $D_3$) para o intercâmbio de sinais entre os quatro circuitos integrados da família \cite{intel1973mcs4, faggin1974patent}.
 
-A distribuição dos 16 terminais do processador Intel 4004 organiza-se em funções específicas: quatro pinos bidirecionais ($D_0$ a $D_3$) para o barramento multiplexado de dados, endereços e instruções, dois pinos de entrada para o relógio bifásico não sobreposto ($\phi_1$ e $\phi_2$), uma saída de sincronização (\textit{SYNC}), uma entrada de reinicialização (\textit{RESET}), uma entrada para testes lógicos de salto (\textit{TEST}), quatro linhas de seleção de memória RAM (CM-RAM0 a CM-RAM3), uma linha de habilitação de memória ROM (CM-ROM) e dois terminais de alimentação elétrica ($V_{SS}$ a \SI{+5}{\volt} e $V_{DD}$ a \SI{-10}{\volt}).
+Os 16 terminais do Intel 4004 distribuem-se em: quatro pinos para o barramento multiplexado ($D_0$ a $D_3$), duas entradas para as fases de relógio não sobrepostas ($\phi_1$ e $\phi_2$), uma saída de sincronização (\textit{SYNC}), uma entrada de reinicialização (\textit{RESET}), uma entrada para testes lógicos (\textit{TEST}), quatro linhas de seleção de memória RAM (CM-RAM0 a CM-RAM3), uma linha de habilitação de memória ROM (CM-ROM) e dois terminais de alimentação elétrica ($V_{SS} = \SI{+5}{\volt}$ e $V_{DD} = \SI{-10}{\volt}$).
 
-O relógio bifásico emprega duas fases de onda quadradas não sobrepostas ($\phi_1$ e $\phi_2$). Com o período de relógio especificado em \SI{1,35}{\micro\second} (frequência de \SI{740,7}{\kilo\hertz}), cada instrução de uma palavra (8 bits) requer oito períodos de relógio consecutivos para completar sua execução, estabelecendo um ciclo básico de instrução de \SI{10,8}{\micro\second} e uma capacidade de processamento de aproximadamente \num{92600} instruções por segundo. Instruções de duas palavras (16 bits) demandam 16 períodos de relógio consecutivos (\SI{21,6}{\micro\second}).
+Com o período de relógio bifásico especificado em \SI{1,35}{\micro\second} (frequência de \SI{740,7}{\kilo\hertz}), cada instrução de uma palavra (8 bits) requer oito períodos de relógio para completar sua execução, estabelecendo um ciclo básico de instrução de \SI{10,8}{\micro\second} e taxa de processamento de aproximadamente \num{92600} instruções por segundo. Instruções de duas palavras (16 bits) demandam 16 períodos consecutivos (\SI{21,6}{\micro\second}).
 
-O ciclo de instrução de \SI{10,8}{\micro\second} reparte-se cronologicamente em oito subciclos de temporização sob as fases do relógio bifásico:
+O ciclo de instrução de \SI{10,8}{\micro\second} reparte-se cronologicamente em oito subciclos sob as fases do relógio bifásico:
 \begin{enumerate}
-\item Subciclo A1 (\textit{Address 1}): transmissão dos quatro bits menos significativos do endereço de memória ROM ($A_0$ a $A_3$).
-\item Subciclo A2 (\textit{Address 2}): envio dos quatro bits intermediários do endereço de ROM ($A_4$ a $A_7$).
-\item Subciclo A3 (\textit{Address 3}): envio dos quatro bits mais significativos ($A_8$ a $A_{11}$), completando o endereço de 12 bits para seleção de palavra na ROM.
-\item Subciclo M1 (\textit{Memory 1}): leitura pela ROM dos quatro bits superiores da palavra de instrução (código de operação, OPR).
-\item Subciclo M2 (\textit{Memory 2}): leitura dos quatro bits inferiores da instrução (modificador de operação, OPA), armazenando a instrução completa no registrador da CPU.
-\item Subciclo X1 (\textit{Execute 1}): decodificação da instrução e início da execução lógica ou aritmética na ULA e registradores.
-\item Subciclo X2 (\textit{Execute 2}): conclusão das operações na ULA, atualização do acumulador e sinalização dos indicadores de transporte (\textit{carry}).
-\item Subciclo B (\textit{Bus / Data / I/O}): transferência do dado de 4 bits entre a CPU e as portas de entrada e saída ou caracteres da memória RAM 4002.
+\item A1 (\textit{Address 1}): envio dos quatro bits menos significativos de endereço de ROM ($A_0$ a $A_3$).
+\item A2 (\textit{Address 2}): envio dos quatro bits intermediários de endereço de ROM ($A_4$ a $A_7$).
+\item A3 (\textit{Address 3}): envio dos quatro bits mais significativos de endereço de ROM ($A_8$ a $A_{11}$).
+\item M1 (\textit{Memory 1}): leitura do código de operação da instrução na ROM (OPR).
+\item M2 (\textit{Memory 2}): leitura do modificador de operação da instrução na ROM (OPA).
+\item X1 (\textit{Execute 1}): decodificação e início da execução lógica ou aritmética na ULA e registradores.
+\item X2 (\textit{Execute 2}): conclusão das operações na ULA, atualização do acumulador e sinalizadores.
+\item B (\textit{Bus / Data / I/O}): transferência de dados de 4 bits entre CPU, portas de entrada e saída ou RAM 4002.
 \end{enumerate}
 
-A \cref{fig:mcs4_bus_timing} apresenta o diagrama em blocos da interconexão dos quatro componentes da família MCS-4 através do barramento multiplexado compartilhado e o cronograma temporal detalhado das oito fases do ciclo de instrução.
+A \cref{fig:mcs4_bus_timing} apresenta o diagrama em blocos da interconexão da família MCS-4 através do barramento multiplexado e o cronograma temporal dos oito subciclos de temporização.
 
 \begin{figure}[!t]
 \centering

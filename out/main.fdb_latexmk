@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex out/main"] 1791764802.59303 "out/main.aux" "out/main.bbl" "out/main" 1791764804.31125 0
-  "./pos_textuais/01_referencias.bib" 1791763936.72802 9226 9c22adeaf6e9e0068b2838592c62f9f9 ""
+["bibtex out/main"] 1791766954.40897 "out/main.aux" "out/main.bbl" "out/main" 1791766956.06646 0
+  "./pos_textuais/01_referencias.bib" 1791766023.08176 9226 9c22adeaf6e9e0068b2838592c62f9f9 ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/ieeetran/IEEEtran.bst" 1440712899 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "out/main.aux" 1791764804.10174 18621 82038b3c3bce675123d8f1630bf71133 "pdflatex"
+  "out/main.aux" 1791766955.86124 16945 8502c5d734cbd8e0daf16cf4a7c99ee4 "pdflatex"
   (generated)
   "out/main.bbl"
   "out/main.blg"
   (rewritten before read)
-["pdflatex"] 1791764802.65857 "main.tex" "out/main.pdf" "main" 1791764804.31142 0
+["pdflatex"] 1791766954.47419 "main.tex" "out/main.pdf" "main" 1791766956.06663 0
   "/etc/texmf/web2c/texmf.cnf" 1783689242.64666 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -140,18 +140,18 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1769369718 41603 27f93b3067076450172040dcd57ca8b3 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1783689657 5418024 d27383b0a8fadef44c19c8c5a157ff8e ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1783689397 2266866 ab1e2d0ea536e15b6feb4b0565114da7 ""
-  "00_config.tex" 1791645415.13567 4719 2804f28f36d6033202d158830d90df01 ""
-  "main.tex" 1791764731.40394 1648 c0e3535d8a9eeb256e0a115a3c5d8197 ""
-  "out/main.aux" 1791764804.10174 18621 82038b3c3bce675123d8f1630bf71133 "pdflatex"
-  "out/main.bbl" 1791764802.65279 6586 5a2d3258e97d659b7f258ac7041929ff "bibtex out/main"
-  "out/main.out" 1791764804.11574 5129 690b8aa336418dcf73bfa0cec6fedcc9 "pdflatex"
-  "secoes/00_resumo.tex" 1791747242.20892 1649 334371daebaea0f7971acdc5e16d04cd ""
-  "secoes/01_introducao.tex" 1791741236.22327 11010 0248eb5d37ec386c745859d437119112 ""
-  "secoes/02_fundamentacao.tex" 1791747045.57511 29240 b84bec6884cc1587deac821d60b7f3d1 ""
-  "secoes/03_metodologia.tex" 1791747206.75349 10424 d364c8eb096f1413e2a297f522da5353 ""
-  "secoes/04_resultados.tex" 1791749115.24867 25014 eb51c3e70b037e924c991bb5f61da64a ""
-  "secoes/05_discussao.tex" 1791764036.16739 14405 f628510b9356fc893a4b3b358251dc96 ""
-  "secoes/06_conclusao.tex" 1791764772.44927 7109 549f2ad5194ed0ab81fd46931cdb154d ""
+  "00_config.tex" 1791766023.07998 4719 2804f28f36d6033202d158830d90df01 ""
+  "main.tex" 1791766023.08009 1648 c0e3535d8a9eeb256e0a115a3c5d8197 ""
+  "out/main.aux" 1791766955.86124 16945 8502c5d734cbd8e0daf16cf4a7c99ee4 "pdflatex"
+  "out/main.bbl" 1791766954.46726 6586 5a2d3258e97d659b7f258ac7041929ff "bibtex out/main"
+  "out/main.out" 1791766955.87524 5129 690b8aa336418dcf73bfa0cec6fedcc9 "pdflatex"
+  "secoes/00_resumo.tex" 1791766772.81024 1586 be22348c571fb0cbc9137aac7cd74d2c ""
+  "secoes/01_introducao.tex" 1791766832.12327 9370 b6ae41f858f94851b4c760fd4028af81 ""
+  "secoes/02_fundamentacao.tex" 1791766851.21795 24085 eda57e7deba65b311d0b50fe3cb23473 ""
+  "secoes/03_metodologia.tex" 1791766792.83091 8491 7669d6a107bc7af560b4b28a1a4d2192 ""
+  "secoes/04_resultados.tex" 1791766880.96747 20265 8198e961edc06ffc5ed683b13c565786 ""
+  "secoes/05_discussao.tex" 1791766812.74258 11978 f6b4f587fcb6185182a1dd389dd0b66b ""
+  "secoes/06_conclusao.tex" 1791766846.95102 5331 6a096c545fb3201836d9d31042974314 ""
   (generated)
   "out/main.aux"
   "out/main.log"

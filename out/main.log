@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.7.10)  11 OCT 2026 21:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.7.10)  11 OCT 2026 22:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -661,95 +661,100 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 f-dist/fonts/enc/dvips/base/8r.enc}
 
 
-]) (./secoes/02_fundamentacao.tex [2]
+]) (./secoes/02_fundamentacao.tex
 Underfull \hbox (badness 6526) in paragraph at lines 14--15
 []\T1/ptm/m/n/10 (+20) Em tran-sis-to-res de efeito de campo Metal-Óxido-
  []
 
-[3] [4] [5]) (./secoes/03_metodologia.tex [6] [7]) (./secoes/04_resultados.tex
-[8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 104--104
+[2] [3] [4]) (./secoes/03_metodologia.tex
+Underfull \vbox (badness 2426) has occurred while \output is active []
+
+ [5])
+[6] (./secoes/04_resultados.tex [7]
+Underfull \hbox (badness 10000) in paragraph at lines 55--55
 []|\T1/ptm/b/n/8 (+20) Fundamento
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--104
+Underfull \hbox (badness 10000) in paragraph at lines 55--55
 []|\T1/ptm/m/n/8 (+20) Tolerância de ali-nha-mento
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--104
+Underfull \hbox (badness 10000) in paragraph at lines 55--55
 []|\T1/ptm/m/n/8 (+20) Redução de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--104
+Underfull \hbox (badness 10000) in paragraph at lines 55--55
 \T1/ptm/m/n/8 (+20) 60% a 80%
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--104
+Underfull \hbox (badness 10000) in paragraph at lines 55--55
 \T1/ptm/m/n/8 (+20) na ca-pa-ci-tân-cia
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--104
+Underfull \hbox (badness 10000) in paragraph at lines 55--55
 \T1/ptm/m/n/8 (+20) pa-ra-sita com
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--104
+Underfull \hbox (badness 10000) in paragraph at lines 55--55
 \OML/cmm/m/it/8 C[] \OMS/cmsy/m/n/8 ^^Y
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--104
+Underfull \hbox (badness 10000) in paragraph at lines 55--55
 []|\T1/ptm/m/n/8 (+20) Amplificação por
  []
 
 
-Underfull \hbox (badness 2698) in paragraph at lines 104--104
+Underfull \hbox (badness 2698) in paragraph at lines 55--55
 \OT1/cmr/m/n/8 (1 + \OMS/cmsy/m/n/8 j\OML/cmm/m/it/8 A[]\OMS/cmsy/m/n/8 j\OT1/c
 mr/m/n/8 )$\T1/ptm/m/n/8 (+20) , com
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--104
+Underfull \hbox (badness 10000) in paragraph at lines 55--55
 \T1/ptm/m/n/8 (+20) va-lor ab-so-luto
  []
 
 
-Underfull \hbox (badness 7963) in paragraph at lines 104--104
+Underfull \hbox (badness 7963) in paragraph at lines 55--55
 \T1/ptm/m/n/8 (+20) re-du-zido em até
  []
 
 
-Underfull \hbox (badness 6961) in paragraph at lines 104--104
+Underfull \hbox (badness 6961) in paragraph at lines 55--55
 []|\T1/ptm/m/n/8 (+20) Deslocamento po-
  []
 
 
-Underfull \hbox (badness 2653) in paragraph at lines 104--104
+Underfull \hbox (badness 2653) in paragraph at lines 55--55
 \T1/ptm/m/n/8 (+20) si-tivo $\OT1/cmr/m/n/8 ^^A^^H[] \OMS/cmsy/m/n/8 ^^Y
  []
 
 
-Underfull \hbox (badness 3302) in paragraph at lines 104--104
+Underfull \hbox (badness 3302) in paragraph at lines 55--55
 []|\T1/ptm/m/n/8 (+20) Ganho de ve-lo-ci-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--104
+Underfull \hbox (badness 10000) in paragraph at lines 55--55
 \T1/ptm/m/n/8 (+20) re-fra-tá-rio com
  []
 
 
-Underfull \hbox (badness 5388) in paragraph at lines 121--121
+Underfull \hbox (badness 5388) in paragraph at lines 72--72
 []|\T1/ptm/m/n/8 (+20) Autoalinhamento da porta como más-cara:
  []
 
-) [10] (./secoes/05_discussao.tex [11] [12]) [13] (./secoes/06_conclusao.tex)
-[14] (out/main.bbl) [15] (out/main.aux
+) [8] (./secoes/05_discussao.tex [9] [10]) (./secoes/06_conclusao.tex [11])
+(out/main.bbl [12]) [13
+
+] (out/main.aux
 Package cleveref Info: loaded `brazilian' language definitions on input line 15
 .
 )
@@ -761,13 +766,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 690B8AA336418DCF73BFA0CEC6FEDCC9;5129.
  ) 
 Here is how much of TeX's memory you used:
- 20779 strings out of 469421
- 403769 string characters out of 5467709
- 873417 words of memory out of 5000000
- 48671 multiletter control sequences out of 15000+600000
- 771173 words of font info for 429 fonts, out of 8000000 for 9000
+ 20756 strings out of 469421
+ 403352 string characters out of 5467709
+ 874417 words of memory out of 5000000
+ 48653 multiletter control sequences out of 15000+600000
+ 771362 words of font info for 433 fonts, out of 8000000 for 9000
  61 hyphenation exceptions out of 8191
- 80i,15n,97p,2082b,1066s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 80i,15n,97p,2082b,1211s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texli
@@ -784,10 +789,10 @@ r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share
 dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/ut
 mri8a.pfb>
-Output written on out/main.pdf (15 pages, 319898 bytes).
+Output written on out/main.pdf (13 pages, 303198 bytes).
 PDF statistics:
- 535 PDF objects out of 1000 (max. 8388607)
- 443 compressed objects within 5 object streams
- 109 named destinations out of 1000 (max. 500000)
+ 522 PDF objects out of 1000 (max. 8388607)
+ 432 compressed objects within 5 object streams
+ 98 named destinations out of 1000 (max. 500000)
  74401 words of extra memory for PDF output out of 89155 (max. 10000000)
 
