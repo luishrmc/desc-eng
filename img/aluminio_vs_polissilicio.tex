@@ -1,0 +1,177 @@
+\documentclass[tikz,border=4pt]{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazilian]{babel}
+\usepackage{amsmath}
+\usepackage{siunitx}
+\sisetup{
+  output-decimal-marker = {,},
+  range-phrase = { a },
+  retain-explicit-plus = true
+}
+\usetikzlibrary{babel, arrows.meta, positioning, shapes.geometric, fit, calc}
+
+\begin{document}
+\begin{tikzpicture}[
+  >=Stealth,
+  font=\sffamily,
+  hdrleft/.style={draw=red!55!black, fill=red!10!white, rounded corners=3pt, minimum width=4.60cm, minimum height=0.72cm, align=center, font=\small\bfseries, text=red!45!black},
+  hdrright/.style={draw=blue!55!black, fill=blue!10!white, rounded corners=3pt, minimum width=4.60cm, minimum height=0.72cm, align=center, font=\small\bfseries, text=blue!45!black},
+  vsbadge/.style={draw=black!40, fill=gray!12, rounded corners=2pt, inner sep=3pt, font=\scriptsize\bfseries, text=black!75},
+  catstrip/.style={draw=black!25, fill=gray!10, rounded corners=2pt, minimum width=9.80cm, minimum height=0.38cm, align=center, font=\footnotesize\bfseries, text=black!85},
+  cardleft/.style={draw=red!40!black!50, fill=red!3!white, rounded corners=2pt, text width=4.35cm, minimum height=1.12cm, align=center, font=\small},
+  cardright/.style={draw=blue!40!black!50, fill=blue!3!white, rounded corners=2pt, text width=4.35cm, minimum height=1.12cm, align=center, font=\small},
+  tallleft/.style={draw=red!40!black!50, fill=red!3!white, rounded corners=2pt, text width=4.35cm, minimum height=2.05cm, align=center, font=\small},
+  tallright/.style={draw=blue!40!black!50, fill=blue!3!white, rounded corners=2pt, text width=4.35cm, minimum height=2.05cm, align=center, font=\small},
+  boxleft/.style={draw=red!40!black!50, fill=red!3!white, rounded corners=2pt},
+  boxright/.style={draw=blue!40!black!50, fill=blue!3!white, rounded corners=2pt}
+]
+
+% ==============================================================================
+% CABEÇALHOS DAS COLUNAS
+% ==============================================================================
+\node[hdrleft]  at (2.30, 13.52) {Alumínio (Porta Metálica)};
+\node[vsbadge]  at (4.90, 13.52) {vs};
+\node[hdrright] at (7.50, 13.52) {Polissilício (SGT)};
+
+% ==============================================================================
+% LINHA 1: PONTO DE FUSÃO E ESTABILIDADE TÉRMICA
+% ==============================================================================
+\node[catstrip] at (4.90, 12.76) {1. Ponto de fusão e estabilidade térmica};
+\node[cardleft]  at (2.30, 11.90) {Fusão a \SI{660}{\celsius}\\[2pt]Sem recozimento em alta T};
+\draw[->, black!65, thick] (4.65, 11.90) -- (5.15, 11.90);
+\node[cardright] at (7.50, 11.90) {Estável acima de \SI{1100}{\celsius}\\[2pt]Recozimento e captura iônica};
+
+% ==============================================================================
+% LINHA 2: FUNÇÃO DE TRABALHO
+% ==============================================================================
+\node[catstrip] at (4.90, 11.02) {2. Diferença de função de trabalho ($\Phi_{ms}$)};
+\node[cardleft]  at (2.30, 10.16) {$\Phi_{ms} \approx \SI{-0,21}{\volt}$\\[2pt]Barreira contrária à abertura};
+\draw[->, black!65, thick] (4.65, 10.16) -- (5.15, 10.16);
+\node[cardright] at (7.50, 10.16) {$\Phi_{ms} \approx \SI{+0,86}{\volt}$\\[2pt]Ganho $\Delta\Phi_{ms} \approx \SI{+1,07}{\volt}$};
+
+% ==============================================================================
+% LINHA 3: SUBSTRATO E TENSÃO DE LIMIAR
+% ==============================================================================
+\node[catstrip] at (4.90, 9.28) {3. Substrato cristalográfico e tensão de limiar ($V_{th}$)};
+\node[cardleft]  at (2.30, 8.42) {Si $\langle 111 \rangle$ (alta carga fixa $+$)\\[2pt]$V_{th}$ de \SIrange{-3,5}{-5,0}{\volt}};
+\draw[->, black!65, thick] (4.65, 8.42) -- (5.15, 8.42);
+\node[cardright] at (7.50, 8.42) {Si $\langle 100 \rangle$ (baixa carga fixa $+$)\\[2pt]$V_{th}$ de \SIrange{-1,5}{-2,5}{\volt}};
+
+% ==============================================================================
+% LINHA 4: CAMADAS DE ROTEAMENTO (COM MINI ESQUEMAS DE PLANOS)
+% ==============================================================================
+\node[catstrip] at (4.90, 7.54) {4. Arquitetura de interconexão e camadas};
+
+% Cartão esquerdo: 1 plano + túnel difuso
+\draw[boxleft] (0.00, 5.26) rectangle (4.60, 7.26);
+\node[font=\footnotesize] at (2.30, 7.04) {1 plano metálico + túnel difuso};
+
+% Mini esquema esquerdo
+\draw[draw=blue!45!black, fill=blue!7!white] (0.45, 5.34) rectangle (4.15, 5.88);
+\node[font=\scriptsize, text=blue!40!black] at (2.30, 5.47) {Substrato};
+\draw[draw=orange!70!black, fill=orange!24!white] (1.25, 5.62) rectangle (3.35, 5.88);
+\node[font=\scriptsize, text=orange!50!black] at (2.30, 5.75) {Túnel $p^+$};
+
+% Óxido com janelas de contato (vias)
+\draw[draw=cyan!60!black, fill=cyan!12!white] (0.45, 5.88) rectangle (1.36, 6.14);
+\draw[draw=cyan!60!black, fill=cyan!12!white] (1.60, 5.88) rectangle (3.00, 6.14);
+\draw[draw=cyan!60!black, fill=cyan!12!white] (3.24, 5.88) rectangle (4.15, 6.14);
+
+% Plano único de Alumínio descendo pelas vias e cruzamento isolado
+\filldraw[draw=black!75, fill=gray!38!white]
+  (0.55, 6.14) -- (1.36, 6.14) -- (1.36, 5.88) -- (1.60, 5.88) --
+  (1.60, 6.14) -- (1.68, 6.14) -- (1.68, 6.36) -- (0.55, 6.36) -- cycle;
+\filldraw[draw=black!75, fill=gray!38!white]
+  (2.92, 6.14) -- (3.00, 6.14) -- (3.00, 5.88) -- (3.24, 5.88) --
+  (3.24, 6.14) -- (4.05, 6.14) -- (4.05, 6.36) -- (2.92, 6.36) -- cycle;
+\draw[draw=black!75, fill=gray!50!white] (1.92, 6.14) rectangle (2.68, 6.40);
+\node[font=\scriptsize, text=black!80] at (2.30, 6.60) {Al (1 plano)};
+
+\draw[->, black!65, thick] (4.65, 6.26) -- (5.15, 6.26);
+
+% Cartão direito: 2 planos sobrepostos isolados
+\draw[boxright] (5.20, 5.26) rectangle (9.80, 7.26);
+\node[font=\footnotesize] at (7.50, 7.04) {2 planos sobrepostos isolados};
+
+% Mini esquema direito
+\draw[draw=blue!45!black, fill=blue!7!white] (5.55, 5.38) rectangle (9.45, 5.76);
+\node[font=\scriptsize, text=blue!40!black] at (7.50, 5.57) {Substrato livre (sem túneis)};
+\draw[draw=cyan!60!black, fill=cyan!12!white] (5.55, 5.76) rectangle (9.45, 5.92);
+\draw[draw=red!55!black, fill=red!22!brown!30!white] (5.75, 5.92) rectangle (9.25, 6.20);
+\node[font=\scriptsize, text=red!40!black] at (7.50, 6.06) {Polissilício (plano 1)};
+\draw[draw=cyan!60!black, fill=cyan!12!white] (5.75, 6.20) rectangle (9.25, 6.48);
+\node[font=\scriptsize, text=cyan!50!black] at (7.50, 6.34) {Óxido isolante};
+\draw[draw=black!75, fill=gray!38!white] (6.10, 6.48) rectangle (8.90, 6.76);
+\node[font=\scriptsize, text=black!85] at (7.50, 6.62) {Alumínio (plano 2)};
+
+% ==============================================================================
+% LINHA 5: ALIMENTAÇÃO E COMPATIBILIDADE TTL (COM ESCALA DE TENSÃO)
+% ==============================================================================
+\node[catstrip] at (4.90, 4.92) {5. Alimentação nominal e compatibilidade TTL};
+
+% Cartão esquerdo: -24 V a -28 V fora da janela TTL
+\draw[boxleft] (0.00, 2.71) rectangle (4.60, 4.61);
+\node[font=\scriptsize] at (2.30, 4.38) {Fonte de \SIrange{-24}{-28}{\volt} (sem TTL)};
+
+% Eixo de tensão esquerdo: x(V) = 3,60 + 0,108 * V
+\draw[->, black!70, thin] (0.35, 3.36) -- (4.35, 3.36);
+\draw[draw=green!55!black, fill=green!18!white, dashed] (3.60, 3.30) rectangle (4.14, 3.72);
+\node[font=\scriptsize\bfseries, text=green!45!black] at (3.87, 3.94) {TTL};
+\draw[draw=red!65!black, fill=red!32!white] (0.58, 3.38) rectangle (1.01, 3.64);
+\draw[<->, red!60!black, densely dashed] (1.06, 3.51) -- (3.55, 3.51);
+\node[font=\scriptsize, text=red!60!black] at (2.30, 3.76) {Fora da janela TTL};
+
+% Marcas e valores no eixo esquerdo
+\draw[black!60, thin] (0.58, 3.28) -- (0.58, 3.36);
+\draw[black!60, thin] (1.01, 3.28) -- (1.01, 3.36);
+\draw[black!60, thin] (3.60, 3.28) -- (3.60, 3.36);
+\draw[black!60, thin] (4.14, 3.28) -- (4.14, 3.36);
+\node[font=\scriptsize] at (0.52, 3.04) {$-28$};
+\node[font=\scriptsize] at (1.08, 3.04) {$-24$};
+\node[font=\scriptsize] at (3.56, 3.04) {$0$};
+\node[font=\scriptsize] at (4.16, 3.04) {\SI{+5}{\volt}};
+
+\draw[->, black!65, thick] (4.65, 3.66) -- (5.15, 3.66);
+
+% Cartão direito: V_DD = -10 V a V_SS = +5 V ancorado no TTL
+\draw[boxright] (5.20, 2.71) rectangle (9.80, 4.61);
+\node[font=\scriptsize] at (7.50, 4.38) {$V_{DD}=\SI{-10}{\volt}$ a $V_{SS}=\SI{+5}{\volt}$ (TTL)};
+
+% Eixo de tensão direito: x(V) = 8,80 + 0,108 * V
+\draw[->, black!70, thin] (5.55, 3.36) -- (9.55, 3.36);
+\draw[draw=green!55!black, fill=green!18!white, dashed] (8.80, 3.30) rectangle (9.34, 3.72);
+\node[font=\scriptsize\bfseries, text=green!45!black] at (9.07, 3.94) {TTL};
+\draw[draw=blue!65!black, fill=blue!25!white, fill opacity=0.75] (7.72, 3.38) rectangle (9.34, 3.64);
+\draw[blue!70!black, thick, densely dashed] (9.34, 3.28) -- (9.34, 3.74);
+\fill[blue!70!black] (9.34, 3.51) circle (1.5pt);
+\node[font=\scriptsize, align=center, text=blue!55!black] at (6.52, 3.76)
+  {\SI{15}{\volt} ancorado\\[-1pt]em \SI{+5}{\volt}};
+
+% Marcas e valores no eixo direito
+\draw[black!60, thin] (7.72, 3.28) -- (7.72, 3.36);
+\draw[black!60, thin] (8.80, 3.28) -- (8.80, 3.36);
+\draw[black!60, thin] (9.34, 3.28) -- (9.34, 3.36);
+\node[font=\scriptsize] at (7.72, 3.04) {$-10$};
+\node[font=\scriptsize] at (8.76, 3.04) {$0$};
+\node[font=\scriptsize] at (9.38, 3.04) {\SI{+5}{\volt}};
+
+% ==============================================================================
+% LINHA 6: APLICAÇÕES HISTÓRICAS REAIS
+% ==============================================================================
+\node[catstrip] at (4.90, 2.35) {6. Aplicações históricas representativas};
+\node[tallleft]  at (2.30, 1.03) {%
+  Lógica PMOS ($<\SI{150}{\kilo\hertz}$)\\[3pt]
+  Alta área e tensão elevada\\[3pt]
+  Inviável para CPU monolítica
+};
+\draw[->, black!65, thick] (4.65, 1.03) -- (5.15, 1.03);
+\node[tallright] at (7.50, 1.03) {%
+  Fairchild 3708 (1968)\\[1pt]
+  {\scriptsize (multiplexador analógico\\[-1pt]de 8 canais)}\\[3pt]
+  DRAM Intel 1103 (1970)\\[3pt]
+  Intel 4004 / MCS-4 (1971)
+};
+
+\end{tikzpicture}
+\end{document}
