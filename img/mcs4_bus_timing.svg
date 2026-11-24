@@ -1,0 +1,259 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="488" viewBox="0 0 940 488">
+  <defs>
+    <marker id="arrow-dark" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#334155"/>
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#1d4ed8"/>
+    </marker>
+    <marker id="arrow-emerald" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#047857"/>
+    </marker>
+    <marker id="arrow-orange" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#c2410c"/>
+    </marker>
+    <marker id="arrow-purple" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#6d28d9"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="940" height="488" fill="#ffffff"/>
+
+  <!-- ====================================================================== -->
+  <!-- PAINEL (a): DIAGRAMA EM BLOCOS DA FAMILIA MCS-4 (DIP 16 PINOS)          -->
+  <!-- ====================================================================== -->
+  <rect x="12" y="10" width="916" height="222" rx="5" fill="#fafafa" stroke="#94a3b8" stroke-width="1.5"/>
+  <rect x="12" y="10" width="916" height="28" rx="5" fill="#e2e8f0" stroke="#64748b" stroke-width="1.5"/>
+  <text x="470" y="29" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.5" font-weight="bold" text-anchor="middle" fill="#0f172a">(a) Arquitetura em blocos e pinagem da família MCS-4 (encapsulamento DIP de 16 pinos)</text>
+
+  <!-- Trilhos de alimentacao superiores V_SS (+5 V) e V_DD (-10 V) -->
+  <line x1="150" y1="48" x2="870" y2="48" stroke="#dc2626" stroke-width="1.8"/>
+  <text x="142" y="52" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="end" fill="#b91c1c">V<tspan baseline-shift="sub" font-size="75%">SS</tspan> (+5 V)</text>
+
+  <line x1="150" y1="62" x2="870" y2="62" stroke="#2563eb" stroke-width="1.8"/>
+  <text x="142" y="66" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="end" fill="#1d4ed8">V<tspan baseline-shift="sub" font-size="75%">DD</tspan> (&#8722;10 V)</text>
+
+  <!-- Derivacoes de energia para 4004, 4001, 4002 e 4003 -->
+  <line x1="260" y1="48" x2="260" y2="80" stroke="#dc2626" stroke-width="1.3"/>
+  <circle cx="260" cy="48" r="2.5" fill="#dc2626"/>
+  <line x1="276" y1="62" x2="276" y2="80" stroke="#2563eb" stroke-width="1.3"/>
+  <circle cx="276" cy="62" r="2.5" fill="#2563eb"/>
+
+  <line x1="538" y1="48" x2="538" y2="156" stroke="#dc2626" stroke-width="1.2" stroke-dasharray="3,2"/>
+  <circle cx="538" cy="48" r="2.5" fill="#dc2626"/>
+  <line x1="548" y1="62" x2="548" y2="156" stroke="#2563eb" stroke-width="1.2" stroke-dasharray="3,2"/>
+  <circle cx="548" cy="62" r="2.5" fill="#2563eb"/>
+
+  <line x1="700" y1="48" x2="700" y2="156" stroke="#dc2626" stroke-width="1.2" stroke-dasharray="3,2"/>
+  <circle cx="700" cy="48" r="2.5" fill="#dc2626"/>
+  <line x1="710" y1="62" x2="710" y2="156" stroke="#2563eb" stroke-width="1.2" stroke-dasharray="3,2"/>
+  <circle cx="710" cy="62" r="2.5" fill="#2563eb"/>
+
+  <line x1="825" y1="48" x2="825" y2="132" stroke="#dc2626" stroke-width="1.2" stroke-dasharray="3,2"/>
+  <circle cx="825" cy="48" r="2.5" fill="#dc2626"/>
+  <line x1="841" y1="62" x2="841" y2="132" stroke="#2563eb" stroke-width="1.2" stroke-dasharray="3,2"/>
+  <circle cx="841" cy="62" r="2.5" fill="#2563eb"/>
+
+  <!-- Gerador de relogio e entradas RESET / TEST -->
+  <rect x="24" y="88" width="96" height="46" rx="4" fill="#ffffff" stroke="#475569" stroke-width="1.3"/>
+  <text x="72" y="106" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#0f172a">Relógio</text>
+  <text x="72" y="123" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" text-anchor="middle" fill="#334155">740,7 kHz</text>
+
+  <line x1="120" y1="103" x2="156" y2="103" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow-dark)"/>
+  <text x="138" y="98" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" text-anchor="middle" fill="#0f172a">&#966;<tspan baseline-shift="sub" font-size="75%">1</tspan>,&#966;<tspan baseline-shift="sub" font-size="75%">2</tspan></text>
+
+  <line x1="56" y1="164" x2="156" y2="164" stroke="#334155" stroke-width="1.4" marker-end="url(#arrow-dark)"/>
+  <text x="104" y="159" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" text-anchor="middle" fill="#334155">RESET</text>
+
+  <line x1="56" y1="192" x2="156" y2="192" stroke="#334155" stroke-width="1.4" marker-end="url(#arrow-dark)"/>
+  <text x="104" y="187" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" text-anchor="middle" fill="#334155">TEST</text>
+
+  <!-- BLOCO INTEL 4004 CPU (16 pinos explicitos) -->
+  <rect x="158" y="80" width="234" height="142" rx="5" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.8"/>
+  <text x="275" y="100" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a">Intel 4004 (CPU 4 bits)</text>
+  <text x="275" y="117" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" text-anchor="middle" fill="#1e40af">2.300 trans. | 12 mm&#178; | 16 pinos</text>
+  <line x1="168" y1="124" x2="382" y2="124" stroke="#93c5fd" stroke-width="1"/>
+  <text x="275" y="140" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" text-anchor="middle" fill="#0f172a">ULA (BCD), Acum., 16 reg.</text>
+  <text x="275" y="156" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" text-anchor="middle" fill="#0f172a">PC 12 bits, Pilha 3&#215;</text>
+
+  <!-- Pinagem explicita dentro do 4004 -->
+  <rect x="166" y="165" width="218" height="50" rx="3" fill="#ffffff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="275" y="180" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" text-anchor="middle" fill="#1e293b">D<tspan baseline-shift="sub" font-size="75%">0</tspan> a D<tspan baseline-shift="sub" font-size="75%">3</tspan> (4) | &#966;<tspan baseline-shift="sub" font-size="75%">1</tspan>,&#966;<tspan baseline-shift="sub" font-size="75%">2</tspan> (2) | V<tspan baseline-shift="sub" font-size="75%">SS</tspan>,V<tspan baseline-shift="sub" font-size="75%">DD</tspan> (2)</text>
+  <text x="275" y="196" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" text-anchor="middle" fill="#1e293b">SYNC (1) | RESET (1) | TEST (1)</text>
+  <text x="275" y="211" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" text-anchor="middle" fill="#1e293b">CM-ROM (1) | CM-RAM<tspan baseline-shift="sub" font-size="75%">0..3</tspan> (4)</text>
+
+  <!-- Barramento bidirecional multiplexado de 4 bits (D0 a D3) -->
+  <line x1="396" y1="100" x2="720" y2="100" stroke="#1d4ed8" stroke-width="3.2" marker-start="url(#arrow-blue)" marker-end="url(#arrow-blue)"/>
+  <rect x="414" y="72" width="318" height="20" rx="2" fill="#fafafa"/>
+  <text x="573" y="87" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#1e3a8a">Barramento multiplexado de 4 bits (D<tspan baseline-shift="sub" font-size="75%">0</tspan> a D<tspan baseline-shift="sub" font-size="75%">3</tspan>)</text>
+
+  <!-- Linhas de controle saindo da CPU para ROM e RAM -->
+  <!-- SYNC -->
+  <line x1="392" y1="118" x2="682" y2="118" stroke="#334155" stroke-width="1.3"/>
+  <rect x="404" y="104" width="38" height="12" fill="#fafafa"/>
+  <text x="423" y="114" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" text-anchor="middle" fill="#334155">SYNC</text>
+
+  <!-- CM-ROM para 4001 -->
+  <line x1="392" y1="133" x2="450" y2="133" stroke="#047857" stroke-width="1.4"/>
+  <line x1="450" y1="133" x2="450" y2="154" stroke="#047857" stroke-width="1.4" marker-end="url(#arrow-emerald)"/>
+  <rect x="396" y="120" width="54" height="11" fill="#fafafa"/>
+  <text x="423" y="130" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" text-anchor="middle" fill="#065f46">CM-ROM</text>
+
+  <!-- CM-RAM0..3 para 4002 -->
+  <line x1="392" y1="147" x2="622" y2="147" stroke="#c2410c" stroke-width="1.4"/>
+  <line x1="622" y1="147" x2="622" y2="154" stroke="#c2410c" stroke-width="1.4" marker-end="url(#arrow-orange)"/>
+  <rect x="536" y="128" width="76" height="13" fill="#fafafa"/>
+  <text x="574" y="138" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" text-anchor="middle" fill="#9a3412">CM-RAM<tspan baseline-shift="sub" font-size="75%">0..3</tspan></text>
+
+  <!-- Conexoes verticais do barramento D0-D3 e SYNC para 4001 e 4002 -->
+  <line x1="484" y1="102" x2="484" y2="154" stroke="#1d4ed8" stroke-width="2" marker-start="url(#arrow-blue)" marker-end="url(#arrow-blue)"/>
+  <line x1="518" y1="118" x2="518" y2="154" stroke="#334155" stroke-width="1.2" marker-end="url(#arrow-dark)"/>
+
+  <line x1="648" y1="102" x2="648" y2="154" stroke="#1d4ed8" stroke-width="2" marker-start="url(#arrow-blue)" marker-end="url(#arrow-blue)"/>
+  <line x1="682" y1="118" x2="682" y2="154" stroke="#334155" stroke-width="1.2" marker-end="url(#arrow-dark)"/>
+
+  <!-- BLOCO INTEL 4001 ROM+I/O -->
+  <rect x="418" y="156" width="144" height="66" rx="4" fill="#ecfdf5" stroke="#047857" stroke-width="1.6"/>
+  <text x="490" y="175" font-family="DejaVu Sans, Arial, sans-serif" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#065f46">Intel 4001 (ROM)</text>
+  <text x="490" y="193" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" text-anchor="middle" fill="#064e3b">2.048 bits (256&#215;8)</text>
+  <text x="490" y="210" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" text-anchor="middle" fill="#047857">Porta I/O 4 bits</text>
+
+  <!-- BLOCO INTEL 4002 RAM+I/O -->
+  <rect x="578" y="156" width="144" height="66" rx="4" fill="#fff7ed" stroke="#c2410c" stroke-width="1.6"/>
+  <text x="650" y="175" font-family="DejaVu Sans, Arial, sans-serif" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#7c2d12">Intel 4002 (RAM)</text>
+  <text x="650" y="193" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" text-anchor="middle" fill="#7c2d12">320 bits (4&#215;20&#215;4)</text>
+  <text x="650" y="210" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" text-anchor="middle" fill="#9a3412">Porta saída 4 bits</text>
+
+  <!-- Ligacao I/O para o expansor 4003 -->
+  <line x1="722" y1="189" x2="758" y2="189" stroke="#6d28d9" stroke-width="1.8" marker-end="url(#arrow-purple)"/>
+  <text x="740" y="182" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#5b21b6">I/O</text>
+
+  <!-- BLOCO INTEL 4003 EXPANSOR I/O -->
+  <rect x="760" y="132" width="156" height="90" rx="4" fill="#f5f3ff" stroke="#6d28d9" stroke-width="1.6"/>
+  <text x="838" y="152" font-family="DejaVu Sans, Arial, sans-serif" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#4c1d95">Intel 4003 (I/O)</text>
+  <text x="838" y="170" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" text-anchor="middle" fill="#5b21b6">Reg. desloc. estático</text>
+  <text x="838" y="188" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" text-anchor="middle" fill="#4c1d95">10 saídas paralelas</text>
+  <text x="838" y="206" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" text-anchor="middle" fill="#6d28d9">+ saída serial (cascata)</text>
+
+  <!-- ====================================================================== -->
+  <!-- PAINEL (b): CRONOGRAMA TEMPORAL DO CICLO DE 10,8 us (8 SUBCICLOS)       -->
+  <!-- ====================================================================== -->
+  <rect x="12" y="242" width="916" height="236" rx="5" fill="#fafafa" stroke="#94a3b8" stroke-width="1.5"/>
+  <rect x="12" y="242" width="916" height="28" rx="5" fill="#e2e8f0" stroke="#64748b" stroke-width="1.5"/>
+  <text x="470" y="261" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.5" font-weight="bold" text-anchor="middle" fill="#0f172a">(b) Cronograma temporal do ciclo de instrução de 10,8 &#956;s (8 períodos &#215; 1,35 &#956;s a 740,7 kHz)</text>
+
+  <!-- Cota do ciclo integral de 10,8 us (x=134 a x=910) acima da cota 1,35 us -->
+  <text x="522" y="284" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a">Ciclo de instrução = 10,8 &#956;s (fases &#966;<tspan baseline-shift="sub" font-size="75%">1</tspan>, &#966;<tspan baseline-shift="sub" font-size="75%">2</tspan> não sobrepostas)</text>
+  <line x1="136" y1="291" x2="908" y2="291" stroke="#1e3a8a" stroke-width="1.3" marker-start="url(#arrow-blue)" marker-end="url(#arrow-blue)"/>
+
+  <!-- Cota do periodo unitario de 1,35 us na coluna 1 -->
+  <text x="182" y="307" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#0f172a">1,35 &#956;s</text>
+  <line x1="136" y1="313" x2="229" y2="313" stroke="#334155" stroke-width="1.2" marker-start="url(#arrow-dark)" marker-end="url(#arrow-dark)"/>
+
+  <!-- Rotulos das linhas de sinal a esquerda -->
+  <text x="124" y="336" font-family="DejaVu Sans, Arial, sans-serif" font-size="12.5" font-weight="bold" text-anchor="end" fill="#0f172a">Fase &#966;<tspan baseline-shift="sub" font-size="75%">1</tspan></text>
+  <text x="124" y="364" font-family="DejaVu Sans, Arial, sans-serif" font-size="12.5" font-weight="bold" text-anchor="end" fill="#0f172a">Fase &#966;<tspan baseline-shift="sub" font-size="75%">2</tspan></text>
+  <text x="124" y="392" font-family="DejaVu Sans, Arial, sans-serif" font-size="12.5" font-weight="bold" text-anchor="end" fill="#dc2626">SYNC</text>
+  <text x="124" y="426" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="end" fill="#1e3a8a">Barramento</text>
+  <text x="124" y="441" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="end" fill="#1e3a8a">D<tspan baseline-shift="sub" font-size="75%">0</tspan> a D<tspan baseline-shift="sub" font-size="75%">3</tspan></text>
+
+  <!-- Fundo da grade temporal (x=134..910, 8 colunas de 97 px cada) -->
+  <rect x="134" y="317" width="291" height="133" fill="#eff6ff" fill-opacity="0.55"/>
+  <rect x="425" y="317" width="194" height="133" fill="#ecfdf5" fill-opacity="0.55"/>
+  <rect x="619" y="317" width="194" height="133" fill="#fffbeb" fill-opacity="0.65"/>
+  <rect x="813" y="317" width="97" height="133" fill="#f5f3ff" fill-opacity="0.65"/>
+
+  <!-- Linhas verticais divisorias dos 8 subciclos -->
+  <line x1="134" y1="286" x2="134" y2="450" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="231" y1="305" x2="231" y2="450" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="328" y1="316" x2="328" y2="450" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="425" y1="316" x2="425" y2="450" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="522" y1="316" x2="522" y2="450" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="619" y1="316" x2="619" y2="450" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="716" y1="316" x2="716" y2="450" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="813" y1="316" x2="813" y2="450" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="910" y1="286" x2="910" y2="450" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Onda phi_1 (pulsos em cada uma das 8 colunas) -->
+  <polyline points="
+    134,341 142,341 142,323 172,323 172,341
+    231,341 239,341 239,323 269,323 269,341
+    328,341 336,341 336,323 366,323 366,341
+    425,341 433,341 433,323 463,323 463,341
+    522,341 530,341 530,323 560,323 560,341
+    619,341 627,341 627,323 657,323 657,341
+    716,341 724,341 724,323 754,323 754,341
+    813,341 821,341 821,323 851,323 851,341 910,341"
+    fill="none" stroke="#1e293b" stroke-width="1.8"/>
+
+  <!-- Onda phi_2 (pulsos nao sobrepostos deslocados em meio periodo) -->
+  <polyline points="
+    134,369 186,369 186,351 216,351 216,369
+    283,369 283,351 313,351 313,369
+    380,369 380,351 410,351 410,369
+    477,369 477,351 507,351 507,369
+    574,369 574,351 604,351 604,369
+    671,369 671,351 701,351 701,369
+    768,369 768,351 798,351 798,369
+    865,369 865,351 895,351 895,369 910,369"
+    fill="none" stroke="#0f766e" stroke-width="1.8"/>
+
+  <!-- Onda SYNC: retorno apos SYNC anterior em t=0 e pulso em X3 sinalizando proximo A1 -->
+  <polyline points="134,379 134,397 815,397 815,379 908,379 908,397" fill="none" stroke="#dc2626" stroke-width="1.8"/>
+  <text x="142" y="392" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" fill="#991b1b">Após SYNC anterior</text>
+  <text x="861" y="392" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#991b1b">SYNC &#8594; A1</text>
+
+  <!-- Caixas do barramento multiplexado D0..D3 (8 subciclos A1 a X3) -->
+  <!-- A1 -->
+  <polygon points="136,428 143,410 222,410 229,428 222,446 143,446" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.4"/>
+  <text x="182" y="426" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#1e3a8a">A1</text>
+  <text x="182" y="441" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" text-anchor="middle" fill="#1e40af">A<tspan baseline-shift="sub" font-size="75%">0</tspan> a A<tspan baseline-shift="sub" font-size="75%">3</tspan></text>
+
+  <!-- A2 -->
+  <polygon points="233,428 240,410 319,410 326,428 319,446 240,446" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.4"/>
+  <text x="279" y="426" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#1e3a8a">A2</text>
+  <text x="279" y="441" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" text-anchor="middle" fill="#1e40af">A<tspan baseline-shift="sub" font-size="75%">4</tspan> a A<tspan baseline-shift="sub" font-size="75%">7</tspan></text>
+
+  <!-- A3 -->
+  <polygon points="330,428 337,410 416,410 423,428 416,446 337,446" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.4"/>
+  <text x="376" y="426" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#1e3a8a">A3</text>
+  <text x="376" y="441" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" text-anchor="middle" fill="#1e40af">A<tspan baseline-shift="sub" font-size="75%">8</tspan> a A<tspan baseline-shift="sub" font-size="75%">11</tspan></text>
+
+  <!-- M1 -->
+  <polygon points="427,428 434,410 513,410 520,428 513,446 434,446" fill="#d1fae5" stroke="#047857" stroke-width="1.4"/>
+  <text x="473" y="426" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#065f46">M1</text>
+  <text x="473" y="441" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" text-anchor="middle" fill="#064e3b">OPR</text>
+
+  <!-- M2 -->
+  <polygon points="524,428 531,410 610,410 617,428 610,446 531,446" fill="#d1fae5" stroke="#047857" stroke-width="1.4"/>
+  <text x="570" y="426" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#065f46">M2</text>
+  <text x="570" y="441" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" text-anchor="middle" fill="#064e3b">OPA</text>
+
+  <!-- X1 -->
+  <polygon points="621,428 628,410 707,410 714,428 707,446 628,446" fill="#fef3c7" stroke="#b45309" stroke-width="1.4"/>
+  <text x="667" y="426" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#78350f">X1</text>
+  <text x="667" y="441" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" text-anchor="middle" fill="#92400e">Decod.</text>
+
+  <!-- X2 -->
+  <polygon points="718,428 725,410 804,410 811,428 804,446 725,446" fill="#fef3c7" stroke="#b45309" stroke-width="1.4"/>
+  <text x="764" y="426" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#78350f">X2</text>
+  <text x="764" y="441" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" text-anchor="middle" fill="#92400e">ULA / RAM</text>
+
+  <!-- X3 -->
+  <polygon points="815,428 822,410 901,410 908,428 901,446 822,446" fill="#ede9fe" stroke="#6d28d9" stroke-width="1.4"/>
+  <text x="861" y="426" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#4c1d95">X3</text>
+  <text x="861" y="441" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" text-anchor="middle" fill="#5b21b6">Fim / SYNC</text>
+
+  <!-- Agrupamentos inferiores por funcao do barramento -->
+  <rect x="136" y="453" width="287" height="19" rx="3" fill="#dbeafe" stroke="#93c5fd" stroke-width="1"/>
+  <text x="279" y="467" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a">CPU &#8594; ROM (Endereço 12 bits)</text>
+
+  <rect x="427" y="453" width="190" height="19" rx="3" fill="#d1fae5" stroke="#6ee7b7" stroke-width="1"/>
+  <text x="522" y="467" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#065f46">ROM &#8594; CPU (OPR/OPA)</text>
+
+  <rect x="621" y="453" width="190" height="19" rx="3" fill="#fef3c7" stroke="#fcd34d" stroke-width="1"/>
+  <text x="716" y="467" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#92400e">Execução ULA e RAM</text>
+
+  <rect x="815" y="453" width="93" height="19" rx="3" fill="#ede9fe" stroke="#c4b5fd" stroke-width="1"/>
+  <text x="861" y="467" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#5b21b6">E/S e SYNC</text>
+</svg>
