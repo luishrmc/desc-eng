@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Post-write hook: compila o documento de forma deterministica apos alteracao em secoes/
+# Post-write hook: executa linter preventivo, compila com latexmk e audita integridade global.
 echo "[INFO][post-write-compile] Executando linter estilistico preventivo..."
 bash .agents/hooks/latex-style-linter.sh secoes/
 
 echo "[INFO][post-write-compile] Iniciando compilacao de verificacao com latexmk..."
-
 mkdir -p out
 
 if latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=out main.tex > out/compile_hook.log 2>&1; then
-  echo "[OK][post-write-compile] Compilacao bem-sucedida. PDF gerado em out/main.pdf."
+  echo "[OK][post-write-compile] Compilacao bem-sucedida. Executando auditoria global..."
+  python3 .agents/scripts/audit-build.py --strict
   exit 0
 else
   EXIT_CODE=$?

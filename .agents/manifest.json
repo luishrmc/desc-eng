@@ -1,59 +1,112 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "project": "Artigo Academico Federico Faggin e Intel 4004",
-  "version": "1.0.0",
-  "topology": "Supervisor-Worker com Duplo Gate de Validacao",
+  "version": "2.0.0",
+  "topology": "Supervisor-Worker Hierarquico Dual-Loop com Barreira de Sincronizacao",
   "governance": {
     "max_iterations_per_section": 5,
+    "max_subagent_reuse_rounds": 3,
     "stagnation_threshold": 2,
-    "rollback_action": "git checkout HEAD -- {target_file}"
+    "rollback_action": "git checkout HEAD -- {target_file}",
+    "require_single_column_figures": true
   },
   "agents": [
     {
       "name": "orchestrator-agent",
       "definition": ".agents/agents/orchestrator-agent.md",
-      "role": "Supervisor central de fluxo e estado do DAG",
+      "role": "Supervisor central de fluxo, DAG, Git e reciclagem de subagentes",
       "model": "pro",
       "permissions": {
-        "read": ["utils/tema.md", "main.tex", "secoes/*.tex"],
-        "write": []
+        "read": [
+          "00_config.tex",
+          "main.tex",
+          "secoes/*.tex",
+          "utils/tema.md",
+          "utils/memory/**"
+        ],
+        "write": [
+          "utils/memory/episodes/*.md"
+        ]
       },
-      "tools_allowed": ["run_command", "send_message", "view_file"],
-      "skills": ["plan-agents", "plan-hooks"]
+      "tools_allowed": [
+        "read_file",
+        "write_file",
+        "run_command",
+        "send_message",
+        "invoke_subagent",
+        "define_subagent",
+        "manage_subagents"
+      ],
+      "skills": [
+        "plan-agents",
+        "plan-hooks",
+        "git-branch-lifecycle",
+        "git-commit-stager",
+        "git-safety-guard"
+      ]
     },
     {
       "name": "retriever-agent",
       "definition": ".agents/agents/retriever-agent.md",
-      "role": "Especialista em recuperacao documental e pesquisa historica",
+      "role": "Especialista em recuperacao documental, mapeamento de deltas e integridade referencial",
       "model": "flash",
       "permissions": {
         "read": [
-          "utils/docs/aulas/**",
-          "utils/docs/ref/**",
-          "utils/docs/search/**",
-          "pos_textuais/01_referencias.bib"
+          "utils/aulas/**",
+          "utils/docs/**",
+          "utils/memory/**",
+          "pos_textuais/01_referencias.bib",
+          "secoes/*.tex",
+          "img/*.svg"
         ],
         "write": []
       },
-      "tools_allowed": ["view_file", "search-retriever"],
-      "skills": ["search-retriever"]
+      "tools_allowed": [
+        "read_file",
+        "search_web"
+      ],
+      "skills": [
+        "bib-validator"
+      ]
     },
     {
       "name": "latex-author-agent",
       "definition": ".agents/agents/latex-author-agent.md",
-      "role": "Redator tecnico academico em codigo LaTeX",
+      "role": "Redator tecnico academico LaTeX e autor de diagramas SVG em coluna unica",
       "model": "pro",
       "permissions": {
-        "read": ["00_config.tex", "main.tex", "utils/tema.md"],
-        "write": ["secoes/*.tex", "img/*"]
+        "read": [
+          "00_config.tex",
+          "main.tex",
+          "utils/tema.md",
+          "utils/memory/**",
+          "pos_textuais/01_referencias.bib",
+          "secoes/*.tex",
+          "img/*",
+          "out/preview_*.png"
+        ],
+        "write": [
+          "secoes/*.tex",
+          "img/*.svg",
+          "img/*.pdf"
+        ]
       },
-      "tools_allowed": ["view_file", "replace_file_content", "write_to_file"],
-      "skills": ["latex-writer"]
+      "tools_allowed": [
+        "read_file",
+        "write_file",
+        "edit_file",
+        "run_command"
+      ],
+      "skills": [
+        "latex-writer",
+        "refine-text",
+        "svg-figure-pipeline"
+      ]
     },
     {
       "name": "latex-compiler-agent",
       "definition": ".agents/agents/latex-compiler-agent.md",
-      "role": "Verificador de compilacao deterministica e analise de logs",
+      "role": "Verificador de compilacao deterministica, auditoria de logs e renderizacao seletiva",
       "model": "flash",
       "permissions": {
         "read": [
@@ -61,29 +114,51 @@
           "00_config.tex",
           "secoes/*.tex",
           "pos_textuais/*.bib",
-          "out/*.log"
+          "img/*",
+          "out/*"
         ],
-        "write": ["out/*"]
+        "write": [
+          "out/*"
+        ]
       },
-      "tools_allowed": ["run_command", "view_file"],
-      "skills": ["latex-build"]
+      "tools_allowed": [
+        "run_command",
+        "read_file"
+      ],
+      "skills": [
+        "latex-build",
+        "bib-validator"
+      ]
     },
     {
       "name": "technical-critic-agent",
       "definition": ".agents/agents/technical-critic-agent.md",
-      "role": "Auditor critico de fisica de semicondutores e rigor historico",
+      "role": "Auditor adversarial de fisica, historiografia, estilo e layout visual em duas colunas",
       "model": "pro",
       "permissions": {
         "read": [
+          "00_config.tex",
           "secoes/*.tex",
           "utils/tema.md",
-          "utils/docs/aulas/**",
-          "pos_textuais/01_referencias.bib"
+          "utils/aulas/**",
+          "utils/docs/**",
+          "pos_textuais/01_referencias.bib",
+          "utils/memory/**",
+          "img/*",
+          "out/main.log",
+          "out/pages/*.png"
         ],
         "write": []
       },
-      "tools_allowed": ["view_file"],
-      "skills": ["academic-review"]
+      "tools_allowed": [
+        "read_file",
+        "search_web"
+      ],
+      "skills": [
+        "academic-review",
+        "bib-validator",
+        "refine-text"
+      ]
     }
   ],
   "pipeline_sequence": [

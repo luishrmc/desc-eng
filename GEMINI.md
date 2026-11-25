@@ -1,70 +1,71 @@
 # Diretrizes do Sistema: Artigo Academico Federico Faggin e Intel 4004
 
 ## 1. Escopo do Projeto e Arquitetura do Workspace
-Este workspace hospeda o desenvolvimento de um artigo academico sobre a contribuicao tecnica de Federico Faggin no desenvolvimento da tecnologia de porta autoalinhada de silicio (Silicon Gate Technology, SGT) e na viabilizacao fisica do microprocessador comercial Intel 4004. O texto examina a transicao de circuitos integrados com porta metalica de aluminio para silicio policristalino, detalha a reducao de capacitancias parasitas e analisa os reflexos dessa mudanca estrutural na integracao de sistemas em pastilha unica.
+Este workspace hospeda o desenvolvimento de um artigo academico em formato IEEE duas colunas sobre a contribuicao tecnica de Federico Faggin na tecnologia de porta autoalinhada de silicio (Silicon Gate Technology, SGT) e na viabilizacao fisica do microprocessador comercial Intel 4004.
 
 Organizacao de pastas do repositorio:
-- `00_config.tex`: Declaracao de pacotes, definicao de estilos e parametros tipograficos globais.
-- `main.tex`: Arquivo de entrada principal que organiza a inclusao das secoes textuais.
-- `secoes/`: Arquivos `.tex` correspondentes a cada subdivisao do artigo.
-- `pos_textuais/01_referencias.bib`: Catalogo de fontes bibliograficas e citacoes.
-- `img/`: Vetores, esquematicos e figuras dos dispositivos semicondutores.
-- `utils/memory/`: Sistema de memoria cognitiva tripartite (caches, heuristicas, auditorias e episodios relacionais).
-- `utils/docs/`: Fontes documentais primarias, patentes e artigos historicos coletados.
-- `out/`: Diretorio de saida isolado para artefatos gerados pelo compilador LaTeX.
+- `00_config.tex`: Pacotes, `siunitx` (`output-decimal-marker = {,} `, `retain-explicit-plus = true`), `cleveref` e metadados globais.
+- `main.tex`: Arquivo mestre estrutural que organiza as secoes e a bibliografia.
+- `secoes/`: Arquivos `.tex` modulares (`00_resumo.tex` a `06_conclusao.tex`).
+- `pos_textuais/01_referencias.bib`: Catalogo canonico de fontes bibliograficas.
+- `img/`: Diagramas vetoriais em coluna unica (`.svg`, `.tex` e seus `.pdf` recortados).
+- `utils/aulas/` e `utils/docs/`: Materiais de aula (`Aula1.pdf` a `Aula10.pdf`) e fontes documentais coletadas.
+- `utils/memory/`: Sistema de memoria cognitiva tripartite (`compilation_heuristics.md`, `critic_rubric_telemetry.md`, caches e episodios relacionais em `episodes/`).
+- `.agents/scripts/`: Utilitarios deterministicos (`svg2pdf.sh` e `audit-build.py`).
+- `out/`: Diretorio isolado para compilacao (`main.pdf`, logs e previas temporarias `out/pages/`).
 
-## 2. Topologia Multi-Agente e Arquitetura de Loops Hierarquicos (Dual-Loop)
-O desenvolvimento opera sob uma arquitetura hierarquica em dois niveis com cinco agentes especializados:
-1. `orchestrator-agent` (Modelo: pro): Coordenacao do DAG global, despacho de frentes paralelas e gerenciamento do Outer Loop.
-2. `retriever-agent` (Modelo: flash): Extracao de deltas conceituais e mapeamento de reuso matematico a partir de `utils/docs/`.
-3. `latex-author-agent` (Modelo: pro): Redacao em prosa continua e operacao do Inner Loop de auto-correcao sintatica.
-4. `latex-compiler-agent` (Modelo: flash): Compilacao nao-interativa e geracao de telemetria estruturada em `out/`.
-5. `technical-critic-agent` (Modelo: pro): Auditoria adversarial de rigor fisico, historico e anti-redundancia no Outer Loop.
+## 2. Topologia Multi-Agente, Dual-Loop e Ciclo de Vida
+O desenvolvimento opera em arquitetura hierarquica de dois niveis com cinco agentes definidos em `.agents/manifest.json` e `.agents/agents/*.md`:
+1. `orchestrator-agent` (`pro`): Coordenacao do DAG, despacho concorrente disjunto, gestao de Git e reciclagem de subagentes.
+2. `retriever-agent` (`flash`): Extracao de deltas conceituais, mapeamento de `\cref{}` e auditoria documental.
+3. `latex-author-agent` (`pro`): Redacao em prosa continua, criacao/conversao de SVGs em `\columnwidth` (`svg-figure-pipeline`), checagem visual PNG e linter local.
+4. `latex-compiler-agent` (`flash`): Compilacao limpa (`latexmk`), auditoria deterministica (`audit-build.py --strict`) e renderizacao seletiva `pdftoppm`.
+5. `technical-critic-agent` (`pro`): Auditoria adversarial de fisica, historiografia, anti-redundancia e layout visual nas paginas PNG.
 
-Dinamica dos Loops:
-- **Inner Loop (Sintaxe e Estilo):** O redator itera diretamente com o linter local (`latex-style-linter.sh`) e o compilador ate zerar erros e advertencias, sem acionar o revisor senior.
-- **Outer Loop (Semantica e Epistemologia):** Acionado exclusivamente sobre versoes com exit code 0 e linter aprovado, registrando licoes aprendidas na Memoria Episodica Relacional em `utils/memory/episodes/`.
-- **Despacho Concorrente Disjunto:** O orquestrador despacha multiplas frentes paralelas de trabalho onde cada redator opera com propriedade exclusiva de um arquivo `.tex`, sincronizando em barreira unica.
+Dinamica e eficiencia dos loops:
+- **Inner Loop:** O redator gera/ajusta texto e SVGs (`svg2pdf.sh` + leitura do PNG) e valida com `latex-style-linter.sh`. Na barreira global, o compilador executa `latexmk` + `audit-build.py --strict`.
+- **Outer Loop:** Acionado apenas sobre versoes com exit code 0 e `audit-build.py --strict` aprovado, registrando licoes em `utils/memory/episodes/`.
+- **Despacho Concorrente Disjunto:** Em tarefas transversais, cada `latex-author-agent` recebe propriedade exclusiva de arquivos `.tex` e `.svg` distintos (com prefixos de preview unicos).
+- **Reciclagem de Subagentes:** Reutilizar um subagente apenas durante os ajustes de uma mesma tarefa (`N <= 3` rodadas). Ao iniciar nova secao ou auditoria global, criar instancia limpa apoiada nos episodios `EP-*.md` para evitar saturacao de cache acima de `300k` tokens.
 
 ## 3. Sistema de Memoria Cognitiva Tripartite
-- **Memoria Semantica:** Base de regras invariantes e catalogo canonico `pos_textuais/01_referencias.bib`.
-- **Memoria Procedural:** Heuristicas operacionais em `utils/memory/compilation_heuristics.md` e scripts de validacao em `.agents/hooks/`.
-- **Memoria Episodica Relacional:** Trilhas indexadas em `utils/memory/episodes/` com frontmatter YAML, tags ontologicas hierarquicas e arestas de causalidade (`references_eq`, `supersedes`, `addressed_by`).
+- **Memoria Semantica:** Invariantes fisicas e historicas e `pos_textuais/01_referencias.bib`.
+- **Memoria Procedural:** Heuristicas operacionais em `utils/memory/compilation_heuristics.md` e scripts em `.agents/hooks/` e `.agents/scripts/`.
+- **Memoria Episodica Relacional:** Trilhas indexadas em `utils/memory/episodes/` com frontmatter YAML, tags ontologicas e arestas de causalidade.
 
 ## 4. Governanca de Seguranca e Isolamento de Escrita
-- Modificacao de arquivos `.tex` em `secoes/`: Permitida exclusivamente ao `latex-author-agent`. Em execucoes paralelas, cada agente recebe permissao restrita a um unico arquivo alvo.
-- Comandos de compilacao no terminal: Permitidos exclusivamente ao `latex-compiler-agent`.
-- Comandos de reversao de codigo e sincronizacao git: Restritos ao `orchestrator-agent`.
-- Agentes de consulta (`retriever-agent` e `technical-critic-agent`) operam em modo estritamente de leitura.
+- Modificacao de `secoes/*.tex` e `img/*`: Restrita ao `latex-author-agent` com alvo exclusivo em execucoes paralelas.
+- Compilacao global (`latexmk` e `audit-build.py`): Restrita ao `latex-compiler-agent`. Conversao local de SVGs via `.agents/scripts/svg2pdf.sh` permitida ao `latex-author-agent`.
+- Controle de versao Git e registro de episodios: Restritos ao `orchestrator-agent` (via pathspecs explicitos, sem `git add .`).
+- Agentes de leitura (`retriever-agent` e `technical-critic-agent`): Proibido editar arquivos ou executar comandos shell, sendo permitido `read_file` (incluindo PDFs/PNGs) e `search_web` para verificacao factual externa.
 
 ## 5. Fluxos de Trabalho e Validacao Preventiva
-- Linting estilistico preventivo (executado antes de qualquer compilacao):
+- Linting estilistico preventivo:
   ```bash
   bash .agents/hooks/latex-style-linter.sh secoes/
   ```
-- Compilacao completa do artigo:
+- Conversao e limpeza de figura SVG em coluna unica:
   ```bash
-  latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=out main.tex
+  bash .agents/scripts/svg2pdf.sh img/<figura>.svg
+  bash .agents/scripts/svg2pdf.sh --clean img/<figura>.svg
   ```
-- Limpeza de arquivos temporarios:
+- Compilacao limpa completa e auditoria estrita:
   ```bash
-  latexmk -C -outdir=out main.tex
+  latexmk -C -outdir=out main.tex && latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=out main.tex && python3 .agents/scripts/audit-build.py --strict
   ```
-- Auditoria de estado do repositorio:
+- Auditoria de estado e reversao de secao:
   ```bash
-  git status --porcelain
-  ```
-- Reversao de secao com falha de convergencia:
-  ```bash
+  git status --porcelain -- ':!out/'
   git checkout HEAD -- secoes/XX_secao_alvo.tex
   ```
 
 ## 6. Restricoes Negativas e Invariantes Comportamentais (Tolerancia Zero)
-- Proibido gerar agentes genericos que unifiquem escrita, compilacao e arbitragem.
-- **Protocolo Anti-Redundancia Intercapitular:** Proibido re-deduzir ou reapresentar blocos de equacoes matematicas ja formalizados em secoes anteriores. Modelos de capacitancia, limiar e atraso introduzidos na Fundamentacao Teórica devem ser referenciados nas secoes posteriores estritamente por meio de rotulos cruzados (`\cref{eq:...}`).
-- Proibido utilizar travessoes em-dash ("—"), en-dash ("–") ou ponto e virgula (";") na producao de textos em portugues.
-- Proibido o uso de `\textbf{}` no corpo da prosa ou em listas. O negrito fica restrito exclusivamente a cabecalhos de tabela e comandos estruturais de secao.
-- Proibido o uso de listas (itemize ou enumerate) para narrativas continuas. O texto deve ser redigido prioritariamente em prosa corrida e paragrafos coesos. O uso de listas fica limitado a no maximo um bloco breve por secao, estritamente quando indispensavel para especificacoes tecnicas formais.
-- Proibido o uso de jargoes empolados de IA e academicismos vazios (ex.: "alta heterogeneidade topologica", "filtros criticos rigorosos", "confluencia interdisciplinar", "vertices epistemicos"). Adotar linguagem tecnica natural, direta e humana de engenharia.
-- Proibido o uso inflado e desnecessario de termos superlativos como "fundamental", "critico", "essencial", "revolucionario", "astronomicos", "impressionante" ou "divisor de aguas".
-- Proibido transitar entre etapas do artigo sem parecer formal de aprovacao emitido pelo revisor.
+- Proibido unificar redacao, compilacao global e arbitragem em um unico agente.
+- **Padrao Estrito de Duas Colunas:** Proibido usar `\begin{figure*}`. Todas as figuras devem usar `\begin{figure}[!t]` com `\includegraphics[width=\columnwidth]{...}`, legenda explicativa e chamada via `\cref{fig:...}`.
+- **Protocolo Anti-Redundancia Intercapitular:** Proibido re-deduzir equacoes ou repetir metricas ja formalizadas em secoes anteriores; referenciar via `\cref{}`.
+- **Consistencia de Polaridade e `siunitx`:** Manter $V_{SS} = \SI{+5}{\volt}$ acima e $V_{DD} = \SI{-10}{\volt}$ abaixo nos esquematicos PMOS; usar virgula decimal em `\SI` e nunca inserir `\text{...}` dentro do 3o argumento de `\SIrange`.
+- Proibido utilizar travessoes (`—` ou `–`) ou ponto e virgula (`;`) no texto em portugues ou nas legendas/SVGs.
+- Proibido usar `\textbf{}` no corpo da prosa ou em listas (restrito a cabecalhos de tabelas).
+- Proibido fragmentar narrativas continuas em listas (`itemize`/`enumerate`), limitadas a no maximo um bloco breve por secao quando estritamente tecnico.
+- Proibido usar jargoes de IA ou superlativos inflados (`revolucionario`, `divisor de aguas`, `genese`, `corporificou`, `impressionante`, `astronomicos`, `fundamental`, `critico`, `essencial`, `crucial`, `pioneiro`) sem suporte funcional concreto.
+- Proibido transitar entre etapas sem aprovacao formal (`APPROVE`) do `technical-critic-agent`.

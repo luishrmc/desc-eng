@@ -74,7 +74,8 @@ Validate the drafted block against the following criteria:
 | **Punctuation** | Em dashes (`---`), parenthetical en dashes (`--`), semicolons (`;`) | Commas, parentheticals, or separate sentences | Em dashes and semicolons frequently introduce syntactically weak or conversational clauses. |
 | **Math Syntax** | Equations lacking terminal punctuation | Append `,` or `.` inside or immediately after the math block | Equations are grammatically integrated clauses, not detached graphical blocks. |
 | **Sentence Starters** | Starting sentences with `$x$`, `$\mathcal{M}$`, or `\cite{...}` | Lead with a noun phrase: "The variable $x$", "In \citet{smith2024}" | Prevents capitalization ambiguities and improves parsing cadence. |
-| **Cross-References** | Hardcoded text references ("Equation 3", "(see Fig 1)") | `\eqref{eq:...}`, `\ref{fig:...}`, `\Cref{...}` | Hardcoded identifiers break when document order shifts during revision. |
+| **Cross-References** | Hardcoded text references ("Equation 3", "(see Fig 1)") or mismatched `\eqref` | `\cref{eq:...}`, `\cref{fig:...}`, `\cref{tab:...}` | `cleveref` is configured in Brazilian Portuguese in `00_config.tex` (`Equação`, `Figura`, `Tabela`). |
+| **Figures & Layout** | Wide `\begin{figure*}` or `\SIrange{a}{b}{\ohm\text{ ...}}` | Single-column `\begin{figure}[!t]` with `\columnwidth`, `\text{...}` outside `\SIrange` | Preserves IEEE two-column reading flow and avoids `siunitx` dropping spaces before `\text{...}`. |
 | **Vocabulary** | Hype descriptors: *crucial, pivotal, delve, testament, groundbreaking* | Objective descriptors: *sufficient, bounded, invariant, rate-limiting* | Scholarly rigor depends on verifiable attributes, not emotional endorsement. |
 
 ## Verification Checklist
@@ -82,8 +83,8 @@ Validate the drafted block against the following criteria:
 Before emitting LaTeX blocks, ensure:
 
 - [ ] Output contains no root document tags (`\documentclass`, `\begin{document}`).
-- [ ] No unprompted bulleted or enumerated environments are present.
-- [ ] Every display equation ends with a grammatically consistent comma or period.
-- [ ] Every equation cross-reference uses `\eqref{...}`.
-- [ ] Every figure or table is referenced in the surrounding text using `\ref{...}`.
-- [ ] Zero instances of `---` (em dash) or conversational framing markers ("In conclusion", "As shown above").
+- [ ] No unprompted bulleted or enumerated environments are present (max 1 brief technical list per section).
+- [ ] Every display equation ends with a grammatically consistent comma or period (and uses `aligned` when needed to fit `\columnwidth`).
+- [ ] Every equation, figure, and table cross-reference uses `\cref{...}` (never `\eqref{...}` or hardcoded numbers).
+- [ ] Zero `\begin{figure*}` environments are present: every figure uses `\begin{figure}[!t]` and `\includegraphics[width=\columnwidth]{...}`.
+- [ ] Zero instances of `---` / `--` / `—` / `–`, `;`, or conversational framing markers ("In conclusion", "As shown above").

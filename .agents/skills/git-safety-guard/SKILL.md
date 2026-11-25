@@ -116,11 +116,11 @@ while IFS= read -r STAGED_FILE; do
   fi
 done < <(git diff --staged --name-only)
 
-# Block unapproved binary additions
-BINARY_COUNT=$(git diff --staged --numstat 2>/dev/null | grep '^-	-' | wc -l | tr -d ' ')
-if [ "$BINARY_COUNT" -gt 0 ]; then
-  echo "REJECTED: Staged changes contain raw binary additions." >&2
-  git diff --staged --numstat | grep '^-	-' >&2
+# Block unapproved binary additions (allow cropped vector figure PDFs in img/ and compiled out/main.pdf <= 5MB)
+UNAPPROVED_BINARIES=$(git diff --staged --numstat 2>/dev/null | awk '$1 == "-" && $2 == "-" {print $3}' | grep -vE '^(img/.*\.pdf|out/main\.pdf|utils/aulas/.*\.pdf)$' || true)
+if [ -n "$UNAPPROVED_BINARIES" ]; then
+  echo "REJECTED: Staged changes contain unapproved raw binary additions:" >&2
+  echo "$UNAPPROVED_BINARIES" >&2
   exit 22
 fi
 ```
@@ -150,7 +150,9 @@ trap cleanup EXIT
 
 # 1. Execute Linting Suite
 LINT_CMD=""
-if [ -f "package.json" ] && grep -q '"lint"' package.json; then
+if [ -f ".agents/hooks/latex-style-linter.sh" ] && [ -d "secoes" ]; then
+  LINT_CMD="bash .agents/hooks/latex-style-linter.sh secoes/"
+elif [ -f "package.json" ] && grep -q '"lint"' package.json; then
   LINT_CMD="npm run lint --silent"
 elif [ -f "Makefile" ] && grep -q '^lint:' Makefile; then
   LINT_CMD="make lint"
@@ -167,7 +169,9 @@ fi
 
 # 2. Execute Test Suite
 TEST_CMD=""
-if [ -f "package.json" ] && grep -q '"test"' package.json; then
+if [ -f ".agents/scripts/audit-build.py" ] && [ -f "main.tex" ]; then
+  TEST_CMD="python3 .agents/scripts/audit-build.py --strict"
+elif [ -f "package.json" ] && grep -q '"test"' package.json; then
   TEST_CMD="npm test -- --silent"
 elif [ -f "Makefile" ] && grep -q '^test:' Makefile; then
   TEST_CMD="make test"

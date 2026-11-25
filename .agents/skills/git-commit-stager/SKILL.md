@@ -76,16 +76,18 @@ while IFS= read -r line; do
       IGNORED_ARTIFACTS+=("$FILE_PATH")
       continue
       ;;
-    *.log|*.tmp|*.swp|*.bak|*.pyc|__pycache__/*|.DS_Store|thumbs.db|coverage/*)
+    *.log|*.tmp|*.swp|*.bak|*.pyc|__pycache__/*|.DS_Store|thumbs.db|coverage/*|out/preview_*.png|out/pages/*)
       IGNORED_ARTIFACTS+=("$FILE_PATH")
       continue
       ;;
   esac
 
-  # Verify file is not matched by .gitignore
+  # Verify file is not matched by .gitignore (allow explicitly tracked release artifact out/main.pdf)
   if git check-ignore -q -- "$FILE_PATH" 2>/dev/null; then
-    IGNORED_ARTIFACTS+=("$FILE_PATH")
-    continue
+    if [ "$FILE_PATH" != "out/main.pdf" ]; then
+      IGNORED_ARTIFACTS+=("$FILE_PATH")
+      continue
+    fi
   fi
 
   # Categorize by status code
