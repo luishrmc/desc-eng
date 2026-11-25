@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="380" viewBox="0 0 460 380">
+  <defs>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#1d4ed8"/>
+    </marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#0f766e"/>
+    </marker>
+    <marker id="arrow-slate" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="460" height="380" fill="#ffffff"/>
+
+  <!-- Moldura e cabecalho -->
+  <rect x="6" y="6" width="448" height="368" rx="5" fill="#fafafa" stroke="#94a3b8" stroke-width="1.4"/>
+  <rect x="6" y="6" width="448" height="28" rx="5" fill="#e2e8f0" stroke="#64748b" stroke-width="1.4"/>
+  <text x="230" y="25" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#0f172a">Linhagem de processadores (1971 a 1976)</text>
+
+  <!-- Coluna esquerda: Linhagem SGT conduzida por Faggin (x=20..260, centro=140) -->
+  <!-- No 1: Intel 4004 -->
+  <rect x="20" y="46" width="240" height="60" rx="4" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.6"/>
+  <text x="140" y="64" font-family="DejaVu Sans, Arial, sans-serif" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a">Intel 4004 (1971)</text>
+  <text x="140" y="80" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" text-anchor="middle" fill="#1e293b">PMOS SGT 10 &#956;m | 4 bits</text>
+  <text x="140" y="96" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" text-anchor="middle" fill="#1e40af">2.300 trans. | 740 kHz</text>
+
+  <line x1="140" y1="106" x2="140" y2="122" stroke="#1d4ed8" stroke-width="1.8" marker-end="url(#arrow-blue)"/>
+
+  <!-- No 2: Intel 8008 -->
+  <rect x="20" y="126" width="240" height="60" rx="4" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="140" y="144" font-family="DejaVu Sans, Arial, sans-serif" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a">Intel 8008 (1972)</text>
+  <text x="140" y="160" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" text-anchor="middle" fill="#1e293b">PMOS SGT 10 &#956;m | 8 bits</text>
+  <text x="140" y="176" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" text-anchor="middle" fill="#1e40af">3.500 trans. | 16 KB</text>
+
+  <line x1="140" y1="186" x2="140" y2="202" stroke="#1d4ed8" stroke-width="1.8" marker-end="url(#arrow-blue)"/>
+
+  <!-- No 3: Intel 8080 -->
+  <rect x="20" y="206" width="240" height="60" rx="4" fill="#ecfdf5" stroke="#059669" stroke-width="1.6"/>
+  <text x="140" y="224" font-family="DejaVu Sans, Arial, sans-serif" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#065f46">Intel 8080 (1974)</text>
+  <text x="140" y="240" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" text-anchor="middle" fill="#1e293b">NMOS SGT 6 &#956;m | 8 bits</text>
+  <text x="140" y="256" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" text-anchor="middle" fill="#047857">2 MHz | 64 KB</text>
+
+  <line x1="140" y1="266" x2="140" y2="282" stroke="#0f766e" stroke-width="1.8" marker-end="url(#arrow-teal)"/>
+
+  <!-- No 4: Zilog Z80 -->
+  <rect x="20" y="286" width="240" height="60" rx="4" fill="#f0fdfa" stroke="#0f766e" stroke-width="1.6"/>
+  <text x="140" y="304" font-family="DejaVu Sans, Arial, sans-serif" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#134e4a">Zilog Z80 (1976)</text>
+  <text x="140" y="320" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" text-anchor="middle" fill="#1e293b">NMOS | +5 V unipolar</text>
+  <text x="140" y="336" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" text-anchor="middle" fill="#0f766e">Refresh DRAM integrado</text>
+
+  <text x="140" y="364" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#334155">Linhagem SGT conduzida por Faggin</text>
+
+  <!-- Coluna direita: Ramo independente (x=278..442, largura=164, centro=360) -->
+  <rect x="278" y="136" width="164" height="210" rx="5" fill="#f8fafc" stroke="#64748b" stroke-width="1.3" stroke-dasharray="4,3"/>
+  <rect x="278" y="136" width="164" height="26" rx="5" fill="#e2e8f0" stroke="#64748b" stroke-width="1.3"/>
+  <text x="360" y="153" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#334155">Ramo independente</text>
+
+  <!-- Motorola 6800 (1974) -->
+  <rect x="290" y="176" width="140" height="46" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1.3"/>
+  <text x="360" y="196" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e293b">Motorola 6800</text>
+  <text x="360" y="213" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#475569">(1974)</text>
+
+  <line x1="360" y1="222" x2="360" y2="242" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow-slate)"/>
+
+  <!-- MOS 6502 (1975) -->
+  <rect x="290" y="246" width="140" height="62" rx="4" fill="#ffffff" stroke="#475569" stroke-width="1.5"/>
+  <text x="360" y="266" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#0f172a">MOS 6502 (1975)</text>
+  <text x="360" y="283" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#334155">8 bits | Chuck Peddle</text>
+  <text x="360" y="299" font-family="DejaVu Sans, Arial, sans-serif" font-size="10.5" text-anchor="middle" fill="#475569">Derivado do 6800</text>
+
+  <text x="360" y="325" font-family="DejaVu Sans, Arial, sans-serif" font-size="10.5" text-anchor="middle" fill="#475569">Sem vínculo com</text>
+  <text x="360" y="339" font-family="DejaVu Sans, Arial, sans-serif" font-size="10.5" text-anchor="middle" fill="#475569">a linhagem SGT</text>
+</svg>

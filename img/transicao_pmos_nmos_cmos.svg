@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="380" viewBox="0 0 460 380">
+  <defs>
+    <marker id="arrow-step" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="460" height="380" fill="#ffffff"/>
+
+  <!-- ====================================================================== -->
+  <!-- BLOCO 1: PMOS SGT (Intel 4004, 1971)                                   -->
+  <!-- ====================================================================== -->
+  <rect x="10" y="8" width="440" height="104" rx="6" fill="#fff7ed" stroke="#c2410c" stroke-width="1.6"/>
+  <rect x="10" y="8" width="440" height="28" rx="6" fill="#ffedd5" stroke="#c2410c" stroke-width="1.6"/>
+  <text x="230" y="27" font-family="DejaVu Sans, Arial, sans-serif" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#9a3412">1. PMOS SGT (Intel 4004, 1971)</text>
+
+  <!-- Card 1.1 -->
+  <rect x="20" y="43" width="205" height="60" rx="4" fill="#ffffff" stroke="#fdba74" stroke-width="1.2"/>
+  <text x="122.5" y="61" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#9a3412">Portadores: lacunas</text>
+  <text x="122.5" y="78" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1e293b">&#956;<tspan baseline-shift="sub" font-size="75%">p</tspan> &#8776; 150 a 200 cm&#178;/V&#183;s</text>
+  <text x="122.5" y="94" font-family="DejaVu Sans, Arial, sans-serif" font-size="10.5" text-anchor="middle" fill="#475569">Baixa mobilidade, canais largos</text>
+
+  <!-- Card 1.2 -->
+  <rect x="235" y="43" width="205" height="60" rx="4" fill="#ffffff" stroke="#fdba74" stroke-width="1.2"/>
+  <text x="337.5" y="61" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#9a3412">Carga ativa e alimentação</text>
+  <text x="337.5" y="78" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1e293b">Corrente estática contínua</text>
+  <text x="337.5" y="94" font-family="DejaVu Sans, Arial, sans-serif" font-size="10.5" text-anchor="middle" fill="#475569">Fontes +5 V / &#8722;10 V</text>
+
+  <!-- Seta 1 -> 2 -->
+  <line x1="230" y1="112" x2="230" y2="128" stroke="#334155" stroke-width="2.2" marker-end="url(#arrow-step)"/>
+
+  <!-- ====================================================================== -->
+  <!-- BLOCO 2: NMOS SGT (8080/Z80, 1974 a 1976)                              -->
+  <!-- ====================================================================== -->
+  <rect x="10" y="132" width="440" height="104" rx="6" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.6"/>
+  <rect x="10" y="132" width="440" height="28" rx="6" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.6"/>
+  <text x="230" y="151" font-family="DejaVu Sans, Arial, sans-serif" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a">2. NMOS SGT (8080 e Z80, 1974 a 1976)</text>
+
+  <!-- Card 2.1 -->
+  <rect x="20" y="167" width="205" height="60" rx="4" fill="#ffffff" stroke="#93c5fd" stroke-width="1.2"/>
+  <text x="122.5" y="185" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a">Portadores: elétrons</text>
+  <text x="122.5" y="202" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1e293b">&#956;<tspan baseline-shift="sub" font-size="75%">n</tspan> &#8776; 500 a 800 cm&#178;/V&#183;s</text>
+  <text x="122.5" y="218" font-family="DejaVu Sans, Arial, sans-serif" font-size="10.5" font-weight="bold" text-anchor="middle" fill="#1d4ed8">~3&#215; mais rápidos que lacunas</text>
+
+  <!-- Card 2.2 -->
+  <rect x="235" y="167" width="205" height="60" rx="4" fill="#ffffff" stroke="#93c5fd" stroke-width="1.2"/>
+  <text x="337.5" y="185" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a">Compatibilidade TTL (+5 V)</text>
+  <text x="337.5" y="202" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1e293b">Alimentação +5 V unipolar (Z80)</text>
+  <text x="337.5" y="218" font-family="DejaVu Sans, Arial, sans-serif" font-size="10.5" text-anchor="middle" fill="#475569">Mantém dissipação estática</text>
+
+  <!-- Seta 2 -> 3 -->
+  <line x1="230" y1="236" x2="230" y2="252" stroke="#334155" stroke-width="2.2" marker-end="url(#arrow-step)"/>
+
+  <!-- ====================================================================== -->
+  <!-- BLOCO 3: CMOS COMPLEMENTAR                                             -->
+  <!-- ====================================================================== -->
+  <rect x="10" y="256" width="440" height="114" rx="6" fill="#ecfdf5" stroke="#059669" stroke-width="1.6"/>
+  <rect x="10" y="256" width="440" height="28" rx="6" fill="#d1fae5" stroke="#059669" stroke-width="1.6"/>
+  <text x="230" y="275" font-family="DejaVu Sans, Arial, sans-serif" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#065f46">3. CMOS Complementar (Par pMOS + nMOS)</text>
+
+  <!-- Card 3.1 -->
+  <rect x="20" y="292" width="205" height="68" rx="4" fill="#ffffff" stroke="#6ee7b7" stroke-width="1.2"/>
+  <text x="122.5" y="311" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#065f46">Chaveamento em par</text>
+  <text x="122.5" y="329" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1e293b">Uma válvula fecha por inteiro</text>
+  <text x="122.5" y="347" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1e293b">quando a oposta abre</text>
+
+  <!-- Card 3.2 -->
+  <rect x="235" y="292" width="205" height="68" rx="4" fill="#ffffff" stroke="#6ee7b7" stroke-width="1.2"/>
+  <text x="337.5" y="311" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#065f46">Corte de corrente estática</text>
+  <text x="337.5" y="329" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1e293b">Sem fluxo contínuo em repouso</text>
+  <text x="337.5" y="347" font-family="DejaVu Sans, Arial, sans-serif" font-size="10.5" font-weight="bold" text-anchor="middle" fill="#047857">Gasto quase só na troca de bit</text>
+</svg>

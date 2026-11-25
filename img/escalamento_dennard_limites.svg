@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="340" viewBox="0 0 460 340">
+  <defs>
+    <marker id="arrow-break" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#6d28d9"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="460" height="340" fill="#ffffff"/>
+
+  <!-- ====================================================================== -->
+  <!-- REGIME 1: ESCALAMENTO DE DENNARD (1974 a 2000)                         -->
+  <!-- ====================================================================== -->
+  <rect x="10" y="8" width="440" height="118" rx="6" fill="#ecfdf5" stroke="#059669" stroke-width="1.6"/>
+  <rect x="10" y="8" width="440" height="28" rx="6" fill="#d1fae5" stroke="#059669" stroke-width="1.6"/>
+  <text x="230" y="27" font-family="DejaVu Sans, Arial, sans-serif" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#065f46">Escalamento de Dennard (1974 a 2000)</text>
+
+  <!-- Card 1.1 -->
+  <rect x="20" y="43" width="205" height="72" rx="4" fill="#ffffff" stroke="#6ee7b7" stroke-width="1.2"/>
+  <text x="122.5" y="63" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#065f46">Redução por fator &#954;</text>
+  <text x="122.5" y="82" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1e293b">Densidade &#215;&#954;&#178; e velocidade &#215;&#954;</text>
+  <text x="122.5" y="100" font-family="DejaVu Sans, Arial, sans-serif" font-size="10.5" text-anchor="middle" fill="#475569">Dimensões e tensão caem juntas</text>
+
+  <!-- Card 1.2 -->
+  <rect x="235" y="43" width="205" height="72" rx="4" fill="#ffffff" stroke="#6ee7b7" stroke-width="1.2"/>
+  <text x="337.5" y="63" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#065f46">Potência/área constante</text>
+  <text x="337.5" y="82" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1e293b">Mais transistores sem elevar</text>
+  <text x="337.5" y="100" font-family="DejaVu Sans, Arial, sans-serif" font-size="10.5" font-weight="bold" text-anchor="middle" fill="#047857">o calor: base da Lei de Moore</text>
+
+  <!-- ====================================================================== -->
+  <!-- TRANSICAO DE RUPTURA                                                   -->
+  <!-- ====================================================================== -->
+  <line x1="230" y1="126" x2="230" y2="136" stroke="#6d28d9" stroke-width="2"/>
+  <rect x="48" y="136" width="364" height="24" rx="12" fill="#f5f3ff" stroke="#6d28d9" stroke-width="1.4"/>
+  <text x="230" y="152" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#4c1d95">Ruptura física: óxido isolante de poucos átomos</text>
+  <line x1="230" y1="160" x2="230" y2="173" stroke="#6d28d9" stroke-width="2" marker-end="url(#arrow-break)"/>
+
+  <!-- ====================================================================== -->
+  <!-- REGIME 2: POS-2000: LIMITES FISICOS E DTCO                             -->
+  <!-- ====================================================================== -->
+  <rect x="10" y="177" width="440" height="154" rx="6" fill="#f5f3ff" stroke="#6d28d9" stroke-width="1.6"/>
+  <rect x="10" y="177" width="440" height="28" rx="6" fill="#ede9fe" stroke="#6d28d9" stroke-width="1.6"/>
+  <text x="230" y="196" font-family="DejaVu Sans, Arial, sans-serif" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#4c1d95">Pós-2000: Limites Físicos e DTCO</text>
+
+  <!-- Card 2.1 -->
+  <rect x="20" y="212" width="205" height="60" rx="4" fill="#ffffff" stroke="#c4b5fd" stroke-width="1.2"/>
+  <text x="122.5" y="230" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#4c1d95">Tensão estagna perto de ~1 V</text>
+  <text x="122.5" y="247" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1e293b">Correntes de fuga e</text>
+  <text x="122.5" y="263" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1e293b">tunelamento quântico</text>
+
+  <!-- Card 2.2 -->
+  <rect x="235" y="212" width="205" height="60" rx="4" fill="#ffffff" stroke="#c4b5fd" stroke-width="1.2"/>
+  <text x="337.5" y="230" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#4c1d95">Barreira de potência térmica</text>
+  <text x="337.5" y="247" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1e293b">Fim do ganho por núcleo único</text>
+  <text x="337.5" y="263" font-family="DejaVu Sans, Arial, sans-serif" font-size="10.5" font-weight="bold" text-anchor="middle" fill="#5b21b6">Impõe múltiplos núcleos</text>
+
+  <!-- Card 2.3 (full width) -->
+  <rect x="20" y="280" width="420" height="42" rx="4" fill="#ffffff" stroke="#c4b5fd" stroke-width="1.2"/>
+  <text x="230" y="298" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#4c1d95">Co-otimização processo-arquitetura (DTCO)</text>
+  <text x="230" y="314" font-family="DejaVu Sans, Arial, sans-serif" font-size="10.5" text-anchor="middle" fill="#1e293b">Retoma na nanoescala o método integrado aplicado por Faggin no Intel 4004</text>
+</svg>

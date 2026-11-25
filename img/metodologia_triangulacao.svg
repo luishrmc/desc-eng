@@ -1,121 +1,108 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="920" height="430" viewBox="0 0 920 430">
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="651" viewBox="0 0 460 651">
   <defs>
     <marker id="arrow-dark" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
       <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#334155"/>
     </marker>
-    <marker id="arrow-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <marker id="arrow-slate" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#64748b"/>
+    </marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse">
       <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#0f766e"/>
     </marker>
   </defs>
 
-  <rect x="0" y="0" width="920" height="430" fill="#ffffff"/>
+  <rect x="0" y="0" width="460" height="651" fill="#ffffff"/>
 
   <!-- ====================================================================== -->
-  <!-- CAMADA SUPERIOR: 3 PILARES INDEPENDENTES DE EVIDENCIA                  -->
+  <!-- CAMADA 1: 3 PILARES INDEPENDENTES DE EVIDENCIA                         -->
   <!-- ====================================================================== -->
+  <rect x="10" y="6" width="440" height="215" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.4"/>
+  <rect x="10" y="6" width="440" height="22" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.4"/>
+  <text x="230" y="21" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#0f172a">Três Pilares Independentes de Evidência</text>
 
   <!-- Pilar 1: Modelagem Fisica -->
-  <rect x="12" y="10" width="288" height="126" rx="5" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"/>
-  <rect x="12" y="10" width="288" height="28" rx="5" fill="#dbeafe" stroke="#2563eb" stroke-width="1.6"/>
-  <text x="156" y="29" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a">1. Modelagem Física de Semicondutores</text>
-  <text x="156" y="60" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1e293b">Sze e Ng (2006), Mead e Conway (1980),</text>
-  <text x="156" y="80" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1e293b">Weste e Harris (2011)</text>
-  <text x="156" y="100" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1e3a8a">Capacitâncias C<tspan baseline-shift="sub" font-size="75%">ox</tspan>, C<tspan baseline-shift="sub" font-size="75%">ov</tspan> e efeito Miller</text>
-  <text x="156" y="120" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1e3a8a">Tensão de limiar V<tspan baseline-shift="sub" font-size="75%">th</tspan> e atraso RC (&#964;<tspan baseline-shift="sub" font-size="75%">pd</tspan>)</text>
+  <rect x="20" y="34" width="420" height="56" rx="5" fill="#eff6ff" stroke="#2563eb" stroke-width="1.4"/>
+  <rect x="20" y="34" width="420" height="20" rx="5" fill="#dbeafe" stroke="#2563eb" stroke-width="1.4"/>
+  <text x="230" y="48" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#1e3a8a">1. Modelagem Física de Semicondutores</text>
+  <text x="230" y="68" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1e293b">Sze e Ng (2006), Mead e Conway (1980), Weste e Harris (2011)</text>
+  <text x="230" y="83" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1e3a8a">Capacitâncias C<tspan baseline-shift="sub" font-size="78%">ox</tspan>, C<tspan baseline-shift="sub" font-size="78%">ov</tspan>, efeito Miller, V<tspan baseline-shift="sub" font-size="78%">th</tspan> e atraso RC (&#964;<tspan baseline-shift="sub" font-size="78%">pd</tspan>)</text>
 
-  <!-- Pilar 2: Registros Contemporaneos -->
-  <rect x="316" y="10" width="288" height="126" rx="5" fill="#ecfdf5" stroke="#059669" stroke-width="1.6"/>
-  <rect x="316" y="10" width="288" height="28" rx="5" fill="#d1fae5" stroke="#059669" stroke-width="1.6"/>
-  <text x="460" y="29" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#065f46">2. Registros da Época (1967 a 1974)</text>
-  <text x="460" y="60" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1e293b">Pat. US 3.475.234 (1969), 3.673.471 (1972)</text>
-  <text x="460" y="80" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1e293b">Pat. US 3.699.646 (1972), 3.821.715 (1974)</text>
-  <text x="460" y="100" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#065f46">Data Sheet (nov/1971), Manual (fev/1973)</text>
-  <text x="460" y="120" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#065f46">Artigos técnicos de 1970 e 1972</text>
+  <!-- Pilar 2: Registros da Epoca -->
+  <rect x="20" y="96" width="420" height="56" rx="5" fill="#ecfdf5" stroke="#059669" stroke-width="1.4"/>
+  <rect x="20" y="96" width="420" height="20" rx="5" fill="#d1fae5" stroke="#059669" stroke-width="1.4"/>
+  <text x="230" y="110" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#065f46">2. Registros da Época (1967 a 1974)</text>
+  <text x="230" y="130" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1e293b">Patentes US 3.475.234, 3.673.471, 3.699.646 e 3.821.715</text>
+  <text x="230" y="145" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#065f46">Data Sheet (1971), Manual (1973) e artigos (1970 e 1972)</text>
 
   <!-- Pilar 3: Relatos dos Projetistas -->
-  <rect x="620" y="10" width="288" height="126" rx="5" fill="#fff7ed" stroke="#c2410c" stroke-width="1.6"/>
-  <rect x="620" y="10" width="288" height="28" rx="5" fill="#ffedd5" stroke="#c2410c" stroke-width="1.6"/>
-  <text x="764" y="29" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#9a3412">3. Relatos dos Projetistas (1981 a 2021)</text>
-  <text x="764" y="60" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1e293b">Artigo conjunto IEEE Micro (1996)</text>
-  <text x="764" y="80" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1e293b">Noyce e Hoff (1981), Nature Elec. (2018)</text>
-  <text x="764" y="100" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#9a3412">Entrevista (2004) e painel (2007) do CHM</text>
-  <text x="764" y="120" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#9a3412">Autobiografia de Faggin (2021)</text>
+  <rect x="20" y="158" width="420" height="56" rx="5" fill="#fff7ed" stroke="#c2410c" stroke-width="1.4"/>
+  <rect x="20" y="158" width="420" height="20" rx="5" fill="#ffedd5" stroke="#c2410c" stroke-width="1.4"/>
+  <text x="230" y="172" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#9a3412">3. Relatos dos Projetistas (1981 a 2021)</text>
+  <text x="230" y="192" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1e293b">Artigos retrospectivos (1981, 1996, 2018) e autobiografia (2021)</text>
+  <text x="230" y="207" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#9a3412">Entrevista (2004) e painel de história oral (2007) do CHM</text>
 
   <!-- ====================================================================== -->
-  <!-- CONEXOES DE CRUZAMENTO ENTRE PILARES E FILTROS                         -->
+  <!-- CONVERGENCIA DOS PILARES PARA OS FILTROS                               -->
   <!-- ====================================================================== -->
-  <line x1="156" y1="136" x2="156" y2="152" stroke="#334155" stroke-width="1.8"/>
-  <line x1="460" y1="136" x2="460" y2="152" stroke="#334155" stroke-width="1.8"/>
-  <line x1="764" y1="136" x2="764" y2="152" stroke="#334155" stroke-width="1.8"/>
-  <line x1="156" y1="152" x2="764" y2="152" stroke="#334155" stroke-width="2.0"/>
-  <circle cx="156" cy="152" r="3" fill="#334155"/>
-  <circle cx="460" cy="152" r="3" fill="#334155"/>
-  <circle cx="764" cy="152" r="3" fill="#334155"/>
-  <line x1="156" y1="152" x2="156" y2="165" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow-dark)"/>
-  <line x1="460" y1="152" x2="460" y2="165" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow-dark)"/>
-  <line x1="764" y1="152" x2="764" y2="165" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow-dark)"/>
+  <line x1="230" y1="221" x2="230" y2="239" stroke="#334155" stroke-width="2.1" marker-end="url(#arrow-dark)"/>
 
   <!-- ====================================================================== -->
-  <!-- CAMADA INTERMEDIARIA: 3 FILTROS DE VALIDACAO CRUZADA                   -->
+  <!-- CAMADA 2: 3 FILTROS DE VALIDACAO CRUZADA                               -->
   <!-- ====================================================================== -->
+  <rect x="10" y="243" width="440" height="207" rx="6" fill="#f8fafc" stroke="#475569" stroke-width="1.5"/>
+  <rect x="10" y="243" width="440" height="22" rx="6" fill="#e2e8f0" stroke="#475569" stroke-width="1.5"/>
+  <text x="230" y="258" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#0f172a">Três Filtros de Validação Cruzada</text>
 
   <!-- Filtro 1 -->
-  <rect x="12" y="168" width="288" height="110" rx="5" fill="#f8fafc" stroke="#475569" stroke-width="1.6"/>
-  <rect x="12" y="168" width="288" height="28" rx="5" fill="#e2e8f0" stroke="#475569" stroke-width="1.6"/>
-  <text x="156" y="187" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#0f172a">Filtro 1: Prioridade ao registro da época</text>
-  <text x="156" y="219" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1e293b">Patentes e manuais de 1967 a 1974</text>
-  <text x="156" y="240" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1e293b">prevalecem sobre memórias escritas</text>
-  <text x="156" y="261" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1e293b">ou gravadas décadas depois</text>
+  <rect x="20" y="271" width="420" height="50" rx="5" fill="#ffffff" stroke="#64748b" stroke-width="1.3"/>
+  <text x="230" y="286" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#0f172a">Filtro 1: Prioridade ao registro da época</text>
+  <text x="230" y="301" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#334155">Patentes, artigos e manuais de 1967 a 1974 prevalecem</text>
+  <text x="230" y="315" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#334155">sobre memórias escritas ou gravadas décadas depois</text>
+
+  <line x1="230" y1="321" x2="230" y2="330" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow-slate)"/>
 
   <!-- Filtro 2 -->
-  <rect x="316" y="168" width="288" height="110" rx="5" fill="#f8fafc" stroke="#475569" stroke-width="1.6"/>
-  <rect x="316" y="168" width="288" height="28" rx="5" fill="#e2e8f0" stroke="#475569" stroke-width="1.6"/>
-  <text x="460" y="187" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#0f172a">Filtro 2: Confronto de relatos divergentes</text>
-  <text x="460" y="219" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1e293b">Escopo Busicom (12 circuitos vs. 8 a 9 tipos)</text>
-  <text x="460" y="240" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1e293b">Autoria técnica do contato enterrado</text>
-  <text x="460" y="261" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1e293b">(patente Vadasz vs. execução de Faggin)</text>
+  <rect x="20" y="332" width="420" height="50" rx="5" fill="#ffffff" stroke="#64748b" stroke-width="1.3"/>
+  <text x="230" y="347" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#0f172a">Filtro 2: Confronto de relatos divergentes</text>
+  <text x="230" y="362" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#334155">Escopo Busicom (12 circuitos vs. 8 a 9 tipos) e autoria</text>
+  <text x="230" y="376" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#334155">do contato enterrado (patente Vadasz vs. execução de Faggin)</text>
+
+  <line x1="230" y1="382" x2="230" y2="391" stroke="#64748b" stroke-width="1.6" marker-end="url(#arrow-slate)"/>
 
   <!-- Filtro 3 -->
-  <rect x="620" y="168" width="288" height="110" rx="5" fill="#f8fafc" stroke="#475569" stroke-width="1.6"/>
-  <rect x="620" y="168" width="288" height="28" rx="5" fill="#e2e8f0" stroke="#475569" stroke-width="1.6"/>
-  <text x="764" y="187" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#0f172a">Filtro 3: Auditoria pelas leis da física</text>
-  <text x="764" y="219" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1e293b">Verificação quantitativa dos dados reais</text>
-  <text x="764" y="240" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1e293b">Cálculos comparativos hipotéticos da</text>
-  <text x="764" y="261" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1e293b">antiga porta de alumínio (sem réplica)</text>
+  <rect x="20" y="393" width="420" height="50" rx="5" fill="#ffffff" stroke="#64748b" stroke-width="1.3"/>
+  <text x="230" y="408" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#0f172a">Filtro 3: Auditoria pelas leis da física</text>
+  <text x="230" y="423" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#334155">Verificação quantitativa dos parâmetros reais da SGT e cálculos</text>
+  <text x="230" y="437" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#334155">hipotéticos para porta de alumínio (sem réplica física)</text>
 
   <!-- ====================================================================== -->
   <!-- CONVERGENCIA DOS FILTROS PARA A SINTESE VALIDADA                       -->
   <!-- ====================================================================== -->
-  <line x1="156" y1="278" x2="156" y2="294" stroke="#334155" stroke-width="1.8"/>
-  <line x1="460" y1="278" x2="460" y2="294" stroke="#334155" stroke-width="1.8"/>
-  <line x1="764" y1="278" x2="764" y2="294" stroke="#334155" stroke-width="1.8"/>
-  <line x1="156" y1="294" x2="764" y2="294" stroke="#334155" stroke-width="2.0"/>
-  <circle cx="460" cy="294" r="3" fill="#334155"/>
-  <line x1="460" y1="294" x2="460" y2="307" stroke="#334155" stroke-width="2.0" marker-end="url(#arrow-dark)"/>
+  <line x1="230" y1="450" x2="230" y2="468" stroke="#334155" stroke-width="2.1" marker-end="url(#arrow-dark)"/>
 
   <!-- ====================================================================== -->
-  <!-- CAMADA INFERIOR: SINTESE VALIDADA (CADEIA CAUSAL COMPROVADA)           -->
+  <!-- CAMADA 3: SINTESE VALIDADA (CADEIA CAUSAL COMPROVADA)                  -->
   <!-- ====================================================================== -->
-  <rect x="12" y="310" width="896" height="108" rx="5" fill="#f0fdfa" stroke="#0f766e" stroke-width="1.7"/>
-  <rect x="12" y="310" width="896" height="26" rx="5" fill="#ccfbf1" stroke="#0f766e" stroke-width="1.7"/>
-  <text x="460" y="328" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#134e4a">Síntese Validada: Relação Causal Comprovada</text>
+  <rect x="10" y="472" width="440" height="173" rx="6" fill="#f0fdfa" stroke="#0f766e" stroke-width="1.6"/>
+  <rect x="10" y="472" width="440" height="22" rx="6" fill="#ccfbf1" stroke="#0f766e" stroke-width="1.6"/>
+  <text x="230" y="487" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#134e4a">Síntese Validada: Relação Causal Comprovada</text>
 
   <!-- Bloco Causal 1 -->
-  <rect x="26" y="348" width="324" height="58" rx="4" fill="#ffffff" stroke="#0f766e" stroke-width="1.3"/>
-  <text x="188" y="370" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#115e59">Física dos Dispositivos e Circuito</text>
-  <text x="188" y="391" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1e293b">SGT, contatos enterrados, bootstrapping, ortogonal</text>
+  <rect x="20" y="500" width="420" height="38" rx="4" fill="#ffffff" stroke="#0f766e" stroke-width="1.3"/>
+  <text x="230" y="515" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#115e59">Física dos Dispositivos e Circuito</text>
+  <text x="230" y="531" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1e293b">SGT, contatos enterrados, bootstrapping e layout ortogonal</text>
 
-  <line x1="350" y1="377" x2="376" y2="377" stroke="#0f766e" stroke-width="2.2" marker-end="url(#arrow-teal)"/>
+  <line x1="230" y1="538" x2="230" y2="548" stroke="#0f766e" stroke-width="1.8" marker-end="url(#arrow-teal)"/>
 
   <!-- Bloco Causal 2 -->
-  <rect x="380" y="348" width="246" height="58" rx="4" fill="#ffffff" stroke="#0f766e" stroke-width="1.3"/>
-  <text x="503" y="370" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#115e59">Intel 4004 Monolítico</text>
-  <text x="503" y="391" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1e293b">12 mm&#178;, 2.300 transistores, 740 kHz</text>
+  <rect x="20" y="550" width="420" height="38" rx="4" fill="#ffffff" stroke="#0f766e" stroke-width="1.3"/>
+  <text x="230" y="565" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#115e59">Intel 4004 Monolítico</text>
+  <text x="230" y="581" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1e293b">Área de 12 mm&#178;, 2.300 transistores e clock de 740 kHz</text>
 
-  <line x1="626" y1="377" x2="652" y2="377" stroke="#0f766e" stroke-width="2.2" marker-end="url(#arrow-teal)"/>
+  <line x1="230" y1="588" x2="230" y2="598" stroke="#0f766e" stroke-width="1.8" marker-end="url(#arrow-teal)"/>
 
   <!-- Bloco Causal 3 -->
-  <rect x="656" y="348" width="238" height="58" rx="4" fill="#ffffff" stroke="#0f766e" stroke-width="1.3"/>
-  <text x="775" y="370" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#115e59">Impacto Industrial e Social</text>
-  <text x="775" y="391" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1e293b">Sistemas embarcados e automação</text>
+  <rect x="20" y="600" width="420" height="38" rx="4" fill="#ffffff" stroke="#0f766e" stroke-width="1.3"/>
+  <text x="230" y="615" font-family="DejaVu Sans, Arial, sans-serif" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#115e59">Impacto Industrial e Social</text>
+  <text x="230" y="631" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1e293b">Sistemas embarcados, controle digital e automação</text>
 </svg>
