@@ -22,8 +22,8 @@
 \BIBdecl
 
 \bibitem{morton1958}
-J.~A. Morton, ``The tyranny of large numbers,'' \emph{Bell Laboratories
-  Record}, vol.~36, no.~5, pp. 161--164, 1958.
+J.~A. Morton and W.~J. Pietenpol, ``The technological impact of transistors,''
+  \emph{Proceedings of the IRE}, vol.~46, no.~6, pp. 955--959, Jun. 1958.
 
 \bibitem{moore1965}
 G.~E. Moore, ``Cramming more components onto integrated circuits,''
@@ -38,44 +38,13 @@ R.~K. Cavin, P.~Lugli, and V.~V. Zhirnov, ``Evolution of research on
   semiconductors and computation,'' \emph{Proceedings of the IEEE}, vol. 100,
   no.~13, pp. 1720--1742, May 2012.
 
-\bibitem{weste2010}
-N.~H.~E. Weste and D.~M. Harris, \emph{{CMOS VLSI} Design: A Circuits and
-  Systems Perspective}, 4th~ed.\hskip 1em plus 0.5em minus 0.4em\relax Boston,
-  MA: Addison-Wesley, 2011.
-
 \bibitem{faggin1970}
 F.~Faggin and T.~Klein, ``Silicon gate technology,'' \emph{Solid-State
   Electronics}, vol.~13, no.~8, pp. 1125--1144, Aug. 1970.
 
-\bibitem{faggin1969patent}
-F.~Faggin, ``Semiconductor device with self-aligned gate,'' US Patent
-  3,475,234, Oct. 1969, depositada em 1968, concedida em 28 de out. de 1969.
-
-\bibitem{noyce1981}
-R.~N. Noyce and M.~E. Hoff, ``A history of microprocessor development at
-  {Intel},'' \emph{IEEE Micro}, vol.~1, no.~1, pp. 8--21, Feb. 1981.
-
 \bibitem{faggin1996}
 F.~Faggin, M.~E. Hoff, S.~Mazor, and M.~Shima, ``The history of the 4004,''
   \emph{IEEE Micro}, vol.~16, no.~6, pp. 10--20, Dec. 1996.
-
-\bibitem{intel1973mcs4}
-\emph{{MCS-4} Micro Computer Set Users Manual}, Intel Corporation, Santa Clara,
-  CA, Feb. 1973.
-
-\bibitem{faggin2021}
-F.~Faggin, \emph{Silicon: From the Invention of the Microprocessor to the New
-  Science of Consciousness}.\hskip 1em plus 0.5em minus 0.4em\relax Novato, CA:
-  Waterside Productions, 2021.
-
-\bibitem{faggin1974patent}
-F.~Faggin, M.~E. Hoff, and S.~Mazor, ``Memory system for multi-chip digital
-  computer,'' US Patent 3,821,715, Jun. 1974, depositada em 22 de jan. de 1973,
-  concedida em 28 de jun. de 1974.
-
-\bibitem{sze2006}
-S.~M. Sze and K.~K. Ng, \emph{Physics of Semiconductor Devices}, 3rd~ed.\hskip
-  1em plus 0.5em minus 0.4em\relax Hoboken, NJ: John Wiley \& Sons, 2006.
 
 \bibitem{kerwin1969patent}
 R.~E. Kerwin, D.~L. Klein, and J.~C. Sarace, ``Method for making {MIS}
@@ -87,10 +56,37 @@ T.~Klein and F.~Faggin, ``Doped semiconductor electrodes for {MOS} type
   devices,'' US Patent 3,673,471, Jun. 1972, depositada em 8 de out. de 1970,
   concedida em 27 de jun. de 1972.
 
+\bibitem{noyce1981}
+R.~N. Noyce and M.~E. Hoff, ``A history of microprocessor development at
+  {Intel},'' \emph{IEEE Micro}, vol.~1, no.~1, pp. 8--21, Feb. 1981.
+
+\bibitem{intel1973mcs4}
+\emph{{MCS-4} Micro Computer Set Users Manual}, Intel Corporation, Santa Clara,
+  CA, Feb. 1973.
+
+\bibitem{faggin2021}
+F.~Faggin, \emph{Silicon: From the Invention of the Microprocessor to the New
+  Science of Consciousness}.\hskip 1em plus 0.5em minus 0.4em\relax Novato, CA:
+  Waterside Productions, 2021.
+
+\bibitem{faggin1974patent}
+M.~E. Hoff, S.~Mazor, and F.~Faggin, ``Memory system for multi-chip digital
+  computer,'' US Patent 3,821,715, Jun. 1974, depositada em 22 de jan. de 1973,
+  concedida em 28 de jun. de 1974.
+
+\bibitem{sze2006}
+S.~M. Sze and K.~K. Ng, \emph{Physics of Semiconductor Devices}, 3rd~ed.\hskip
+  1em plus 0.5em minus 0.4em\relax Hoboken, NJ: John Wiley \& Sons, 2006.
+
+\bibitem{weste2010}
+N.~H.~E. Weste and D.~M. Harris, \emph{{CMOS VLSI} Design: A Circuits and
+  Systems Perspective}, 4th~ed.\hskip 1em plus 0.5em minus 0.4em\relax Boston,
+  MA: Addison-Wesley, 2011.
+
 \bibitem{vadasz1972patent}
-L.~L. Vadasz, ``Semiconductor device and method of making same,'' US Patent
-  3,699,646, Oct. 1972, depositada em 28 de dez. de 1970, concedida em 24 de
-  out. de 1972.
+L.~L. Vadasz, ``Integrated circuit structure and method for making integrated
+  circuit structure,'' US Patent 3,699,646, Oct. 1972, depositada em 28 de dez.
+  de 1970, concedida em 24 de out. de 1972.
 
 \bibitem{faggin1972fourchip}
 F.~Faggin and M.~E. Hoff, ``Standard parts and custom design merge in four-chip
@@ -100,8 +96,12 @@ F.~Faggin and M.~E. Hoff, ``Standard parts and custom design merge in four-chip
 \emph{{MCS-4} Micro Computer Set Data Sheet}, Intel Corporation, Santa Clara,
   CA, Nov. 1971.
 
+\bibitem{faggin2018howwemade}
+F.~Faggin, ``How we made the microprocessor,'' \emph{Nature Electronics},
+  vol.~1, no.~1, p.~88, Jan. 2018.
+
 \bibitem{chm2004faggin}
-F.~Faggin, ``Oral history of {Federico Faggin},'' Oral History Interview by Rob
+------, ``Oral history of {Federico Faggin},'' Oral History Interview by Rob
   Gardner, Computer History Museum, Reference X2941.2005, Catalog 102658025,
   Mountain View, CA, Aug. 2004.
 
@@ -111,23 +111,19 @@ F.~Faggin, H.~Feeney, M.~E. Hoff, S.~Mazor, and M.~Shima, ``Oral history panel
   Moderated by Dave House, Computer History Museum, Reference X4024.2007,
   Catalog 102658187, Mountain View, CA, Apr. 2007.
 
-\bibitem{faggin2018howwemade}
-F.~Faggin, ``How we made the microprocessor,'' \emph{Nature Electronics},
-  vol.~1, p.~3, 2018.
-
 \bibitem{intel1988annualreport}
 {Intel Corporation}, ``Intel corporation 1988 annual report: A history of
   innovation,'' Intel Corporation, Santa Clara, CA, Tech. Rep., 1988.
 
 \bibitem{bls1982futurework}
-{U.S. Bureau of Labor Statistics}, ``The future of work: Does it belong to us
-  or to the robots?'' \emph{Monthly Labor Review}, vol. 105, no.~9, pp. 3--8,
+S.~A. Levitan and C.~M. Johnson, ``The future of work: Does it belong to us or
+  to the robots?'' \emph{Monthly Labor Review}, vol. 105, no.~9, pp. 10--14,
   Sep. 1982.
 
 \bibitem{nber2022cnc}
-E.~Lewis \emph{et~al.}, ``Computerized machine tools, employment, and labor
-  market dynamics,'' National Bureau of Economic Research, Working Paper 30400,
-  2022.
+L.~P. Boustan, J.~Choi, and D.~Clingingsmith, ``Computerized machine tools and
+  the transformation of {US} manufacturing,'' National Bureau of Economic
+  Research, Working Paper 30400, Aug. 2022.
 
 \bibitem{chmz80panel2007}
 F.~Faggin, M.~Shima, and R.~Ungermann, ``Oral history panel on the development
