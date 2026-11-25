@@ -1,14 +1,15 @@
 # Fdb version 4
-["bibtex out/main"] 1795607750.49581 "out/main.aux" "out/main.bbl" "out/main" 1795607752.2441 0
+["bibtex out/main"] 1795613841.39515 "out/main.aux" "out/main.bbl" "out/main" 1795613880.2119 0
   "./pos_textuais/01_referencias.bib" 1795523520.90778 9420 7b3380c4703eca97717a5e8f0895ba9d ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/ieeetran/IEEEtran.bst" 1440712899 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "out/main.aux" 1795607752.0101 30076 d5546a96853452b8af35a6b49e01f3cd "pdflatex"
+  "out/main.aux" 1795613880.01531 30016 1b5cd20fa7b472d60842f023fb748a8a "pdflatex"
   (generated)
   "out/main.bbl"
   "out/main.blg"
   (rewritten before read)
-["pdflatex"] 1795607750.55551 "main.tex" "out/main.pdf" "main" 1795607752.24428 0
+["pdflatex"] 1795613878.51997 "/home/luis/ufmg/desc-eng/artigo/main.tex" "out/main.pdf" "main" 1795613880.21208 0
   "/etc/texmf/web2c/texmf.cnf" 1783689242.64666 475 c0e671620eb5563b2130f56340a5fde8 ""
+  "/home/luis/ufmg/desc-eng/artigo/main.tex" 1791766023.08009 1648 c0e3535d8a9eeb256e0a115a3c5d8197 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1136768653 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -170,15 +171,15 @@
   "img/roteamento_ortogonal.pdf" 1795606432.61052 26662 470292a4225f00481b08751ad9a09b2c ""
   "img/transicao_pmos_nmos_cmos.pdf" 1795606194.39068 29861 d9ce33e9c622c3e5dd336688fcd6a12d ""
   "main.tex" 1791766023.08009 1648 c0e3535d8a9eeb256e0a115a3c5d8197 ""
-  "out/main.aux" 1795607752.0101 30076 d5546a96853452b8af35a6b49e01f3cd "pdflatex"
-  "out/main.bbl" 1795607750.54962 6521 afc42d97c2ce30436cd51494e361fbf5 "bibtex out/main"
-  "out/main.out" 1795607752.0241 4933 f71d520df60cfa54fa35347826bea98d "pdflatex"
-  "secoes/00_resumo.tex" 1795606335.57704 1875 1aa0c05c6009f6ac38337f9c52a0c7a8 ""
-  "secoes/01_introducao.tex" 1795606338.02 13726 d7312d3ca9b26ccedf2e60ae428d7419 ""
-  "secoes/02_fundamentacao.tex" 1795607617.95214 27476 0a2a6a07d9534e98507a594929329a28 ""
-  "secoes/03_metodologia.tex" 1795606238.45863 11218 f68f62a1d7826e184f11c218d42ab0ed ""
-  "secoes/04_resultados.tex" 1795606273.06706 19417 dbaf044d73039e5ab48e8c2f08068f2d ""
-  "secoes/05_discussao.tex" 1795606268.31014 17450 85b0a2a93c4ce0faa6c2f8cacb4c4dd0 ""
+  "out/main.aux" 1795613880.01531 30016 1b5cd20fa7b472d60842f023fb748a8a "pdflatex"
+  "out/main.bbl" 1795613841.4584 6425 2c3f4f32521fbff87d4c862a641dd34e "bibtex out/main"
+  "out/main.out" 1795613880.02831 4933 f71d520df60cfa54fa35347826bea98d "pdflatex"
+  "secoes/00_resumo.tex" 1795608330.10929 1869 e875c8c07049bac264abcff62b1e9ee0 ""
+  "secoes/01_introducao.tex" 1795608446.36309 13689 fbee0effd783d77d50521d065feb6df8 ""
+  "secoes/02_fundamentacao.tex" 1795609917.99945 27371 9109d3f5d5f92c098c48d4b9327cbbc8 ""
+  "secoes/03_metodologia.tex" 1795610843.1103 10262 1b19abbdf3782e8f46cb35c1005a7a12 ""
+  "secoes/04_resultados.tex" 1795613027.28825 18837 9a7669649c7584b63e9a0e2886771ed1 ""
+  "secoes/05_discussao.tex" 1795613878.36126 16816 8b9c3904e5e76b63c0d02adc1e236382 ""
   "secoes/06_conclusao.tex" 1795606270.6711 3748 f4bb41a84509c963778367061a7fec1d ""
   (generated)
   "out/main.aux"
