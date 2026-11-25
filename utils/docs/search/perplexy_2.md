@@ -38,16 +38,16 @@ Hoff propôs substituir funções de lógica fixa por uma CPU binária de 4 bits
 
 #### A lacuna de implementação
 
-A arquitetura de Hoff/Mazor era um conceito funcional, não um projeto pronto para fabricação. Ambos reconheceram que não eram projetistas MOS de chip e transferiram o trabalho ao grupo de Les Vadasz; a etapa de circuitos e leiaute permaneceu sem responsável até abril de 1970. Quando Faggin entrou na Intel em 3 de abril de 1970, encontrou especificações, diagramas de blocos e circuitos fragmentários, mas nenhum esquema lógico completo da CPU, nenhuma metodologia consolidada para lógica aleatória em SGT e um cronograma contratual já atrasado.[^1]
+A arquitetura de Hoff/Mazor era um conceito funcional, não um projeto pronto para fabricação. Ambos reconheceram que não eram projetistas MOS de chip e transferiram o trabalho ao grupo de Les Vadasz; a etapa de circuitos e \textit{layout} permaneceu sem responsável até abril de 1970. Quando Faggin entrou na Intel em 3 de abril de 1970, encontrou especificações, diagramas de blocos e circuitos fragmentários, mas nenhum esquema lógico completo da CPU, nenhuma metodologia consolidada para lógica aleatória em SGT e um cronograma contratual já atrasado.[^1]
 
 A inexequibilidade prática tinha quatro dimensões:
 
 - **Densidade de interconexão:** uma CPU é lógica aleatória, não uma matriz regular de memória; a metalização única e os contatos convencionais impunham cruzamentos, área e congestionamento.
 - **Velocidade/potência:** cargas MOS convencionais introduziam queda de limiar e corrente insuficiente; o produto \(R_{on}C_L\) seria alto demais para a meta de temporização.
-- **Metodologia:** faltavam bibliotecas de blocos, regras de dimensionamento, fluxo de verificação e disciplina de leiaute para aproximadamente 2.300 transistores.
+- **Metodologia:** faltavam bibliotecas de blocos, regras de dimensionamento, fluxo de verificação e disciplina de \textit{layout} para aproximadamente 2.300 transistores.
 - **Encapsulamento:** apenas 16 pinos exigiam barramento multiplexado e decodificação distribuída entre CPU, ROM e RAM, elevando a complexidade temporal interna.[^10][^1]
 
-Faggin desenvolveu a metodologia de projeto, os blocos de circuito, o dimensionamento, o leiaute e a verificação; aplicou contato enterrado e carga *bootstrap* à SGT e conduziu a execução dos chips 4001, 4002, 4003 e 4004. Shima retornou para lógica, simulação, programas e inspeção de leiaute. O primeiro lote do 4004 falhou porque a máscara de contato enterrado fora omitida; o lote corrigido demonstrou silício funcional no início de 1971, evidenciando que o contato era estrutural, não cosmético.[^11][^10]
+Faggin desenvolveu a metodologia de projeto, os blocos de circuito, o dimensionamento, o \textit{layout} e a verificação; aplicou contato enterrado e carga *bootstrap* à SGT e conduziu a execução dos chips 4001, 4002, 4003 e 4004. Shima retornou para lógica, simulação, programas e inspeção de \textit{layout}. O primeiro lote do 4004 falhou porque a máscara de contato enterrado fora omitida; o lote corrigido demonstrou silício funcional no início de 1971, evidenciando que o contato era estrutural, não cosmético.[^11][^10]
 
 ### 2. Fontes primárias
 
@@ -464,7 +464,7 @@ Após sair da Intel, Faggin fundou a Zilog com Ralph Ungermann e concebeu o Z80 
 
 ## Síntese para o artigo científico
 
-A contribuição específica de Federico Faggin foi fechar a distância entre arquitetura e artefato industrial. Hoff e Mazor produziram a simplificação arquitetural; Shima assegurou que a máquina atendesse às calculadoras por meio de especificação, lógica, instruções e software; Faggin criou e aplicou a metodologia de circuitos e leiaute que tornou a CPU fabricável, usando a SGT, o contato enterrado e a carga *bootstrap*, e liderou a entrega dos quatro chips.[^10][^1]
+A contribuição específica de Federico Faggin foi fechar a distância entre arquitetura e artefato industrial. Hoff e Mazor produziram a simplificação arquitetural; Shima assegurou que a máquina atendesse às calculadoras por meio de especificação, lógica, instruções e software; Faggin criou e aplicou a metodologia de circuitos e \textit{layout} que tornou a CPU fabricável, usando a SGT, o contato enterrado e a carga *bootstrap*, e liderou a entrega dos quatro chips.[^10][^1]
 
 A causalidade tecnológica pode ser formulada como uma cadeia: autoalinhamento reduziu \(L_{ov}\) e \(C_{ov}\); poli dopado reduziu e tornou mais controlável \(|V_{th}|\); *buried contacts* elevaram a roteabilidade; *bootstrapping* preservou excursão lógica e corrente de carga; a combinação reduziu \(R_{on}C_L\) e permitiu aproximadamente 2.300 transistores em 12 mm², com ciclo de 10,8 µs.[^13][^17] A consequência socioeconômica foi a separação entre plataforma física e função: sistemas deixaram de ser definidos exclusivamente por fiação e passaram a ser definidos por firmware, habilitando a expansão dos sistemas embarcados, a automação reprogramável e, por linhagens diretas e paralelas de 8 bits, o computador pessoal.
 
@@ -472,7 +472,7 @@ A causalidade tecnológica pode ser formulada como uma cadeia: autoalinhamento r
 
 - Não atribuir a US 3,475,234 à Fairchild ou a Faggin; ela pertence à Bell Labs e antecede a implementação industrial de Faggin/Klein.[^4]
 - Não descrever o MCS-4 como CMOS: trata-se de PMOS de canal p, porta de silício, dimensão mínima de 10 µm.[^13]
-- Não declarar que Hoff/Mazor fizeram o leiaute ou que Faggin inventou sozinho a arquitetura; separar arquitetura, especificação/aplicação e implementação física.[^1]
+- Não declarar que Hoff/Mazor fizeram o \textit{layout} ou que Faggin inventou sozinho a arquitetura; separar arquitetura, especificação/aplicação e implementação física.[^1]
 - Não apresentar Apple I/II como descendentes de ISA do 4004/8080/Z80; usaram o 6502.[^31]
 - Não converter listas de aplicações do manual em prova automática de produtos instalados; diferenciar intenção comercial, protótipo e produto documentado.[^1]
 - Não fornecer áreas absolutas de *die* para metal-gate versus SGT sem documento metrológico; usar relações de velocidade/densidade e identificar deduções.[^20]
